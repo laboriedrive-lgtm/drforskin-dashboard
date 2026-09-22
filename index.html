@@ -1,0 +1,1921 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Quản trị nội dung Ecom 2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap">
+<style>
+  :root{
+    --brand:#15397F; --brand-deep:#5B4B8A; --brand-mid:#BFA8E8; --brand-pale:#E7DEF7; --brand-2:#A78BDB; --brand-soft:#F8F4FD;
+    --wood:#8A6A45; --wood-lt:#B89668; --wood-soft:#F3ECDF;
+    --paper:#FCFAF6; --surface:#FFFFFF; --cream:#ECE6D9; --ink:#1C2433; --ink-dim:#7C7566;
+    --line:#E6DFD2; --line-soft:#F3EFE5;
+    --teal:#3A5A9B; --teal-soft:#E7EDF9;
+    --gold:#B4542A; --gold-soft:#FBEEDC;
+    --good:#2E7D5B; --good-soft:#E6F0EA;
+    --warn:#B4542A; --warn-soft:#FBEEDC;
+    --bad:#B3261E; --bad-soft:#F7E6E2;
+    --grey:#6B6353; --grey-soft:#EDEAE1;
+    --shadow:0 1px 2px rgba(28,36,51,.05), 0 10px 26px rgba(28,36,51,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --brand:#7DA0E8; --brand-deep:#4A3D6B; --brand-mid:#C7B4EC; --brand-pale:#E7DEF7; --brand-2:#BBA6E8; --brand-soft:rgba(187,166,232,.18);
+      --wood:#D4A96F; --wood-lt:#E0C08C; --wood-soft:rgba(212,169,111,.14);
+      --paper:#0C0F16; --surface:#161B26; --cream:#1E2531; --ink:#EDEAE1; --ink-dim:#A39B8A;
+      --line:#2E3644; --line-soft:#1D2330;
+      --teal:#8FADE8; --teal-soft:rgba(143,173,232,.15);
+      --gold:#E0A176; --gold-soft:rgba(224,161,118,.15);
+      --good:#5FBF93; --good-soft:rgba(95,191,147,.15);
+      --warn:#E0A176; --warn-soft:rgba(224,161,118,.15);
+      --bad:#E58A83; --bad-soft:rgba(229,138,131,.15);
+      --grey:#A39B8A; --grey-soft:rgba(163,155,138,.14);
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 26px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="dark"]{
+    --brand:#7DA0E8; --brand-deep:#4A3D6B; --brand-mid:#C7B4EC; --brand-pale:#E7DEF7; --brand-2:#BBA6E8; --brand-soft:rgba(187,166,232,.18);
+    --wood:#D4A96F; --wood-lt:#E0C08C; --wood-soft:rgba(212,169,111,.14);
+    --paper:#0C0F16; --surface:#161B26; --cream:#1E2531; --ink:#EDEAE1; --ink-dim:#A39B8A;
+    --line:#2E3644; --line-soft:#1D2330;
+    --teal:#8FADE8; --teal-soft:rgba(143,173,232,.15);
+    --gold:#E0A176; --gold-soft:rgba(224,161,118,.15);
+    --good:#5FBF93; --good-soft:rgba(95,191,147,.15);
+    --warn:#E0A176; --warn-soft:rgba(224,161,118,.15);
+    --bad:#E58A83; --bad-soft:rgba(229,138,131,.15);
+    --grey:#A39B8A; --grey-soft:rgba(163,155,138,.14);
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 10px 26px rgba(0,0,0,.45);
+  }
+  /* Kênh Facebook — đổi tông tím (TikTok) sang xanh dương, để lướt trang nào cũng nhận ra ngay đang ở kênh nào */
+  :root[data-channel="facebook"]{
+    --brand-deep:#0B2E6B; --brand-mid:#5C9CF5; --brand-pale:#BBD6FB; --brand-2:#1877F2; --brand-soft:#E8F1FE;
+  }
+  @media (prefers-color-scheme: dark){
+    :root[data-channel="facebook"]:not([data-theme="light"]){
+      --brand-deep:#0A2A63; --brand-mid:#6FA8F5; --brand-pale:#AEC4E8; --brand-2:#5B95F0; --brand-soft:rgba(91,149,240,.18);
+    }
+  }
+  :root[data-theme="dark"][data-channel="facebook"]{
+    --brand-deep:#0A2A63; --brand-mid:#6FA8F5; --brand-pale:#AEC4E8; --brand-2:#5B95F0; --brand-soft:rgba(91,149,240,.18);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Be Vietnam Pro",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums}
+  h1,h2,h3{font-family:"Be Vietnam Pro",system-ui,sans-serif;font-weight:800;letter-spacing:-.01em;text-wrap:balance;margin:0}
+  .chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;white-space:nowrap}
+  .c-that{background:var(--good-soft);color:var(--good)}
+  .c-uoc{background:var(--warn-soft);color:var(--warn)}
+  .c-thieu{background:var(--bad-soft);color:var(--bad)}
+  .eyebrow{font-family:"Be Vietnam Pro",sans-serif;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-2);font-weight:700}
+  a{color:inherit}
+  ::selection{background:var(--brand-soft)}
+
+  .topbar{background:var(--surface);border-bottom:1px solid var(--line);padding:12px clamp(20px,3vw,48px) 0;position:sticky;top:0;z-index:20}
+  .topbar .row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .brandmark{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .brandmark .chip{background:var(--brand);color:#fff;font-weight:800;font-size:12px;letter-spacing:.04em;padding:4px 9px;border-radius:5px;align-self:center}
+  .brandmark .tag{font-family:"Be Vietnam Pro";font-size:11px;letter-spacing:.04em;color:var(--ink-dim);white-space:nowrap}
+  .topbar h1{font-size:clamp(19px,2.2vw,24px);color:var(--ink);white-space:nowrap}
+  .asof{display:flex;align-items:center}
+  .header-filter-row{display:flex;align-items:center;gap:7px;background:var(--brand-soft);border:1.5px solid var(--brand-2);border-radius:10px;padding:6px 11px}
+  .header-filter-row input[type=date]{font-family:"Be Vietnam Pro";font-size:13px;font-weight:700;padding:3px 4px;border:none;background:transparent;color:var(--brand);cursor:pointer}
+  .header-filter-row .sep{color:var(--brand-2);font-weight:700;font-size:13px}
+  .header-filter-row .filter-days{font-size:11px;color:var(--brand-2);font-weight:700;white-space:nowrap}
+
+  .channel-switch{display:flex;gap:8px;margin:14px 0 0;padding:0 8px}
+  .chpill{display:flex;align-items:center;gap:7px;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:7px 16px 7px 12px;font-family:"Be Vietnam Pro";font-weight:700;font-size:13.5px;color:var(--ink-dim);cursor:pointer;transition:.15s}
+  .chpill .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .chpill:hover{border-color:var(--brand-2);color:var(--ink)}
+  .chpill.active{background:var(--brand-deep);border-color:var(--brand-deep);color:#fff}
+
+  .empty-state{background:var(--surface);border:1.5px dashed var(--line);border-radius:16px;padding:36px 30px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;box-shadow:var(--shadow)}
+  .empty-state .es-icon{font-size:26px}
+  .empty-state h3{font-size:17px;margin:0}
+  .empty-state p{margin:0;color:var(--ink-dim);font-size:14px;max-width:70ch;line-height:1.6}
+  .empty-state ul{margin:4px 0 0;padding-left:18px;color:var(--ink-dim);font-size:13.5px;line-height:1.8}
+
+  .tabs{display:flex;gap:2px;margin:10px 0 0;padding:0 8px;overflow-x:auto;background:var(--brand-deep);border-radius:10px}
+  .tab{background:none;border:none;border-bottom:3px solid transparent;color:var(--brand-pale);padding:10px 14px 8px;cursor:pointer;white-space:nowrap;transition:.15s;font-weight:700;font-size:13px;letter-spacing:.01em;text-align:left;display:flex;flex-direction:column;gap:1px;font-family:"Be Vietnam Pro"}
+  .tab:hover{background:rgba(255,255,255,.06);color:#fff}
+  .tab small{display:block;font-size:10px;font-weight:500;opacity:.8;text-transform:none;letter-spacing:0}
+  .tab.active{color:#fff;border-bottom-color:var(--wood-lt);background:rgba(255,255,255,.06)}
+  .tab.active small{opacity:.95}
+
+  main{max-width:1680px;margin:0 auto;padding:6px clamp(20px,3vw,48px) 80px;display:flex;flex-direction:column;gap:40px}
+  .page{display:none;flex-direction:column;gap:40px}
+  .page.active{display:flex}
+  section{display:flex;flex-direction:column;gap:16px}
+  .section-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .section-head h2{font-size:25px}
+  .section-head p{margin:4px 0 0;color:var(--ink-dim);font-size:14.5px;max-width:80ch}
+
+  .callout{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:var(--gold-soft);border:1.5px solid var(--gold);border-radius:12px;padding:18px 22px}
+  .callout .icon{font-weight:800;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;background:var(--gold);color:#fff;padding:6px 12px;border-radius:20px;white-space:nowrap}
+  .callout .txt{font-size:16px;font-weight:600;flex:1;min-width:260px}
+  .callout .txt b{color:var(--brand)}
+
+  .verdict{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px clamp(22px,3vw,42px);display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow);border-top:5px solid var(--brand-2)}
+  .verdict h2{font-size:clamp(22px,2.6vw,30px);margin-top:4px}
+  .verdict .sub{color:var(--ink-dim);font-size:15.5px;max-width:92ch}
+
+  /* Boxed KPI with delta badge */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+  .tile .eyebrow{font-size:11.5px}
+  .tile .v{font-family:"Be Vietnam Pro";font-size:32px;font-weight:800;line-height:1}
+  .tile .l{font-size:13px;color:var(--ink-dim);font-weight:500}
+  .tile.good .v{color:var(--good)}
+  .tile.bad .v{color:var(--bad)}
+  .tile.teal .v{color:var(--teal)}
+  .delta{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;width:fit-content}
+  .delta.up{background:var(--good-soft);color:var(--good)}
+  .delta.down{background:var(--bad-soft);color:var(--bad)}
+  .delta.flat{background:var(--warn-soft);color:var(--warn)}
+
+  .kpis-sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .tile-sm{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+  .tile-sm .eyebrow{font-size:10px}
+  .tile-sm .v{font-family:"Be Vietnam Pro";font-size:22px;font-weight:800;line-height:1.1}
+  .tile-sm .l{font-size:11px;color:var(--ink-dim)}
+  .tile-sm.good .v{color:var(--good)}
+  .tile-sm.bad .v{color:var(--bad)}
+  .tile-sm.teal .v{color:var(--teal)}
+  .tile-sm .delta{font-size:10.5px;padding:2px 7px;margin-top:1px}
+
+  .dtable-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+  .dtable{border-collapse:collapse;width:100%;min-width:760px}
+  .dtable thead th{text-align:left;font-size:13px;font-weight:700;color:var(--ink-dim);padding:16px 20px;border-bottom:2px solid var(--line);background:var(--paper);white-space:nowrap}
+  .dtable tbody td{padding:16px 20px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:14.5px}
+  .dtable tbody tr:last-child td{border-bottom:none}
+  .dtable tbody tr:hover{background:var(--brand-soft)}
+  .badge{display:inline-block;font-family:"Be Vietnam Pro";font-weight:700;font-size:13px;padding:4px 12px;border-radius:8px}
+  .badge.good{background:var(--good-soft);color:var(--good)}
+  .badge.bad{background:var(--bad-soft);color:var(--bad)}
+  .badge.grey{background:var(--grey-soft);color:var(--grey)}
+  .stepnum{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;font-weight:800;font-size:13px;color:#fff;flex-shrink:0}
+  .stepname{font-weight:700;font-size:15px}
+  .steprow-inner{display:flex;align-items:center;gap:12px}
+
+  .math-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:18px}
+
+  .wk-status{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;padding:5px 12px;border-radius:20px}
+  .wk-status.warn{background:var(--warn-soft);color:var(--warn)}
+  .wk-status.good{background:var(--good-soft);color:var(--good)}
+  .wk-status.pending{background:var(--grey-soft);color:var(--grey)}
+
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+  .cal .dow{font-family:"Be Vietnam Pro";font-size:11.5px;color:var(--ink-dim);text-align:center;padding-bottom:4px;font-weight:700}
+  .cal .day{background:var(--surface);border:1px solid var(--line);border-radius:10px;min-height:62px;padding:7px 9px;font-family:"Be Vietnam Pro";font-size:12.5px;color:var(--ink-dim);position:relative}
+  .cal .day.has{background:var(--brand-soft);border-color:var(--brand-2);color:var(--brand);font-weight:800}
+  .cal .day .cnt{position:absolute;bottom:6px;right:8px;font-size:16px;font-weight:800}
+  .cal .day.empty{background:transparent;border:none}
+  .cal.pickable .day:not(.empty){cursor:pointer;transition:.1s;user-select:none}
+  .cal.pickable .day:not(.empty):hover{border-color:var(--brand-2);box-shadow:0 0 0 2px var(--brand-soft)}
+  .cal .day.in-range{background:var(--brand-soft)}
+  .cal .day.range-edge{background:var(--brand-2);border-color:var(--brand-2);color:#fff}
+  .cal .day.range-edge .cnt{color:#fff}
+  .cal .day.pending{outline:2px dashed var(--gold);outline-offset:2px}
+  .cal-hint{font-size:12.5px;color:var(--brand-2);font-weight:700;display:flex;align-items:center;gap:6px}
+
+  /* Nấc phễu content — bốn bước đọc trái sang phải, nối bằng mũi tên chevron trên đường kẻ */
+  .nac{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px 18px;box-shadow:var(--shadow)}
+  .nac>div{position:relative;padding:0 18px 0 0}
+  .nac>div+div{padding-left:20px;border-left:1px solid var(--line)}
+  .nac>div+div::before{content:"";position:absolute;left:-5px;top:24px;width:9px;height:9px;border-top:1.5px solid var(--line);border-right:1.5px solid var(--line);transform:rotate(45deg);background:var(--surface)}
+  .nac .cham{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:7px}
+  .nac .cham i{width:9px;height:9px;border-radius:3px;flex:0 0 auto}
+  .nac .tien{font-size:27px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.1;color:var(--brand-deep)}
+  .nac .tien small{font-size:13px;font-weight:600;color:var(--ink-dim);margin-left:3px}
+  .nac .duoi{font-size:12px;color:var(--ink-dim);margin-top:5px;line-height:1.45}
+  .nac .sosanh{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--grey-soft);color:var(--grey)}
+  .nac .sosanh.up{background:var(--good-soft);color:var(--good)}
+  .nac .sosanh.down{background:var(--bad-soft);color:var(--bad)}
+  @media(max-width:820px){.nac{grid-template-columns:repeat(2,1fr);row-gap:18px}.nac>div:nth-child(3){padding-left:0;border-left:none}.nac>div:nth-child(3)::before{display:none}}
+
+  .pipeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2px;background:var(--line);border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .stage{background:var(--surface);padding:20px 18px;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:.15s}
+  .stage:hover{background:var(--brand-soft)}
+  .stage.active-stage{background:var(--brand-soft);box-shadow:inset 0 -3px 0 var(--brand-2)}
+  .stage .n{font-family:"Be Vietnam Pro";font-size:11.5px;color:var(--ink-dim);font-weight:700;letter-spacing:.04em}
+  .stage .count{font-family:"Be Vietnam Pro";font-size:38px;font-weight:800;color:var(--brand-2)}
+  .stage .lbl{font-weight:700;font-size:14.5px}
+  .stage .rng{font-size:12px;color:var(--ink-dim)}
+  @media (max-width:760px){.pipeline{grid-template-columns:repeat(2,1fr)}}
+
+  .pdg{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+  .pdg-head{font-weight:800;font-size:15.5px;display:flex;align-items:center;gap:8px}
+  .pdg-item{display:grid;grid-template-columns:1fr auto;gap:10px 16px;align-items:start;padding:12px 0;border-top:1px solid var(--line)}
+  .pdg-item:first-of-type{border-top:none}
+  .pdg-hook{font-weight:700;font-size:14px}
+  .pdg-hook a{color:var(--brand-2);text-decoration:none}
+  .pdg-hook a:hover{text-decoration:underline}
+  .pdg-meta{font-size:12px;color:var(--ink-dim);margin-top:3px}
+  .pdg-stats{font-family:"Be Vietnam Pro";font-size:12.5px;text-align:right;white-space:nowrap}
+  .pdg-dist{font-size:11.5px;padding:3px 9px;border-radius:20px;display:inline-block;margin-top:4px;white-space:nowrap}
+  .pdg-dist.live{background:var(--warn-soft);color:var(--warn)}
+  .pdg-dist.off{background:var(--grey-soft);color:var(--grey)}
+
+  .status-pill{font-size:12px;font-weight:800;padding:5px 13px;border-radius:20px;white-space:nowrap;letter-spacing:.01em;display:inline-block}
+  .status-pill.won{background:var(--good-soft);color:var(--good)}
+  .status-pill.potential{background:var(--warn-soft);color:var(--warn)}
+  .status-pill.cut{background:var(--bad-soft);color:var(--bad)}
+  .status-pill.small{background:var(--grey-soft);color:var(--grey)}
+  .status-pill.nodata{background:var(--line-soft);color:var(--ink-dim);border:1px dashed var(--line)}
+
+  .rank-list{display:flex;flex-direction:column;gap:10px}
+  .rank-item{display:grid;grid-template-columns:40px 1fr auto;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow)}
+  .rank-item .medal{font-family:"Be Vietnam Pro";font-size:20px;font-weight:800;color:var(--gold);text-align:center}
+  .rank-item .name{font-weight:700;font-size:15.5px}
+  .rank-item .sub{font-size:12.5px;color:var(--ink-dim);margin-top:2px}
+  .rank-item .stat{text-align:right}
+  .rank-item .stat .v{font-family:"Be Vietnam Pro";font-size:20px;font-weight:800;color:var(--good)}
+  .rank-item .stat .l{font-size:11px;color:var(--ink-dim)}
+
+  .analysis-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+  .analysis-rank{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;background:var(--brand-deep);color:#fff;font-weight:800;font-size:12.5px;flex-shrink:0}
+  .analysis-meta{font-size:12px;color:var(--ink-dim);line-height:1.6}
+  .analysis-note{font-size:13.5px;line-height:1.6;background:var(--paper);border-radius:10px;padding:10px 14px}
+  .analysis-note b{color:var(--ink)}
+  .analysis-action{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700}
+  .kpis-sm .tile-sm .v.dim{color:var(--ink-dim);font-size:16px}
+  .diagnosis{font-size:14.5px;font-weight:800;padding:7px 13px;border-radius:9px;display:inline-block;margin:6px 0 2px;letter-spacing:-.01em}
+  .diagnosis.crit{background:var(--bad-soft);color:var(--bad)}
+  .diagnosis.warn{background:var(--warn-soft);color:var(--warn)}
+  .diagnosis.good{background:var(--good-soft);color:var(--good)}
+  .diagnosis.info{background:var(--grey-soft);color:var(--grey)}
+
+  .chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:1050px){.chart-grid{grid-template-columns:1fr}}
+  .chart-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
+  .chart-card h3{font-size:17px}
+  .chart-card .period{font-family:"Be Vietnam Pro";font-size:11.5px;color:var(--brand-2);background:var(--brand-soft);padding:3px 10px;border-radius:20px;width:fit-content;font-weight:700}
+  .chart-card .sub{font-size:13px;color:var(--ink-dim)}
+  .chart-legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-dim);font-weight:600}
+  .chart-legend .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+  svg text{font-family:"Be Vietnam Pro",sans-serif}
+  svg .lbl-name{fill:var(--ink);font-size:12.5px;font-weight:700}
+  svg .lbl-sub{fill:var(--ink-dim);font-size:10.5px;font-weight:600}
+  svg .val{font-family:"Be Vietnam Pro",sans-serif;font-size:11.5px;font-weight:800}
+  svg .axis-line{stroke:var(--line);stroke-width:1.5}
+  svg .grid-line{stroke:var(--line);stroke-width:1;stroke-dasharray:3,3}
+  svg .axis-lbl{fill:var(--ink-dim);font-size:10.5px;font-family:"Be Vietnam Pro",sans-serif}
+
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+  table.data{border-collapse:collapse;width:100%;min-width:1300px}
+  table.data thead th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-dim);padding:14px 16px;border-bottom:2px solid var(--line);white-space:nowrap;background:var(--paper)}
+  table.data tbody td{padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+  table.data tbody tr:last-child td{border-bottom:none}
+  table.data tbody tr:hover{background:var(--brand-soft)}
+  .date-cell{font-family:"Be Vietnam Pro";font-size:13px;color:var(--ink-dim);white-space:nowrap}
+  .tags{display:flex;gap:5px;flex-wrap:wrap}
+  .tag{font-size:11.5px;padding:3px 9px;border-radius:20px;background:var(--brand-soft);color:var(--brand);white-space:nowrap;font-weight:700}
+  /* Màu riêng theo định dạng content — dễ nhận diện video/ảnh trong bảng */
+  .fmt-video{background:var(--teal-soft);color:var(--teal)}
+  .fmt-anh{background:var(--gold-soft);color:var(--gold)}
+  .fmt-gif{background:var(--grey-soft);color:var(--grey)}
+  .fmt-landing{background:var(--brand-soft);color:var(--brand-2)}
+  /* Màu riêng theo SKU/sản phẩm — dễ nhận diện content đang nói về sản phẩm nào */
+  .sku-serum{background:var(--teal-soft);color:var(--teal)}
+  .sku-tramtra{background:var(--good-soft);color:var(--good)}
+  .sku-than{background:var(--wood-soft);color:var(--wood)}
+  .sku-glanzen{background:var(--good-soft);color:var(--good)}
+  .sku-da{background:var(--grey-soft);color:var(--grey)}
+  .hook-txt{max-width:280px;font-weight:700;font-size:13.5px}
+  .hook-txt a{color:var(--brand-2);text-decoration:none}
+  .hook-txt a:hover{text-decoration:underline}
+  .muted{color:var(--ink-dim);font-style:italic;font-size:13px}
+  .t-badge{font-family:"Be Vietnam Pro";font-weight:800;font-size:14px;color:var(--brand-2)}
+  .t-sub{font-size:11px;color:var(--ink-dim);margin-top:2px}
+  .action-cell{font-size:13px;color:var(--ink-dim);max-width:230px}
+  .metric-cell{font-family:"Be Vietnam Pro";font-size:13.5px;white-space:nowrap}
+  .metric-cell .pass{color:var(--good);font-weight:700}
+  .metric-cell .fail{color:var(--bad);font-weight:700}
+  .metric-cell .need{color:var(--ink-dim);font-size:11px;display:block;font-family:"Be Vietnam Pro"}
+  .split-bar{display:flex;height:10px;border-radius:6px;overflow:hidden;width:120px;background:var(--line-soft)}
+  .split-bar .ads{background:var(--brand-2)}
+  .split-bar .organic{background:var(--teal)}
+
+  .stale-note{display:flex;gap:14px;align-items:flex-start;background:var(--bad-soft);border:1.5px solid var(--bad);border-radius:12px;padding:16px 20px}
+  .stale-note .icon{font-size:20px;flex-shrink:0}
+  .stale-note .txt{font-size:14.5px;font-weight:600;color:var(--ink)}
+  .stale-note .txt b{color:var(--bad)}
+
+  .filter-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:16px}
+  .filter-caption{font-size:13px;color:var(--ink-dim)}
+  .filter-caption b{color:var(--ink)}
+  .filter-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .filter-row label{font-size:12.5px;color:var(--ink-dim);font-weight:700}
+  .filter-row input[type=date]{font-family:"Be Vietnam Pro";font-size:14px;padding:8px 12px;border:1.5px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink)}
+  .filter-sep{color:var(--ink-dim);font-size:13px}
+  .filter-days{font-size:13px;color:var(--ink-dim);font-weight:700;margin-left:4px}
+  .preset-row{display:flex;gap:8px;flex-wrap:wrap}
+  .preset-btn{font-size:13px;font-weight:700;padding:8px 16px;border-radius:20px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink-dim);cursor:pointer;transition:.15s}
+  .preset-btn:hover{border-color:var(--brand-2);color:var(--brand-2)}
+  .preset-btn.active{background:var(--brand-2);border-color:var(--brand-2);color:#fff}
+
+  footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:9px;font-size:13.5px;color:var(--ink-dim)}
+  footer b{color:var(--ink)}
+  footer .src{font-family:"Be Vietnam Pro";font-size:13px}
+
+  @media (max-width:760px){
+    .topbar .row{align-items:flex-start}
+    .asof{align-items:flex-start;text-align:left}
+    .tab{min-width:200px}
+  }
+</style>
+
+<div class="topbar">
+  <div class="row">
+    <div class="brandmark">
+      <span class="chip">30SHINE</span>
+      <h1>Quản trị nội dung Ecom 2026</h1>
+      <span class="tag">· Sale Online · Drforskin</span>
+    </div>
+    <div class="asof">
+      <div class="header-filter-row">
+        <span class="header-filter-label">📅</span>
+        <input type="date" id="master-date-from">
+        <span class="sep">→</span>
+        <input type="date" id="master-date-to">
+        <span class="filter-days" id="master-filter-days"></span>
+      </div>
+    </div>
+  </div>
+  <div class="channel-switch" id="channel-switch">
+    <button class="chpill active" data-channel="facebook"><span class="dot" style="background:#1877F2"></span>Facebook</button>
+    <button class="chpill" data-channel="tiktok"><span class="dot" style="background:#A78BDB"></span>TikTok</button>
+  </div>
+  <div class="tabs" id="tabs-facebook">
+    <button class="tab active" data-page="pf1">Mục tiêu &amp; sản lượng<small>content có đang đủ nuôi doanh số</small></button>
+    <button class="tab" data-page="pf2">Đối soát rule Facebook Ads<small>creative nào đủ chuẩn để scale, cái nào cắt lỗ</small></button>
+    <button class="tab" data-page="pf3">Hiệu quả từng creative<small>1 đồng bỏ ra đổi được gì, ads hay tự nhiên</small></button>
+  </div>
+  <div class="tabs" id="tabs-tiktok" hidden>
+    <button class="tab active" data-page="p1">Mục tiêu &amp; sản lượng<small>content có đang đủ nuôi doanh số</small></button>
+    <button class="tab" data-page="p2">Đối soát rule Tăng cường<small>video nào đủ chuẩn để scale, video nào cắt lỗ</small></button>
+    <button class="tab" data-page="p3">Hiệu quả từng creative<small>1 đồng bỏ ra đổi được gì, ads hay tự nhiên</small></button>
+  </div>
+</div>
+
+<main>
+  <!-- PAGE 1 -->
+  <div class="page" id="p1">
+    <section class="verdict" style="border-top-color:var(--gold);padding:20px clamp(20px,3vw,32px)">
+      <span class="eyebrow" style="color:var(--gold)">📦 QUẢN TRỊ NỘI DUNG — theo đúng kỳ đang chọn ở góc trên</span>
+      <h2 id="content-month-headline" style="font-size:19px">—</h2>
+      <div class="sub" style="font-size:13px">Đổi ngày ở ô "Xem theo kỳ" trên đầu trang để xem lại bất kỳ giai đoạn nào — mục tiêu, sản lượng, tỷ lệ ra đơn đều tính lại theo đúng kỳ đó, so với kỳ liền trước cùng độ dài. Doanh thu/lợi nhuận kênh chỉ là bối cảnh tham khảo, xem ở cuối trang.</div>
+      <div class="kpis" style="margin-top:10px" id="content-month-kpis"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2 id="funnel-headline">Phễu content — tiền rụng qua từng nấc</h2>
+        <p>Bốn nấc từ lúc content lên sóng tới lúc ra tiền, trong đúng kỳ đang chọn. Nấc nào rụng nhiều nhất là chỗ cần sửa trước.</p>
+      </div>
+      <div class="nac" id="content-funnel"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Kế hoạch sản xuất content T9 — lũy kế thực tế đến đâu</h2>
+        <p>Chia đều 30 content mục tiêu cả tháng theo tuần (tuần đầu 9 ngày nên mục tiêu 9, các tuần sau 7 ngày mục tiêu 7). Hụt tuần nào sẽ cộng dồn sang lũy kế, không "bỏ qua". Ô "0" kèm ⚠️ nghĩa là chưa có content nào air trong tuần đó.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Tuần</th><th>Mục tiêu tuần</th><th>Thực tế tuần</th><th>Lũy kế mục tiêu</th><th>Lũy kế thực tế</th><th>Chênh lệch lũy kế</th><th>Trạng thái</th></tr></thead>
+          <tbody id="week-plan-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Kỳ tự chọn — xem chi tiết một khoảng ngày bất kỳ</h2>
+        <p id="master-kpi-sub">Đổi ngày ở ô "Xem theo kỳ" trên đầu trang, hoặc bấm thẳng lên lịch bên dưới. <b>Lưu ý:</b> đây là công cụ xem chi tiết một khoảng ngày tự chọn, không phải tiến độ mục tiêu cả tháng (xem khối 📦 phía trên) — nên số content/doanh thu ở đây sẽ khác khi bạn đổi khoảng ngày, đó là bình thường.</p>
+      </div>
+      <div class="kpis" id="master-kpis"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Content air trong kỳ đã chọn</h2>
+        <p id="master-cal-caption">—</p>
+      </div>
+      <div class="cal-hint" id="master-cal-hint"></div>
+      <div id="master-calendar-wrap" style="display:flex;gap:16px;flex-wrap:wrap"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Bối cảnh doanh thu — lợi nhuận kênh TikTok (tham khảo)</h2>
+        <p>Đây là mục tiêu <b>toàn kênh</b> (gồm cả 2 campaign đã scale từ lâu như Serum, Tràm trà) — doanh thu từ riêng 18 content test chỉ là phần rất nhỏ trong số này, nên KHÔNG dùng để đánh giá hiệu quả quản trị nội dung. Để tham khảo bối cảnh kinh doanh chung thôi.</p>
+      </div>
+      <div class="kpis" id="revenue-context-kpis"></div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Giai đoạn</th><th>Số ngày</th><th>Doanh thu mục tiêu</th><th>LN gộp mục tiêu</th><th>Trần chi ads</th><th>Đơn cần đạt</th></tr></thead>
+          <tbody id="week-target-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page" id="p2">
+    <div class="callout" id="callout-30s"></div>
+
+    <section>
+      <div class="section-head">
+        <h2>1. Khung thời gian đánh giá chu kỳ video (Milestones Framework)</h2>
+        <p>Quy định các mốc ngày kiểm thử bắt buộc để quyết định tăng ngân sách, kích cầu hoặc cắt lỗ.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Mốc thời gian</th><th>Tên giai đoạn</th><th>Mục tiêu &amp; tiêu chí kiểm tra</th><th>Quy định vận hành cụ thể</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="steprow-inner"><span class="stepnum" style="background:var(--brand-2)">T0</span></div></td>
+              <td><span class="stepname">Khởi tạo &amp; Launch Boost</span></td>
+              <td>Bắt đầu đưa video vào máy học TikTok GMV Max với ngân sách nhỏ.</td>
+              <td>Cài đặt mức ngân sách <b class="num">50.000đ/ngày</b> cho mỗi video kiểm thử.</td>
+            </tr>
+            <tr>
+              <td><div class="steprow-inner"><span class="stepnum" style="background:var(--gold)">T3</span></div></td>
+              <td><span class="stepname">Sàng lọc Sức hút (Attraction Gate)</span></td>
+              <td>Đánh giá phản ứng mở đầu của tệp khách hàng tự nhiên qua Hook 2s và Click giỏ hàng.</td>
+              <td>Cổng lọc mẫu ≥200 view · Hook 2s ≥15% · CTR ≥1,5% (hoặc &gt;15 click) · Trần stop-loss T+3: <b class="num">60.000-100.000đ</b>.</td>
+            </tr>
+            <tr>
+              <td><div class="steprow-inner"><span class="stepnum" style="background:var(--good)">T6</span></div></td>
+              <td><span class="stepname">Chốt Đơn &amp; Scale (Conversion Gate)</span></td>
+              <td>Kiểm tra tỷ lệ chuyển đổi đơn hàng thực tế (CVR) và hiệu suất sinh lời (ROAS).</td>
+              <td>Đơn hàng ≥1 · CVR ≥12% · ROAS 1,20-1,50 → xếp loại <b>WINNER</b>, duy trì 50k/ngày.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>2. Bảng ngưỡng chỉ số chuẩn (Standard Benchmark Matrix)</h2>
+        <p>Ngưỡng số liệu định lượng làm căn cứ ra quyết định, không phụ thuộc cảm tính.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Chỉ số</th><th>Ý nghĩa đo lường</th><th>Ngưỡng chuẩn đạt</th><th>Ngưỡng cảnh báo</th><th>Hành động khắc phục khi kém</th></tr></thead>
+          <tbody>
+            <tr><td><b>Hook 2s (%)</b></td><td>Tỷ lệ giữ chân người xem ở 2 giây đầu tiên</td><td><span class="badge good">≥ 15,0%</span></td><td><span class="badge bad">&lt; 12,0%</span></td><td>Sửa cảnh giật mở đầu, đổi câu chữ 2 giây đầu cho thu hút hơn.</td></tr>
+            <tr><td><b>Tỷ lệ giữ (6s/2s)</b></td><td>Chất lượng nội dung giữ chân từ 2s sang 6s</td><td><span class="badge good">≥ 38,0%</span></td><td><span class="badge bad">&lt; 25,0%</span></td><td>Cắt ngắn đoạn dẫn dắt, đi thẳng vào giải quyết vấn đề.</td></tr>
+            <tr><td><b>CTR</b></td><td>Lượng người quan tâm bấm vào xem giỏ hàng</td><td><span class="badge good">≥ 1,50%</span></td><td><span class="badge bad">&lt; 0,70%</span></td><td>Bổ sung lời kêu gọi hành động (CTA) chỉ tay vào giỏ hàng.</td></tr>
+            <tr><td><b>CPM</b></td><td>Giá thầu cho mỗi 1.000 lượt hiển thị</td><td><span class="badge good">25k - 45k</span></td><td><span class="badge bad">&gt; 150k</span></td><td>CPM cao là tệp quá hẹp hoặc giá thầu bị đội — cân nhắc tắt sớm.</td></tr>
+            <tr><td><b>CVR</b></td><td>Tỷ lệ chuyển đổi từ click sang mua hàng</td><td><span class="badge good">≥ 12,0%</span></td><td><span class="badge bad">&lt; 5,0%</span></td><td>Kích hoạt voucher flash sale hoặc ưu đãi giảm 20k tại giỏ hàng.</td></tr>
+            <tr><td><b>ROAS</b></td><td>Doanh thu GMV / Tổng chi phí quảng cáo</td><td><span class="badge good">≥ 1,25</span></td><td><span class="badge bad">&lt; 0,80</span></td><td>Dưới 1,0 là đang lỗ trực tiếp — chỉ duy trì ở mức ngân sách test.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>3. Quy tắc quản trị rủi ro &amp; trần cắt lỗ cứng (Stop-loss Rules)</h2>
+        <p>Nguyên tắc sắt để bảo toàn ngân sách marketing — tuyệt đối không để đốt tiền vô ích.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Trường hợp</th><th>Dấu hiệu nhận diện</th><th>Trần chi phí cho phép</th><th>Quyết định bắt buộc</th></tr></thead>
+          <tbody>
+            <tr style="background:var(--bad-soft)">
+              <td><b style="color:var(--bad)">Hard Stop-loss</b></td>
+              <td>Video chi tiêu liên tục nhưng 0 đơn hàng trực tiếp</td>
+              <td><b class="num">150.000 - 200.000đ</b></td>
+              <td><b style="color:var(--bad)">TẮT BOOST NGAY LẬP TỨC</b>. Không duy trì thêm ngày nào.</td>
+            </tr>
+            <tr>
+              <td><b>Kẹt phân phối</b></td>
+              <td>Đăng sau 3 ngày mà lượt xem &lt;50 view</td>
+              <td><b class="num">&lt; 1.000đ</b></td>
+              <td>Kiểm tra vi phạm chính sách / tắt và đăng lại phiên bản chỉnh sửa.</td>
+            </tr>
+            <tr style="background:var(--bad-soft)">
+              <td><b style="color:var(--bad)">Thuật toán đánh giá kém</b></td>
+              <td>TikTok chính thức gắn nhãn <span class="badge grey">Kém hiệu quả</span></td>
+              <td>Bất kỳ mức chi phí nào</td>
+              <td><b style="color:var(--bad)">TẮT DỨT ĐIỂM</b> vì thuật toán đã ngừng phân phối tự nhiên.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Content nào đang có tín hiệu tốt để scale</h2>
+        <p>Xếp hạng theo GMV thật, chỉ tính content air trong kỳ đang chọn ở đầu trang.</p>
+      </div>
+      <div class="rank-list" id="rank-list"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Content đang ở giai đoạn nào</h2>
+        <p>Bấm vào từng nhóm để xem cụ thể content nào, hook gì, có đang chạy/cắn tiền hay đã dừng phân phối.</p>
+      </div>
+      <div class="pipeline" id="pipeline-row"></div>
+      <div id="pipeline-detail" style="display:flex;flex-direction:column;gap:18px"></div>
+    </section>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="page" id="p3">
+    <section class="verdict">
+      <span class="eyebrow">🟢 LIVE qua TikTok Business API — chỉ campaign VIDEO, tất cả SKU (1/8 – 22/09/2026)</span>
+      <h2>58,50tr đ chi phí → 333,11tr đ doanh thu → 963 đơn (ROI 5,69x)</h2>
+      <div class="sub">Kéo trực tiếp từ <b>TikTok Business API</b> (GMV Max Report), cập nhật tới hôm nay — chỉ 4 campaign video (xem "Phạm vi dữ liệu" ở footer). Ở cấp video: <b>TikTok Shop API</b> (endpoint <code class="num">/analytics/202509/shop_videos/performance</code>) cho views/GMV/đơn/CTR LIVE của 17/18 content test — nhưng không có trường chi phí quảng cáo (1 video ngày 8/9 quá mới, TikTok chưa xử lý xong). Riêng <b>Hook 2s và chi phí Tăng cường</b> vẫn chỉ export thủ công được (5/18 content, kỳ 10/8-23/8) vì GMV Max Business API không hỗ trợ xuống cấp video/creative (đã thử token mới, vẫn bị từ chối).</div>
+    </section>
+
+    <div class="stale-note" style="background:var(--warn-soft);border-color:var(--warn)">
+      <span class="icon">🔒</span>
+      <span class="txt">Các mục dưới đây (tổng quan video shoppable, chi tiết theo Campaign, MTD tháng 9, đối chiếu SKU, bảng/biểu đồ theo từng video) là <b>số liệu tích luỹ cố định</b> theo kỳ ghi rõ trong từng mục — <b>không đổi</b> theo ô "Xem theo kỳ" ở góc trên, vì dữ liệu chi tiết theo từng campaign/từng video chỉ có ở dạng tổng cộng cho cả kỳ, chưa có breakdown theo từng ngày. Chỉ mục <b>"Toàn cửa hàng theo kỳ đã chọn"</b> bên dưới là có phản ứng theo ô đó. Muốn xem kỳ khác cho các mục còn lại thì cần tôi pull lại API.</span>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <h2>Toàn bộ video shoppable — tổng quan (LIVE qua TikTok Shop API)</h2>
+        <p>Nguồn: TikTok Shop Analytics API (<code class="num">/analytics/202509/shop_videos/overview_performance</code>) — gộp toàn shop 30Shine, mọi SKU, kỳ 1/8-07/09/2026 (ngày mới nhất có số liệu). Bảng chi tiết theo từng video (18 content test) nằm ở mục "Bảng đối chiếu chi tiết" phía dưới, lấy từ endpoint chị em <code class="num">shop_videos/performance</code>.</p>
+      </div>
+      <div class="kpis">
+        <div class="tile"><span class="eyebrow">GMV từ video shoppable</span><div class="v num">134,27tr đ</div><div class="l">toàn shop, 1/8-7/9</div></div>
+        <div class="tile"><span class="eyebrow">Lượt hiển thị sản phẩm</span><div class="v num">397.345</div><div class="l">trong video</div></div>
+        <div class="tile teal"><span class="eyebrow">CTR sản phẩm</span><div class="v num">2,91%</div><div class="l">11.564 click</div></div>
+        <div class="tile good"><span class="eyebrow">Đơn SKU</span><div class="v num">533</div><div class="l">409 khách TB/ngày</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Chi tiết theo Campaign — LIVE tới hôm nay</h2>
+        <p>4 campaign video đang chạy (ENABLE), kỳ 1/8-22/09/2026. Nguồn: TikTok Business API.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Campaign</th><th>Chi phí</th><th>Đơn hàng</th><th>Doanh thu</th><th>ROI</th></tr></thead>
+          <tbody id="camp-current-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Tháng 9 tính đến hôm nay (MTD) — theo campaign</h2>
+        <p id="sept-mtd-caption">—</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Campaign</th><th>Chi phí</th><th>Đơn hàng</th><th>Doanh thu</th><th>ROI</th></tr></thead>
+          <tbody id="sept-mtd-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Toàn cửa hàng theo kỳ đã chọn (GMV Max, tất cả SKU)</h2>
+        <p id="filter-caption">Dùng chung ô "Xem theo kỳ" ở góc trên bên phải — đổi ngày ở đó, số dưới đây tự cập nhật. Dữ liệu thật theo từng ngày, nguồn TikTok Business API + Quảng cáo tháng 8.2026, toàn cửa hàng.</p>
+      </div>
+      <div class="kpis" id="filter-kpis"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Đối chiếu theo SKU — toàn tháng 8/2026</h2>
+        <p>Cấp campaign GMV Max, không tách theo từng video. Nguồn: Chi tiết camps tháng 8.2026.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>SKU / Campaign</th><th>Chi phí</th><th>Đơn hàng</th><th>Doanh thu</th><th>ROI</th></tr></thead>
+          <tbody id="sku-camp-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="stale-note" style="background:var(--good-soft);border-color:var(--good)">
+      <span class="icon">🟢</span>
+      <span class="txt">Đã kết nối <b>TikTok Shop API</b> (endpoint <code class="num">shop_videos/performance</code>) — <b>17/18 content</b> giờ có dữ liệu views/GMV/đơn/CTR LIVE, cập nhật tới ngày 08/09/2026 (1 video quá mới chưa có dữ liệu). Riêng <b>Chi phí Tăng cường và Hook 2s</b> (mở đầu video) vẫn chỉ có cho 5/18 content, do API này không trả về trường chi phí quảng cáo — phần đó vẫn cần export thủ công (kỳ đang có: 10/8-23/8/2026, đã hơi cũ).</span>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <h2>Ads vs Tự nhiên — 1 đồng doanh thu của 5 video có dữ liệu chi phí đến từ đâu</h2>
+        <p>So GMV gắn với quảng cáo Tăng cường (kỳ 10/8-23/8, đã hơi cũ) với tổng GMV video LIVE (qua TikTok Shop API) để tách phần tự nhiên.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Content</th><th>GMV từ Ads</th><th>GMV tổng (LIVE)</th><th>GMV tự nhiên (ước tính)</th><th>Tỷ lệ Ads / Tự nhiên</th></tr></thead>
+          <tbody id="split-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="chart-grid">
+      <div class="chart-card">
+        <h3>So sánh Chi phí đã tiêu vs Doanh thu thu về</h3>
+        <span class="period">⚠️ Kỳ dữ liệu (hơi cũ, 5/18 content): Tăng cường 10/8 – 23/8/2026</span>
+        <div class="chart-legend">
+          <span><span class="dot" style="background:var(--grey)"></span>Chi phí đã tiêu (đ)</span>
+          <span><span class="dot" style="background:var(--good)"></span>Doanh thu GMV (đ)</span>
+        </div>
+        <div id="chart-cost-rev"></div>
+      </div>
+      <div class="chart-card">
+        <h3>So sánh Lượt xem vs CTR sản phẩm (%)</h3>
+        <span class="period">🟢 LIVE qua TikTok Shop API — 17/18 content, tới 08/09/2026</span>
+        <div class="chart-legend">
+          <span><span class="dot" style="background:var(--brand-2)"></span>Lượt xem</span>
+          <span><span class="dot" style="background:var(--teal)"></span>CTR sản phẩm (%)</span>
+        </div>
+        <div id="chart-hook-ctr"></div>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <h2>Bảng đối chiếu chi tiết content trong kỳ đã chọn</h2>
+        <p id="table-caption">—</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr>
+            <th>Content / Ngày air</th><th>Phân loại</th><th>Chi phí Tăng cường</th><th>SKU Order / GMV (LIVE)</th>
+            <th>Hook 2s</th><th>Giữ 6s/2s</th><th>Views / CTR (LIVE)</th><th>Nhãn TikTok</th><th>Đánh giá &amp; góp ý</th>
+          </tr></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- PAGE FB-1 -->
+  <div class="page" id="pf1">
+    <section class="verdict" style="padding:20px clamp(20px,3vw,32px)">
+      <span class="eyebrow">🎯 KẾ HOẠCH TEST &amp; SCALE — 30 ngày · 80.000.000đ</span>
+      <h2 style="font-size:19px">50 nội dung, 5 video lên 600k/ngày.</h2>
+      <div class="sub" style="font-size:13px">Mục tiêu scale đặt lại ở 600k/ngày cho mỗi video win — thang ngân sách và toàn bộ ngưỡng chỉ số xem chi tiết ở tab "Đối soát rule Facebook Ads". Kết quả thật đang chạy: xem tab "Hiệu quả từng creative".</div>
+      <div class="kpis" style="margin-top:10px">
+        <div class="tile"><span class="eyebrow">Nội dung cần test</span><div class="v num">50</div><div class="l">5 sóng × 10</div></div>
+        <div class="tile"><span class="eyebrow">Trần mỗi video win</span><div class="v num">600k</div><div class="l">mỗi ngày · đạt sau 11 ngày ramp</div></div>
+        <div class="tile"><span class="eyebrow">Ngân sách test</span><div class="v num">25,0tr</div><div class="l">31% tổng ngân sách</div></div>
+        <div class="tile good"><span class="eyebrow">Ngân sách scale</span><div class="v num">55,1tr</div><div class="l">5 winner · 7,4-14,6tr mỗi cái</div></div>
+        <div class="tile bad"><span class="eyebrow">Runrate</span><div class="v num">8,4%</div><div class="l">ngân sách đã dùng (6,72tr/80tr) · 33% ngày đã qua (10/30 ngày, launch 12/9)</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Kế hoạch sản xuất Facebook — lũy kế thực tế đến đâu</h2>
+        <p>Tuần tính theo lịch thật (Thứ 2 → Chủ nhật, tuần đầu/cuối tháng lấy phần lẻ ngày). Mục tiêu tuần suy ra từ ngày mỗi sóng lên sóng (12/9, 15/9, 18/9, 21/9, 24/9 — mỗi sóng 10 content); thực tế tuần đối chiếu trực tiếp với ngày air thật trong Lark Base.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Tuần</th><th>Mục tiêu tuần</th><th>Thực tế tuần</th><th>Lũy kế mục tiêu</th><th>Lũy kế thực tế</th><th>Chênh lệch lũy kế</th><th>Trạng thái</th></tr></thead>
+          <tbody>
+            <tr><td><b>Tuần 1</b> · 1-6/9</td><td class="num">0 <span style="color:var(--ink-dim);font-weight:400">(chưa launch)</span></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num" style="color:var(--good);font-weight:800">0</td><td><span class="wk-status good">✓ Đạt lũy kế</span></td></tr>
+            <tr><td><b>Tuần 2</b> · 7-13/9</td><td class="num">10 <span style="color:var(--ink-dim);font-weight:400">(Sóng 1, 12/9)</span></td><td class="num">4</td><td class="num">10</td><td class="num">4</td><td class="num" style="color:var(--bad);font-weight:800">-6</td><td><span class="wk-status warn">⚠️ Chậm lũy kế 6 content</span></td></tr>
+            <tr><td><b>Tuần 3</b> · 14-20/9</td><td class="num">20 <span style="color:var(--ink-dim);font-weight:400">(Sóng 2+3, 15&amp;18/9)</span></td><td class="num">9</td><td class="num">30</td><td class="num">13</td><td class="num" style="color:var(--bad);font-weight:800">-17</td><td><span class="wk-status warn">⚠️ Chậm lũy kế 17 content</span></td></tr>
+            <tr><td><b>Tuần 4</b> · 21-27/9</td><td class="num">20 <span style="color:var(--ink-dim);font-weight:400">(Sóng 4+5, 21&amp;24/9)</span></td><td class="num">2</td><td class="num">50</td><td class="num">15</td><td class="num" style="color:var(--bad);font-weight:800">-35</td><td><span class="wk-status warn">⚠️ Chậm lũy kế 35 content</span></td></tr>
+            <tr><td><b>Tuần 5</b> · 28-30/9</td><td class="num">0 <span style="color:var(--ink-dim);font-weight:400">(chỉ scale)</span></td><td class="num">—</td><td class="num">50</td><td class="num">—</td><td class="num">—</td><td><span class="wk-status pending">Chưa tới hạn</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub" style="font-size:12.5px;color:var(--ink-dim)">15 content Facebook thật đã air tính đến nay (Lark Base), khớp vào đúng tuần theo ngày air — không phải theo ngày lên ngân sách ads.</div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Chi tiết theo sóng — ngày bắt đầu &amp; chi phí nếu thắng sớm</h2>
+        <p>Bật 10 nội dung mỗi sóng, cách nhau 3 ngày. Test kết thúc ngày 15 — sóng cuối vẫn còn đủ 15 ngày để ramp 11 ngày rồi chạy 4 ngày ở trần 600k.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Sóng</th><th>Ngày bắt đầu test</th><th>Số nội dung</th><th>Ngày còn lại nếu thắng ở sóng này</th><th>Chi phí scale cho 1 winner</th></tr></thead>
+          <tbody>
+            <tr><td><b>Sóng 1</b></td><td class="num">Ngày 1</td><td class="num">10</td><td class="num">27 ngày</td><td class="num">14,62tr</td></tr>
+            <tr><td><b>Sóng 2</b></td><td class="num">Ngày 4</td><td class="num">10</td><td class="num">24 ngày</td><td class="num">12,82tr</td></tr>
+            <tr><td><b>Sóng 3</b></td><td class="num">Ngày 7</td><td class="num">10</td><td class="num">21 ngày</td><td class="num">11,02tr</td></tr>
+            <tr><td><b>Sóng 4</b></td><td class="num">Ngày 10</td><td class="num">10</td><td class="num">18 ngày</td><td class="num">9,22tr</td></tr>
+            <tr><td><b>Sóng 5</b></td><td class="num">Ngày 13</td><td class="num">10</td><td class="num">15 ngày</td><td class="num">7,42tr</td></tr>
+            <tr style="background:var(--paper)"><td colspan="4"><b>Tổng ngân sách scale cho 5 winner</b></td><td class="num" style="font-weight:800">55,10tr</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub" style="font-size:13px;color:var(--ink-dim)">Cột "Chi phí scale" là chi phí cho 1 winner NẾU tìm thấy ngay ở sóng đó và chạy hết các ngày còn lại ở trần 600k/ngày.</div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Ngân sách theo tuần — 31% test, 69% chảy vào winner</h2>
+        <p>Kế hoạch cho trọn chu kỳ test 30 ngày (12/9–11/10) — Tuần 3-4 kéo sang tháng 10 nên bảng này <b>không giới hạn trong tháng 9</b>, khác với bảng lũy kế sản xuất ở trên. Test dồn vào 15 ngày đầu, sau đó toàn bộ tiền chảy vào winner.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Tuần</th><th>Ngày</th><th>Cấu phần</th><th>Tổng chi kế hoạch</th></tr></thead>
+          <tbody>
+            <tr><td><b>Tuần 1</b></td><td class="num">1-7</td><td>Test 12,2tr</td><td class="num" style="font-weight:800">13,7tr</td></tr>
+            <tr><td><b>Tuần 2</b></td><td class="num">8-14</td><td>Test 11,4tr · Scale 8,9tr</td><td class="num" style="font-weight:800">20,3tr</td></tr>
+            <tr><td><b>Tuần 3</b></td><td class="num">15-21</td><td>Scale 17,8tr</td><td class="num" style="font-weight:800">19,2tr</td></tr>
+            <tr><td><b>Tuần 4</b></td><td class="num">22-30</td><td>Scale 26,9tr — 5 winner ở trần 600k</td><td class="num" style="font-weight:800">26,9tr</td></tr>
+            <tr style="background:var(--paper)"><td colspan="3"><b>Tổng</b> — Test 25,0tr (31%) · Scale 55,1tr (69%)</td><td class="num" style="font-weight:800">80,1tr</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="stale-note" style="background:var(--warn-soft);border-color:var(--warn)">
+      <span class="icon">⚠️</span>
+      <span class="txt">1 content mới (22/9, "Giải pháp nhắm trúng đích") đã có trong Lark nhưng <b>chưa thấy ad set tương ứng trên tracker vận hành</b> — có thể đang chờ lên ngân sách.</span>
+    </div>
+  </div>
+
+  <!-- PAGE FB-2 -->
+  <div class="page" id="pf2">
+    <div class="callout">
+      <span class="icon">Quy tắc lõi</span>
+      <span class="txt">Ngân sách tăng đúng <b>+30% mỗi 48 giờ</b>, dừng ở <b>600k/ngày</b>. Bước 30% giữ ad set không rơi lại learning phase; nhịp 48h đủ để CPA rolling 3 ngày phản ánh đúng mức chi mới trước lần tăng kế tiếp.</span>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <h2>1. Thang tăng ngân sách: 200k → 600k trong 11 ngày</h2>
+        <p>Tính theo ngày tuổi của chính nội dung đó — không phải theo ngày lịch.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Ngày</th><th>Tầng</th><th>Ngân sách/ngày</th><th>Bước nhảy</th><th>Điều kiện lên bậc</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1-3</td><td><b>L1 Test</b></td><td class="num">200k</td><td class="num">—</td><td>Bật cùng cả sóng</td></tr>
+            <tr><td class="num">4-5</td><td><b>L2 Xác nhận</b></td><td class="num">260k</td><td class="num">+30%</td><td>Qua chốt 2</td></tr>
+            <tr><td class="num">6-7</td><td><b>L3a</b></td><td class="num">340k</td><td class="num">+30%</td><td>Qua chốt 3</td></tr>
+            <tr><td class="num">8-9</td><td><b>L3b</b></td><td class="num">440k</td><td class="num">+30%</td><td>CPA 3 ngày ≤ 1,1 × CPA mục tiêu</td></tr>
+            <tr><td class="num">10-11</td><td><b>L3c</b></td><td class="num">570k</td><td class="num">+30%</td><td>—</td></tr>
+            <tr style="background:var(--brand-soft)"><td class="num">12+</td><td><b>L3 Trần</b></td><td class="num" style="font-weight:800">600k</td><td>chốt trần</td><td>Giữ nguyên. Muốn thêm tiền → scale ngang (nhân bản, tối đa 2 bản)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout" style="background:var(--brand-soft);border-color:var(--brand-2)">
+        <span class="icon" style="background:var(--brand-2)">Vì sao 600k</span>
+        <span class="txt">Ở trạng thái ổn định, 5 winner × 600k = 3,0tr/ngày — đúng mức chi để tiêu hết 80tr/tháng. Đẩy 1 ad set vượt 600k trên tệp Việt Nam thường làm frequency leo nhanh và CPA trượt theo, nên tiền thứ 601k nên đi vào 1 bản sao mới chứ không phải ad set cũ.</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>2. CPA mục tiêu và điểm hoà vốn theo SKU</h2>
+        <p>Mọi rule bên dưới viết theo bội số của CPA mục tiêu (CPA<sub>mt</sub>), nên phải chốt số này trước. CPA<sub>mt</sub> = 25% × AOV — ngưỡng để quyết định scale. CPA<sub>hv</sub> (hoà vốn) = AOV − COGS − phí ship − phí vận hành — ngưỡng để biết còn lãi hay không; vượt nó là lỗ trên từng đơn.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>SKU</th><th>AOV</th><th>COGS</th><th>CPA hoà vốn</th><th>CPA mục tiêu</th><th>Biên còn lại</th><th>Số nội dung</th></tr></thead>
+          <tbody>
+            <tr><td><b>SP04455</b> Combo 7in1+SRM</td><td class="num">829k</td><td class="num">179k</td><td class="num">583k</td><td class="num" style="font-weight:800">207k</td><td class="num">376k</td><td class="num">13</td></tr>
+            <tr><td><b>SP03619</b> SRM Tràm trà</td><td class="num">287k</td><td class="num">56k</td><td class="num">192k</td><td class="num" style="font-weight:800">72k</td><td class="num">120k</td><td class="num">17</td></tr>
+            <tr><td><b>SP06071</b> Serum 7in1</td><td class="num">594k</td><td class="num">124k</td><td class="num">415k</td><td class="num" style="font-weight:800">148k</td><td class="num">267k</td><td class="num">12</td></tr>
+            <tr><td><b>SP04301</b> SRM Than hoạt tính</td><td class="num">190k</td><td class="num">59k</td><td class="num">96k</td><td class="num" style="font-weight:800">48k</td><td class="num">48k</td><td class="num">7</td></tr>
+            <tr><td>— SKU thăm dò</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td>theo SKU</td><td class="num">—</td><td class="num">1</td></tr>
+            <tr style="background:var(--paper)"><td colspan="6"><b>Tổng nội dung</b></td><td class="num" style="font-weight:800">50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout" style="background:var(--warn-soft);border-color:var(--warn)">
+        <span class="icon">Dư địa</span>
+        <span class="txt">CPA hoà vốn đang cao hơn CPA mục tiêu 2-2,8 lần ở 3 SKU đầu — ngưỡng tắt 1,4× CPA<sub>mt</sub> vẫn còn cách điểm lỗ rất xa, có thể chấp nhận CPA cao hơn khi scale mà vẫn lãi. Vẫn giữ ngưỡng chặt trong tháng đầu vì đây là bước nhảy 3,8× so với T7 — nếu tuần 2 thiếu winner thì đây là chỗ nới đầu tiên. <b>Điều kiện:</b> COGS đang ở trạng thái CẦN KIỂM TRA, độ khớp 0,33-0,56 — xác nhận lại trước khi dùng để ra quyết định tiền.</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>3. Bốn chốt chặn — dùng chỉ số nào ở đâu</h2>
+        <p>Chỉ số kém ở mỗi tầng phễu chỉ ra một loại lỗi khác nhau. Bốn chốt này để đội content và đội vận hành khỏi đổ lỗi cho nhau.</p>
+      </div>
+
+      <div class="math-card">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+          <div><span class="badge bad">CHỐT 1 · 24H</span> <b style="margin-left:8px;font-size:15.5px">Cắt lỗ sớm</b></div>
+          <span class="sub" style="font-size:12.5px;color:var(--ink-dim)">đã tiêu ~200k · 100% trên trình</span>
+        </div>
+        <div class="sub" style="font-size:13.5px">Tắt ngay nếu thoả <b>bất kỳ</b> điều kiện nào — chưa đủ đơn để đọc CPA nên chỉ dùng phễu trên.</div>
+        <div class="dtable-wrap">
+          <table class="dtable">
+            <tbody>
+              <tr><td><span class="badge bad">TẮT</span></td><td>Hook rate &lt; 15%</td></tr>
+              <tr><td><span class="badge bad">TẮT</span></td><td>CTR outbound &lt; 0,4%</td></tr>
+              <tr><td><span class="badge bad">TẮT</span></td><td>CPM &gt; 2 × CPM trung bình tài khoản</td></tr>
+              <tr><td><span class="badge bad">TẮT</span></td><td>Chi phí/ATC &gt; 0,6 × CPA mục tiêu và chưa có đơn</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="math-card">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+          <div><span class="badge grey">CHỐT 2 · 72H</span> <b style="margin-left:8px;font-size:15.5px">Quyết định số phận</b></div>
+          <span class="sub" style="font-size:12.5px;color:var(--ink-dim)">đã tiêu 600k</span>
+        </div>
+        <div class="dtable-wrap">
+          <table class="dtable">
+            <thead><tr><th>Kết quả</th><th>Điều kiện</th><th>Hành động</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge good">LÊN L2</span></td><td>CPA ≤ 1,2 × CPA<sub>mt</sub> và ≥ 2 đơn</td><td>Lên 260k/ngày</td></tr>
+              <tr><td><span class="badge grey">GIA HẠN</span></td><td>&lt; 2 đơn nhưng hook ≥ 30% và CTR out ≥ 1,2% và CP/ATC ≤ 0,3 × CPA<sub>mt</sub></td><td>Chạy tiếp 2 ngày @300k rồi xét lại</td></tr>
+              <tr><td><span class="badge grey">ITERATE</span></td><td>Phễu trên tốt nhưng CP/ATC &gt; 0,4 × CPA<sub>mt</sub></td><td>Lỗi ở offer/LP, không phải content. Giữ angle, đổi CTA + LP</td></tr>
+              <tr><td><span class="badge bad">KILL</span></td><td>Còn lại</td><td>Tắt, ghi lý do</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sub" style="font-size:12px">Trên trình: hook · CTR · CP/ATC — Ngoài trình: số đơn (nếu bán qua inbox, thay "đơn" bằng inbox và dùng tỉ lệ chốt trung bình để quy đổi).</div>
+      </div>
+
+      <div class="math-card">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+          <div><span class="badge grey">CHỐT 3 · NGÀY 4-7</span> <b style="margin-left:8px;font-size:15.5px">Xác nhận trước khi cam kết tiền lớn</b></div>
+          <span class="sub" style="font-size:12.5px;color:var(--ink-dim)">260k→340k · tích luỹ 1,8tr</span>
+        </div>
+        <div class="sub" style="font-size:13.5px">600k quá ít để khẳng định 1 nội dung tốt — nó chỉ đủ loại nội dung tệ. Tầng này mua thêm mẫu trước khi bước vào vùng 440k+/ngày.</div>
+        <div class="dtable-wrap">
+          <table class="dtable">
+            <tbody>
+              <tr><td><span class="badge good">LÊN L3</span></td><td>CPA điều chỉnh tích luỹ ≤ 1,1 × CPA<sub>mt</sub></td></tr>
+              <tr><td><span class="badge grey">GIỮ</span></td><td>1,1 - 1,3 × CPA<sub>mt</sub> → chạy thêm 2 ngày, không tăng tiền</td></tr>
+              <tr><td><span class="badge bad">TẮT</span></td><td>&gt; 1,3 × CPA<sub>mt</sub></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sub" style="font-size:12px"><b>Bắt buộc số ngoài:</b> từ đây dùng CPA điều chỉnh (chia hệ số K), không dùng CPA thô của Ads Manager.</div>
+      </div>
+
+      <div class="math-card">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+          <div><span class="badge grey">CHỐT 4 · MỖI 48H</span> <b style="margin-left:8px;font-size:15.5px">Rule tăng/giảm tới trần 600k</b></div>
+          <span class="sub" style="font-size:12.5px;color:var(--ink-dim)">đọc CPA rolling 3 ngày</span>
+        </div>
+        <div class="dtable-wrap">
+          <table class="dtable">
+            <tbody>
+              <tr><td><span class="badge good">+30%</span></td><td>CPA 3 ngày ≤ 1,1 × CPA<sub>mt</sub> — tăng cho tới khi chạm 600k</td></tr>
+              <tr><td><span class="badge grey">GIỮ</span></td><td>1,1 - 1,25 × CPA<sub>mt</sub></td></tr>
+              <tr><td><span class="badge bad">-30%</span></td><td>1,25 - 1,4 × CPA<sub>mt</sub> trong 2 ngày liên tiếp</td></tr>
+              <tr><td><span class="badge bad">TẮT</span></td><td>&gt; 1,4 × CPA<sub>mt</sub> trong 3 ngày → chuyển sang Iterate</td></tr>
+              <tr style="background:var(--brand-soft)"><td><span class="badge grey">TRẦN</span></td><td>Chạm 600k → dừng tăng. Thêm tiền bằng cách nhân bản, tối đa 2 bản sao cho cùng 1 nội dung</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sub" style="font-size:12px"><b>Bắt buộc số ngoài:</b> CPA sau huỷ/hoàn — <b>Trên trình:</b> Frequency 7 ngày để phát hiện bão hoà.</div>
+      </div>
+
+      <div class="callout" style="background:var(--warn-soft);border-color:var(--warn)">
+        <span class="icon">Bão hoà</span>
+        <span class="txt">Frequency 7 ngày &gt; 3,0 kèm CPA tăng &gt; 20% so với tuần trước = đã cạn tệp. Đây <b>không phải</b> lý do tắt — giữ angle, làm mới 3-5 giây đầu và thumbnail, bật lại như một biến thể mới ở bậc L3a (340k).</span>
+      </div>
+      <div class="sub" style="font-size:13.5px"><b>Định nghĩa "video win"</b> — đủ điều kiện lên trần 600k: giữ CPA điều chỉnh ≤ 1,1 × CPA<sub>mt</sub> trong 5 ngày liên tiếp ở mức chi ≥ 440k/ngày.</div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>4. Đọc chỉ số để biết sửa cái gì</h2>
+        <p>Chẩn đoán theo tầng phễu — mỗi triệu chứng chỉ ra một nguyên nhân và nơi cần sửa khác nhau.</p>
+      </div>
+      <div class="dtable-wrap">
+        <table class="dtable">
+          <thead><tr><th>Triệu chứng</th><th>Nguyên nhân</th><th>Sửa ở đâu</th></tr></thead>
+          <tbody>
+            <tr><td>CPM &gt; 1,5× trung bình</td><td>Nội dung bị hệ thống chấm điểm thấp, hoặc tệp quá hẹp</td><td>Đổi creative · mở rộng tệp</td></tr>
+            <tr><td>Hook &lt; 20%</td><td>3 giây đầu không giữ được người xem</td><td>Đổi 3s đầu + thumbnail. Giữ nguyên thân bài</td></tr>
+            <tr><td>Hook ≥ 30% nhưng Hold &lt; 8%</td><td>Mở đầu giật tít, thân bài không giữ được</td><td>Rút ngắn, đưa lợi ích lên trước giây thứ 8</td></tr>
+            <tr><td>Hold ≥ 10% nhưng CTR out &lt; 0,8%</td><td>Xem xong nhưng không có lý do để click</td><td>Thêm CTA rõ · thêm ưu đãi có thời hạn</td></tr>
+            <tr><td>CTR ≥ 1,5% nhưng ATC/LPV &lt; 5%</td><td>Landing page hoặc giá lệch với kỳ vọng video tạo ra</td><td>Đồng bộ thông điệp video ↔ LP · rà lại giá hiển thị</td></tr>
+            <tr><td>ATC/LPV ≥ 8% nhưng ít đơn</td><td>Rớt ở checkout</td><td>Phí ship · phương thức thanh toán · số bước điền form</td></tr>
+            <tr><td>Trên trình đẹp, số thật xấu (K &lt; 0,7)</td><td>Pixel đếm trùng, hoặc đơn huỷ vẫn được tính là Purchase</td><td>Kiểm tra sự kiện trùng · lọc đơn huỷ trước khi tính K</td></tr>
+            <tr><td>Nhiều inbox nhưng tỉ lệ chốt &lt; 15%</td><td>Nội dung hút sai tệp, hoặc kịch bản sale không khớp thông điệp video</td><td>Siết targeting trong nội dung · đưa kịch bản chốt về đúng lời hứa của video</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>5. Hệ số quy đổi K &amp; vận hành</h2>
+        <p>Pixel gần như luôn lệch với đơn thật (trùng lặp, bot, đơn huỷ, mất tín hiệu iOS). Đo độ lệch 1 lần mỗi tuần rồi hiệu chỉnh, thay vì bỏ số trên trình.</p>
+      </div>
+      <div class="math-card">
+        <div class="sub" style="font-family:'Be Vietnam Pro';font-size:14px;font-weight:700;color:var(--ink)">K = Đơn thật (hệ thống) ÷ Purchases (Ads Manager) &nbsp;·&nbsp; CPA điều chỉnh = CPA trên trình ÷ K</div>
+        <ul style="margin:0;padding-left:18px;color:var(--ink-dim);font-size:13.5px;line-height:1.8">
+          <li>Tính K ở <b>cấp tài khoản theo tuần</b>, không tính ở cấp ad — mẫu cấp ad quá nhỏ, K sẽ nhiễu hơn cả chỉ số nó định sửa.</li>
+          <li>K &lt; 1 nghĩa là pixel đang <b>thổi phồng</b> kết quả (đếm trùng, đơn huỷ vẫn tính). K &gt; 1 nghĩa là pixel <b>báo thiếu</b> (mất tín hiệu, khách chốt qua inbox sau khi click).</li>
+          <li>K dao động quá 30% giữa hai tuần liên tiếp là dấu hiệu tracking hỏng, không phải hiệu suất đổi — dừng dùng CPA trên trình cho tới khi sửa xong.</li>
+        </ul>
+      </div>
+      <div class="callout" style="background:var(--brand-soft);border-color:var(--brand-2)">
+        <span class="icon" style="background:var(--brand-2)">Lệch pha</span>
+        <span class="txt">Ads Manager ghi nhận đơn về <b>ngày click</b>, hệ thống đơn hàng ghi về <b>ngày đặt</b>. Với cửa sổ 7 ngày click, một đơn đặt ngày 10 có thể được Meta ghi về ngày 4. Vì vậy: <b>đối chiếu theo tuần, không đối chiếu theo ngày</b>, và đừng cố làm hai con số bằng nhau — mục đích là ra được hệ số K ổn định, không phải khớp sổ.</span>
+      </div>
+      <ul style="margin:0;padding-left:18px;color:var(--ink-dim);font-size:13.5px;line-height:1.9">
+        <li><b>ABO ở tầng test, không dùng CBO.</b> CBO dồn tiền về ad set thắng sớm nên nội dung yếu không bao giờ đủ dữ liệu để được đánh giá công bằng.</li>
+        <li><b>1 ad set = 1 nội dung</b>, cùng tệp broad, cùng placement, cùng giờ bật cho cả sóng.</li>
+        <li><b>Không sửa ad trong 72h test</b> — mọi chỉnh sửa reset learning phase.</li>
+        <li><b>Cố định attribution 7 ngày click / 1 ngày view</b> suốt tháng.</li>
+        <li><b>Chốt số 1 lần/ngày cùng khung giờ.</b> Số Meta còn dao động 24-48h, nên chỉ CPA rolling 3 ngày mới dùng để quyết định.</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- PAGE FB-3 -->
+  <div class="page" id="pf3">
+    <section class="verdict" style="padding:20px clamp(20px,3vw,32px)">
+      <span class="eyebrow">🟢 LIVE qua tracker vận hành (ecom-theo-doi-tk5.pages.dev) + Lark Base</span>
+      <h2 style="font-size:19px">6,72tr đ chi tiêu → 9,41tr đ doanh thu (ROAS 1,40) — kỳ 12/9–22/9/2026</h2>
+      <div class="sub" style="font-size:13px">14 ad set đã lên sóng, 62 inbox, 17 đơn xác nhận — 2 đang chờ lên tầng scale (Anh1→350k, Lột xác diện mạo→260k), 4 đã tắt, 4 mới bật ngày 1 (18-21/9) chưa đủ dữ liệu. Ngưỡng cắt/scale trên tracker này (CP/inbox &gt;35k cắt, ROAS≥3 hoặc CPA&lt;200k để scale, Hold rate≥4%) khác với thang 200k→600k ở tab "Đối soát rule" — cần xác nhận bộ ngưỡng nào đang chính thức áp dụng.</div>
+      <div class="kpis" style="margin-top:10px">
+        <div class="tile"><span class="eyebrow">Ad set đang chạy</span><div class="v num">10</div><div class="l">2 chờ scale · 4 mới ngày 1 · còn lại chờ tắt/iterate</div></div>
+        <div class="tile bad"><span class="eyebrow">Đã tắt</span><div class="v num">4</div><div class="l">CP/inbox &gt;35k, 0 đơn xác nhận</div></div>
+        <div class="tile good"><span class="eyebrow">Top performer</span><div class="v num" style="font-size:20px">Lột xác diện mạo</div><div class="l">ROAS 3,71 · 3 đơn · 567,7k đ chi</div></div>
+        <div class="tile"><span class="eyebrow">Content chưa có ads</span><div class="v num">1</div><div class="l">22/9 "Giải pháp nhắm trúng đích" — có trong Lark, chưa thấy trên tracker</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Hiệu quả từng content — xếp theo ROAS/tín hiệu cao xuống thấp</h2>
+        <p>Số liệu là tổng lũy kế mới nhất từng ad set (tính đến 22/9). "Ngày air" là ngày đăng content thật (Lark); "chạy ads từ" là ngày ad set thật sự lên ngân sách — hai mốc này thường lệch nhau 1-3 ngày. <b>Không có CPM/Impressions</b> — tracker này không đo, cần nối Meta Marketing API hoặc export Ads Manager mới có.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">1</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-serum">Serum 7in1</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1BeZTVLsQf/" target="_blank" rel="noopener">Chỉ 5k/ngày mà da sáng láng mịn như zai Hàn ↗</a></div>
+                <div class="diagnosis warn">🟡 Tín hiệu tốt nhưng mẫu quá nhỏ để tin</div>
+                <div class="analysis-meta">Air 17/9 · Chạy ads từ 18/9 · <b>Ngày 4</b> · Insight: "Muốn da đẹp hơn nhưng sợ chọn sai, tốn kém và không đáng tiền"</div>
+              </div>
+            </div>
+            <span class="status-pill potential">Nhãn cũ TẮT — đã stale, xem lại</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">155.891đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">2</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">77.946đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">1</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Doanh thu</span><div class="v">588.000đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">ROAS</span><div class="v">3,77</div></div>
+          </div>
+          <div class="analysis-note">ROAS cao nhất nhóm, nhưng mẫu còn rất nhỏ (2 inbox, 1 đơn) — <b>chưa đủ tin cậy để kết luận</b>. Nhãn "TẮT" của tracker đang <b>stale</b>: nhật ký 21/9 ghi lý do "CP/inbox &gt;35k <u>và 0 đơn</u>" — điều kiện "0 đơn" đã không còn đúng từ khi đơn này về, cả rule của tracker (ROAS≥3 để scale) lẫn rule ở tab "Đối soát rule" (Chốt 1 chỉ TẮT khi chưa có đơn) đều không còn khớp với TẮT nữa.</div>
+          <div class="analysis-action">🟡 Action: <span style="font-weight:400">CHƯA TẮT theo nhãn cũ — theo dõi thêm 2-3 ngày để tracker re-run hoặc tự xác nhận tay, vì dữ liệu đã đổi sau lúc chốt.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">2</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1H36x1GnJz/" target="_blank" rel="noopener">Lột xác diện mạo, nâng cấp chính mình ↗</a></div>
+                <div class="diagnosis good">🟢 Đạt chuẩn nhân rộng — hook giữ chân tốt + chốt đơn tốt</div>
+                <div class="analysis-meta">Air 15/9 · Chạy ads từ 16/9 · <b>Ngày 6</b> · Insight: "Tôi có thể chấp nhận mình trông thế nào lúc làm việc, nhưng không muốn vẻ ngoài đó đi theo mình và bị người ngoài đánh giá"</div>
+              </div>
+            </div>
+            <span class="status-pill won">Lên L2 → 260k (chờ)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">567.715đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">94.619đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Hold</span><div class="v">4,33%</div></div>
+            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">3</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Doanh thu</span><div class="v">2.104.000đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">ROAS</span><div class="v">3,71</div></div>
+          </div>
+          <div class="analysis-note">Hold rate cao (4,33% — trên ngưỡng chuẩn 4%) <b>+</b> 3 đơn xác nhận <b>+</b> ROAS vượt ngưỡng scale (3,0) — hook giữ chân tốt <b>và</b> sản phẩm/offer đủ thuyết phục để mua. Combo hiếm, đạt cả 2 đầu phễu.</div>
+          <div class="analysis-action">🟢 Action: <span style="font-weight:400">NÊN NHÂN RỘNG — lên 260k như tracker đề xuất, đồng thời tạo thêm biến thể cùng angle "KCN/Zai tỉnh" + insight "sợ bị đánh giá ngoại hình".</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">3</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1Bb7setLce/" target="_blank" rel="noopener">Sạch dầu - giảm mụn chuẩn men! ↗</a></div>
+                <div class="diagnosis warn">🟡 Hiệu suất giảm dần khi tăng ngân sách</div>
+                <div class="analysis-meta">Air 11/9 · Chạy ads từ 13/9 · <b>Ngày 9</b> · Angle: "KCN/Zai tỉnh" (content cũ, chưa gắn Insight trong Lark)</div>
+              </div>
+            </div>
+            <span class="status-pill won">+35% → 350k (chờ)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">1.479.680đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">13</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">113.822đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Đơn</span><div class="v">8</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Doanh thu</span><div class="v">4.196.000đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">ROAS</span><div class="v">2,84</div></div>
+          </div>
+          <div class="analysis-note">Nhiều đơn nhất trong toàn bộ 15 content (8 đơn) — nhưng ROAS đang giảm dần khi ngân sách tăng (260k→gần 350k): dấu hiệu <b>hiệu suất biên giảm</b> (diminishing returns) khi scale, CP/đơn nhích lên dù vẫn dưới ngưỡng 200k.</div>
+          <div class="analysis-action">🟡 Action: <span style="font-weight:400">TĂNG THẬN TRỌNG — lên 350k theo đề xuất nhưng theo dõi sát ROAS 2-3 ngày tới, nếu tụt dưới 2,5 thì dừng tăng thêm.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">4</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/185GLhaKuz/" target="_blank" rel="noopener">Ngày cống hiến cho tư bản ↗</a></div>
+                <div class="diagnosis warn">🟡 Nghẽn ở khâu chốt đơn — thu hút tốt, chuyển đổi chưa tới</div>
+                <div class="analysis-meta">Air 14/9 · Chạy ads từ 15/9 · <b>Ngày 7</b> · Angle: "KCN/Zai tỉnh" (content cũ, chưa gắn Insight trong Lark)</div>
+              </div>
+            </div>
+            <span class="status-pill potential">Iterate: tắt &amp; làm lại (chờ)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">752.753đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">9</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">83.639đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">3,73%</div></div>
+            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">3</div></div>
+            <div class="tile-sm"><span class="eyebrow">Doanh thu</span><div class="v">1.563.000đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">ROAS</span><div class="v">2,08</div></div>
+          </div>
+          <div class="analysis-note">Inbox nhiều (9) và hold ổn (3,73%) — phễu trên hoạt động tốt — nhưng ROAS chưa đạt ngưỡng scale (3,0) sau 7 ngày và chi đã khá cao (752k). Rớt ở bước chốt đơn, không phải ở hook.</div>
+          <div class="analysis-action">🟡 Action: <span style="font-weight:400">ITERATE theo đề xuất — giữ nguyên hook/angle (đã chứng minh hút), đổi CTA/ưu đãi hoặc landing để cải thiện chuyển đổi thay vì đổi hẳn content.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">5</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1DedKpVQBd/" target="_blank" rel="noopener">Dành cho những ae tốn xiền spa nặn mụn ↗</a></div>
+                <div class="diagnosis crit">🟠 Hút đúng người nhưng giá/offer chưa đủ thuyết phục</div>
+                <div class="analysis-meta">Air 10/9 · Chạy ads 12-15/9 (3 ngày) · Angle: "Zai phố/Da sau nặn mụn"</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Đã tắt (15/9)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">796.760đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">7</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">113.823đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">3,14%</div></div>
+            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">2</div></div>
+            <div class="tile-sm"><span class="eyebrow">Doanh thu</span><div class="v">957.000đ</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">1,20</div></div>
+          </div>
+          <div class="analysis-note">Thu hút inbox khá (7) nhưng ROAS rất thấp (1,20 — gần hoà vốn). Angle "tốn tiền spa" hút đúng người quan tâm nhưng giá/offer chưa đủ hấp dẫn so với kỳ vọng hook tạo ra.</div>
+          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý. Nếu tái dùng angle "tốn tiền spa" cần gắn ưu đãi/giá rõ ràng hơn ngay trong content, không chỉ gợi vấn đề.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">6</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1LFsjxVS59/" target="_blank" rel="noopener">Bảo hộ mặt tiền - triển liền 1 bước ↗</a></div>
+                <div class="diagnosis info">⚪ Chưa đủ dữ liệu — còn quá sớm để kết luận</div>
+                <div class="analysis-meta">Air 17/9 · Chạy ads từ 18/9 · <b>Ngày 4</b> · Insight: "Muốn da đẹp hơn nhưng nghĩ nghề này hết cứu rồi, ngại/lười chăm da"</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Tracker đề xuất TẮT</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">190.968đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">2</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">95.484đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
+          </div>
+          <div class="analysis-note">Mẫu còn nhỏ (2 inbox) ở ngày 4 — CP/inbox trung bình, chưa có tín hiệu xấu rõ ràng (không giống nhóm hold thấp hay CP/inbox rất cao).</div>
+          <div class="analysis-action">🟡 Action: <span style="font-weight:400">CHỜ THÊM — đủ điều kiện qua mốc ngày 5-7 mới nên quyết định, chưa vội tắt ở ngày 4.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">7</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/19Sb3qAXeH/" target="_blank" rel="noopener">Giải pháp nào cho tình trạng da bóng dầu ↗</a></div>
+                <div class="diagnosis crit">🟠 Nghẽn ở khâu chốt đơn — CTA/offer chưa đủ mạnh</div>
+                <div class="analysis-meta">Air 14/9 · Chạy ads 15-18/9 (3 ngày) · Angle: "KCN/Zai tỉnh" (content cũ, chưa gắn Insight trong Lark)</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Đã tắt (18/9)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">579.685đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">8</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">72.461đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">3,81%</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
+          </div>
+          <div class="analysis-note">Hold khá (3,81%) và inbox nhiều nhất trong nhóm 0-đơn (8) — content <b>giữ chân và tạo tương tác tốt</b>, nhưng không ai chốt đơn. Dấu hiệu kinh điển: hút đúng sự chú ý nhưng offer/giá không đủ thuyết phục để mua, khác hẳn lỗi hook.</div>
+          <div class="analysis-action">🟡 Action: <span style="font-weight:400">Đã tắt theo rule, nhưng NÊN thử lại angle này với CTA/ưu đãi mạnh hơn thay vì loại bỏ hoàn toàn — phần thu hút đã chứng minh hoạt động.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">8</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1GBMbBWCAD/" target="_blank" rel="noopener">Tiết kiệm 1 nửa tiền đi spa ↗</a></div>
+                <div class="diagnosis crit">🔴 Nghẽn nặng ở khâu chốt — giữ chân tốt nhất nhưng 0 đơn</div>
+                <div class="analysis-meta">Air 10/9 · Chạy ads 12-15/9 (3 ngày) · Angle: "Zai phố/Da sau nặn mụn"</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Đã tắt (15/9)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">782.791đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">4</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">CP/Inbox</span><div class="v">195.698đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Hold</span><div class="v">5,00%</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
+          </div>
+          <div class="analysis-note">Hold rate <b>cao nhất toàn bộ 15 content</b> (5,00%) nhưng KHÔNG có đơn nào — ví dụ rõ nhất cho "giữ chân tốt ≠ ra đơn". Người xem thích nội dung nhưng sản phẩm/giá/CTA có thể hoàn toàn lệch với kỳ vọng sau khi xem hết video.</div>
+          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt đúng (CP/inbox 195k rất cao) — nhưng đáng phân tích riêng vì hold cao nhất: có thể tệp xem hết video khác tệp hay mua hàng, cân nhắc CTA giữa video thay vì chỉ cuối video.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">9</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1CNjcVmuuQ/" target="_blank" rel="noopener">Muốn da đẹp nhưng lười/ngại dưỡng da? ↗</a></div>
+                <div class="diagnosis crit">🔴 Hook chưa đủ thu hút — rớt ngay từ 3 giây đầu</div>
+                <div class="analysis-meta">Air 15/9 · Chạy ads từ 16/9 · <b>Ngày 6</b> · Insight: "Muốn da đẹp hơn nhưng ngại/lười chăm da"</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Tracker đề xuất TẮT</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">510.526đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">3</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">CP/Inbox</span><div class="v">170.175đ</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">Hold</span><div class="v">2,75%</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
+          </div>
+          <div class="analysis-note">Hold <b>thấp nhất nhóm đang chạy</b> (2,75%, dưới ngưỡng cảnh báo) — ngược hẳn với các content trên: lỗi nằm ở chính hook/3 giây đầu, không giữ được người xem nên không có cơ hội ra đơn.</div>
+          <div class="analysis-action">🔴 Action: <span style="font-weight:400">NÊN TẮT theo đề xuất — nếu tái dùng angle "Lười/Ngại", phải đổi hẳn hook mở đầu, không chỉnh phần sau.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <span class="analysis-rank">10</span>
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1DbEjiNyKU/" target="_blank" rel="noopener">1 bước dành riêng cho da dầu mụn ↗</a></div>
+                <div class="diagnosis warn">🟠 Nghẽn nhẹ ở khâu chốt đơn</div>
+                <div class="analysis-meta">Air 12/9 · Chạy ads 13-16/9 (3 ngày) · Angle: "KCN/Zai tỉnh" (content cũ, chưa gắn Insight trong Lark)</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Đã tắt (16/9)</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">691.809đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">115.302đ</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
+          </div>
+          <div class="analysis-note">Inbox khá (6) nhưng không ra đơn, CP/inbox hơi cao — tương tự nhóm "hút chú ý nhưng chưa chốt được", nhẹ hơn trường hợp #7-8.</div>
+          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý, cả CP/inbox lẫn kết quả đều dưới kỳ vọng.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div class="section-head" style="margin:0">
+            <h3 style="font-size:15.5px">#11-14 · 4 content mới, đều "Ngày 1" (bật ads đồng loạt 21/9)</h3>
+          </div>
+          <div class="diagnosis info">⚪ Chưa đủ dữ liệu — mới bật ads</div>
+          <div class="dtable-wrap">
+            <table class="dtable">
+              <thead><tr><th>Content</th><th>Định dạng</th><th>Air</th><th>Chi tiêu</th><th>Inbox</th></tr></thead>
+              <tbody>
+                <tr><td><a href="https://www.facebook.com/share/p/1HAeunvtBQ/" target="_blank" rel="noopener">Shockk, giá ntn k mua thì bao h mua? ↗</a></td><td><span class="badge fmt-anh">🖼️ Ảnh</span></td><td class="num">18/9</td><td class="num">32.398đ</td><td class="num">0</td></tr>
+                <tr><td><a href="https://www.facebook.com/share/r/1dyZQPj4y1/" target="_blank" rel="noopener">20 suất ưu đãi cho ae Hải Phòng-Quảng Ninh ↗</a></td><td><span class="badge fmt-video">🎬 Video</span></td><td class="num">18/9</td><td class="num">38.071đ</td><td class="num">0</td></tr>
+                <tr><td><a href="https://www.facebook.com/share/r/1BvQwXgRuy/" target="_blank" rel="noopener">Sáng cống hiến, tối về rửa mặt sạch dầu ↗</a></td><td><span class="badge fmt-video">🎬 Video</span></td><td class="num">19/9</td><td class="num">51.190đ</td><td class="num">1</td></tr>
+                <tr><td><a href="https://www.facebook.com/share/r/17wwitjA49/" target="_blank" rel="noopener">Làm nghề công nhân nhưng giao diện công tử ↗</a></td><td><span class="badge fmt-video">🎬 Video</span></td><td class="num">21/9</td><td class="num">87.890đ</td><td class="num">0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="analysis-note">Mới chạy 1 ngày, chi tiêu còn thấp (32k-88k) — <b>chưa đủ dữ liệu</b> để đánh giá bất kỳ chỉ số nào, kể cả hold rate cũng chưa ổn định ở mẫu này.</div>
+          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Chờ đến chốt 24h (~200k chi tiêu) rồi mới xét theo đúng rule — không kết luận sớm.</span></div>
+        </div>
+
+        <div class="analysis-card" style="opacity:.8">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span class="analysis-rank" style="background:var(--grey)">15</span>
+            <div>
+              <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
+              <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1FJbN4trz2/" target="_blank" rel="noopener">Giải pháp nhắm trúng đích ↗</a></div>
+              <div class="diagnosis info">⚪ Chưa có dữ liệu quảng cáo</div>
+              <div class="analysis-meta">Air 22/9 (hôm nay) · <b>Chưa thấy ad set trên tracker</b> · Insight: "Muốn da đẹp hơn nhưng nghĩ nghề này hết cứu rồi, ngại/lười chăm da"</div>
+            </div>
+          </div>
+          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Kiểm tra Ads Manager xem đã tạo ad set chưa — có thể đang chờ duyệt hoặc lên lịch.</span></div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div><b>🟢 Kết nối live:</b> <span class="src">Lark Base API</span> ([30Shine] Ecom 2026 › Quản lý bài viết, 18 Tiktok + 15 Facebook content thật, cột "Kênh" tự phân loại) và <span class="src">tracker vận hành Facebook Ads</span> (ecom-theo-doi-tk5.pages.dev — chi tiêu/inbox/đơn/ROAS theo từng ad set, nhật ký điều chỉnh) — đọc trực tiếp, không cần export tay. TikTok Business/Shop API vẫn live như cũ.</div>
+    <div><b>Nguồn dữ liệu TikTok:</b> <span class="src">Lark Base</span> đối chiếu với <span class="src">export Quảng cáo Video Tăng cường</span> (Seller Center, theo từng SKU, kỳ 10/8-22~23/8), <span class="src">Video Performance / Quảng cáo tháng 8 cập nhật mới</span> (kỳ 1/8-2/9, toàn bộ GMV video) và <span class="src">Chi tiết camps tháng 8.2026</span> (kỳ 1-31/8, 4 campaign video). Mục tiêu tháng lấy từ kế hoạch P&amp;L thật do sếp cung cấp; phân bổ tuần là ước tính đều theo ngày.</div>
+    <div><b>Giới hạn hiện tại:</b> 13/18 content TikTok chưa có file export Tăng cường tương ứng (chi phí/Hook 2s) nên chưa thể chấm điểm rule đầy đủ. 1 content Facebook (22/9) đã có trong Lark nhưng chưa thấy ad set tương ứng trên tracker vận hành. 5 content TikTok (5-8/9) là nội dung hỗ trợ Sale đôi 9/9 — vẫn tính vào chỉ tiêu 30 content/tháng (tính từ 1/9) dù không thuộc diện test insight như 13 content trước.</div>
+    <div><b>Phạm vi dữ liệu Trang 1-3 (TikTok):</b> quản trị 100% clip video do 30Shine tự sản xuất — <b>toàn bộ số liệu (doanh thu, chi phí, đơn hàng, content) đều đã loại bỏ livestream và clip cắt từ live</b>, kể cả campaign "LIVE GMV Max 30Shine" trên Trang 3.</div>
+    <div><b>Lưu ý về "SKU Order":</b> theo định nghĩa chính thức của TikTok Shop, SKU Order đếm theo <b>số biến thể sản phẩm khác nhau trong giỏ hàng</b>, không phải số khách hàng thật — 1 khách mua 5 sản phẩm khác nhau trong 1 lần đặt hàng sẽ ghi nhận 5 SKU Order. Vì vậy con số "SKU Order" trong bảng có thể cao hơn số đơn hàng thật; API hiện tại (TikTok Shop Analytics) không trả về số đơn hàng thật tách riêng theo từng video.</div>
+  </footer>
+</main>
+
+<script>
+(function(){
+  const TODAY = new Date();
+  const DAY = 86400000;
+
+  function showPage(pageId){
+    document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+    document.querySelector(`.tab[data-page="${pageId}"]`).classList.add("active");
+    document.getElementById(pageId).classList.add("active");
+  }
+  document.querySelectorAll(".tab").forEach((btn)=>{
+    btn.addEventListener("click",()=>showPage(btn.dataset.page));
+  });
+  document.documentElement.dataset.channel = "facebook";
+  showPage("pf1");
+
+  const CHANNEL_FIRST_PAGE = {tiktok:"p1", facebook:"pf1"};
+  document.querySelectorAll(".chpill").forEach((pill)=>{
+    pill.addEventListener("click",()=>{
+      document.querySelectorAll(".chpill").forEach(p=>p.classList.remove("active"));
+      pill.classList.add("active");
+      const ch = pill.dataset.channel;
+      document.documentElement.dataset.channel = ch;
+      document.getElementById("tabs-tiktok").hidden = ch!=="tiktok";
+      document.getElementById("tabs-facebook").hidden = ch!=="facebook";
+      showPage(CHANNEL_FIRST_PAGE[ch]);
+    });
+  });
+
+  // Real per-video Tăng cường ad data (kỳ 10/8-22~23/8) — matched from Seller Center exports (id bài đăng / hook text)
+  const ADS = {
+    c01: {cost:4086, orders:0, revenue:0, impr:80, clicks:2, hook2s:0.2368, hook6s:0.0526, tiktok_label:"Kém hiệu quả"},
+    c02: {cost:35730, orders:1, revenue:299320, impr:33, clicks:0, hook2s:0.0, hook6s:0.0, tiktok_label:"Có hiệu quả"},
+    c03: {cost:21797, orders:0, revenue:0, impr:212, clicks:5, hook2s:0.1957, hook6s:0.0217, tiktok_label:"Có hiệu quả"},
+    c04: {cost:2572, orders:0, revenue:0, impr:114, clicks:0, hook2s:0.1471, hook6s:0.0196, tiktok_label:"Đang tính toán"},
+    c05: {cost:6062, orders:0, revenue:0, impr:124, clicks:0, hook2s:0.1111, hook6s:0.0085, tiktok_label:"Đang khám phá"},
+  };
+  // Tổng GMV video cả tháng 8 (ads + tự nhiên), kỳ 1/8-2/9 — nguồn "Quảng cáo tháng 8 cập nhật mới.xlsx"
+  const TOTAL_GMV_AUG = { c01:0, c02:299000, c03:0, c04:0, c05:0 };
+
+  // LIVE qua TikTok Shop API — /analytics/202509/shop_videos/performance, kỳ 1/8-08/09/2026, 17/18 video (c18 quá mới)
+  const CONTENT_LIVE = {
+    c01: {views:725, orders:0, gmv:0, ctr:0.0193, gpm:0},
+    c02: {views:708, orders:1, gmv:299000, ctr:0.0099, gpm:422316},
+    c03: {views:886, orders:0, gmv:0, ctr:0.0079, gpm:0},
+    c04: {views:548, orders:0, gmv:0, ctr:0.0018, gpm:0},
+    c05: {views:1056, orders:0, gmv:0, ctr:0.0133, gpm:0},
+    c06: {views:1349, orders:0, gmv:0, ctr:0.0082, gpm:0},
+    c07: {views:228, orders:0, gmv:0, ctr:0.0000, gpm:0},
+    c08: {views:2121, orders:1, gmv:294100, ctr:0.0061, gpm:138792},
+    c09: {views:247, orders:0, gmv:0, ctr:0.0040, gpm:0},
+    c10: {views:1920, orders:0, gmv:0, ctr:0.0099, gpm:0},
+    c11: {views:1198, orders:2, gmv:483050, ctr:0.0151, gpm:406608},
+    c12: {views:1266, orders:1, gmv:252678, ctr:0.0095, gpm:201177},
+    c13: {views:3098, orders:1, gmv:599000, ctr:0.0236, gpm:197169},
+    // 5 content mới — hỗ trợ Sale đôi 9/9 (không phải insight-test), thêm vào Lark Base 5-8/9
+    c14: {views:691, orders:0, gmv:0, ctr:0.0174, gpm:0},
+    c15: {views:1222, orders:5, gmv:459080, ctr:0.0115, gpm:0},
+    c16: {views:81, orders:0, gmv:0, ctr:0.0000, gpm:0},
+    c17: {views:160, orders:0, gmv:0, ctr:0.0000, gpm:0},
+    // c18 (8/9): quá mới, TikTok Shop API chưa có dữ liệu — cố ý không thêm vào đây
+  };
+
+  // Dữ liệu thật theo ngày, CHỈ 4 campaign VIDEO (Serum/Tràm trà/Than/Glanzen) — đã loại bỏ hoàn toàn
+  // campaign "LIVE GMV Max 30Shine" (livestream, không phải clip do 30Shine tự sản xuất).
+  // Nguồn: TikTok Business API, tổng hợp lại theo từng ngày, loại campaign_id 1833800630682705 (LIVE).
+  const DAILY_STORE = [
+    ["2026-08-01",530255,8,2965977],["2026-08-02",886759,20,7139017],["2026-08-03",825215,20,6444315],
+    ["2026-08-04",1441144,41,15164922],["2026-08-05",1148320,26,9237741],["2026-08-06",977728,20,6134267],
+    ["2026-08-07",1385345,23,9028944],["2026-08-08",1919882,37,11717519],["2026-08-09",1181952,20,6018513],
+    ["2026-08-10",1348966,20,7287115],["2026-08-11",989080,10,3967716],["2026-08-12",1230893,23,7663627],
+    ["2026-08-13",1456121,17,6785174],["2026-08-14",1641318,26,9298381],["2026-08-15",1276726,22,7483926],
+    ["2026-08-16",845806,18,5588311],["2026-08-17",789521,8,2868496],["2026-08-18",1111271,18,6598428],
+    ["2026-08-19",732152,10,3449645],["2026-08-20",984397,17,5226531],["2026-08-21",1076647,16,6219333],
+    ["2026-08-22",1043349,24,6075128],["2026-08-23",1035081,19,6337220],["2026-08-24",968770,17,4516750],
+    ["2026-08-25",1654423,20,7119062],["2026-08-26",1235088,11,6135368],["2026-08-27",874926,12,4409313],
+    ["2026-08-28",1357496,24,7398695],["2026-08-29",901484,11,3174566],["2026-08-30",1173928,16,5252037],
+    ["2026-08-31",1096277,15,5802994],
+    ["2026-09-01",1345632,21,6673793],["2026-09-02",1334203,18,7495502],["2026-09-03",1292057,19,6517341],
+    ["2026-09-04",1039863,16,5194422],["2026-09-05",1254406,22,7121796],["2026-09-06",950588,17,6437890],
+    ["2026-09-07",1167445,21,9712565],["2026-09-08",662495,7,2659100],
+    ["2026-09-09",1401849,26,9022351],["2026-09-10",1603568,29,9883953],["2026-09-11",994512,16,4635357],
+    ["2026-09-12",1465304,26,10458039],["2026-09-13",1061151,19,5841874],["2026-09-14",997822,12,4015378],
+    ["2026-09-15",488235,6,1677792],
+    ["2026-09-16",1020506,20,7456318],["2026-09-17",1421751,24,10298378],["2026-09-18",988042,15,4251416],
+    ["2026-09-19",859134,14,4187230],["2026-09-20",1097478,14,3126116],["2026-09-21",689888,11,3576627],
+    ["2026-09-22",354438,6,2162307],
+  ].map(([d,cost,orders,rev])=>({date:d,cost,orders,rev}));
+  const DATA_MIN_DATE = "2026-08-01", DATA_MAX_DATE = "2026-09-22";
+  const DEFAULT_FROM_DATE = "2026-09-01", DEFAULT_TO_DATE = "2026-09-22";
+  const CONTENT_TARGET_PER_WEEK = 7;
+
+  // Nguồn: TikTok Business API (GMV Max Report, /gmv_max/report/get/) — pull LIVE lúc dựng trang
+  // Chỉ 4 campaign VIDEO — đã loại "LIVE GMV Max 30Shine" (campaign livestream, không thuộc phạm vi file này)
+  const SKU_CAMPAIGNS_AUG = [
+    {name:"Serum 7-trong-1 (Ecom_Serum7in1_PGM)", cost:14419145, orders:116, rev:71081627, roi:4.93},
+    {name:"Tràm trà (Ecom - Tràm trà Dr.FORSKIN)", cost:9908641, orders:185, rev:60532621, roi:6.11},
+    {name:"Than hoạt tính (Ecom - Than hoạt tính Dr.FORSKIN)", cost:5540503, orders:187, rev:40230308, roi:7.26},
+    {name:"Sáp Glanzen (không thuộc Drforskin)", cost:5252031, orders:101, rev:30664527, roi:5.84},
+  ];
+  const CAMPAIGNS_CURRENT = [ // 1/8 - 22/09/2026, live tới hôm nay — chỉ campaign video
+    {name:"Serum 7-trong-1", cost:23352261, orders:195, rev:122346124, roi:5.24, status:"ENABLE"},
+    {name:"Tràm trà", cost:17205637, orders:294, rev:93378077, roi:5.43, status:"ENABLE"},
+    {name:"Than hoạt tính", cost:8741550, orders:298, rev:64481541, roi:7.38, status:"ENABLE"},
+    {name:"Sáp Glanzen", cost:9199867, orders:176, rev:52907799, roi:5.75, status:"ENABLE"},
+  ];
+  const SEPT_MTD = { // 01-22/09/2026, live — chỉ campaign video; ngày 22/9 là hôm nay, chưa hết ngày nên số còn tăng
+    cost:23034746, orders:368, rev:127567822, roi:5.54, days:22,
+    campaigns:[
+      {name:"Serum 7-trong-1", cost:8673572, orders:77, rev:49838496, roi:5.75},
+      {name:"Tràm trà", cost:7274327, orders:108, rev:32574456, roi:4.48},
+      {name:"Than hoạt tính", cost:3153450, orders:109, rev:23162600, roi:7.35},
+      {name:"Sáp Glanzen", cost:3933397, orders:74, rev:21992270, roi:5.59},
+    ]
+  };
+
+  const SEED = [
+    {id:"c01", ngay_air:"2026-08-13", san_pham:["Serum 7-trong-1"], concept:"Before-After, UGC Testimonial", hook:"Bỏ ra 5k/ ngày để có 1 làn da siêu thực, ae có thấy tiếc không?", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7673436338330275090"},
+    {id:"c02", ngay_air:"2026-08-14", san_pham:["Tràm trà"], concept:"Before-After, UGC Testimonial", hook:"Stress tuổi dậy thì quá...", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7673744670102441223"},
+    {id:"c03", ngay_air:"2026-08-17", san_pham:["Tràm trà","Than hoạt tính"], concept:"Nói chuyện trực diện", hook:"90% người mới skincare sẽ mắc sai lầm này", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7674940271745879304"},
+    {id:"c04", ngay_air:"2026-08-18", san_pham:["Tràm trà","Than hoạt tính"], concept:"Nói chuyện trực diện", hook:"2 sữa rửa mặt TUỔI DẬY THÌ nhất định phải có trong đời!!", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7675715227358481672"},
+    {id:"c05", ngay_air:"2026-08-21", san_pham:["Tràm trà"], concept:"Before-After, UGC Testimonial", hook:"1 phút rửa mặt mỗi ngày hay quanh năm da dầu mụn? Tôi chọn 1 phút rửa mặt", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7676388735419763986"},
+    {id:"c06", ngay_air:"2026-08-22", san_pham:["Tràm trà"], concept:"Before-After, UGC Testimonial", hook:"Da dầu mụn đang che giấu điều gì?", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7676893751582706962"},
+    {id:"c07", ngay_air:"2026-08-23", san_pham:["Than hoạt tính"], concept:"Before-After, UGC Testimonial", hook:"Bỏ ra 1k mỗi ngày để da sạch dầu, trắng sáng đều màu tin không?", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7677113458436918536"},
+    {id:"c08", ngay_air:"2026-08-27", san_pham:["Tràm trà"], concept:"UGC Testimonial", hook:"24H sau nặn mụn làm gì?", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7678635890717003015"},
+    {id:"c09", ngay_air:"2026-08-27", san_pham:["Tràm trà"], concept:"Feedback", hook:"SRM dành riêng cho da lấy nhân mụn", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7678648381937290514"},
+    {id:"c10", ngay_air:"2026-08-29", san_pham:["Tràm trà"], concept:"UGC Testimonial", hook:"Tốn cả triệu đi spa nặn mụn mà k biết giữ thì chỉ có mất tiền dài dài", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7678926048892947720"},
+    {id:"c11", ngay_air:"2026-08-29", san_pham:["Tràm trà"], concept:"Before-After, UGC Testimonial", hook:"Vừa đi spa nặn mụn về ae nên làm gì?", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7678993812835831058"},
+    {id:"c12", ngay_air:"2026-08-29", san_pham:["Tràm trà"], concept:"Before-After, UGC Testimonial", hook:"Sau khi đi lấy nhân mụn thì nên làm gì ae nhỉ?", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7679036775712443655"},
+    {id:"c13", ngay_air:"2026-08-31", san_pham:["Tràm trà"], concept:"UGC Testimonial", hook:"Da sáng mịn và bớt dầu mụn nhờ có 1 bước này thôi đấy", trang_thai:"Off tăng cường - chuyển GMV thường", link:"https://www.tiktok.com/@shop30shine/video/7679697712991833362"},
+    {id:"c14", ngay_air:"2026-09-05", san_pham:["Đa sản phẩm (Drforskin, Glanzen)"], concept:"Product-focused (Cận cảnh sản phẩm)", hook:"Coming soon 9/9", trang_thai:"GMV Max", link:"https://www.tiktok.com/@shop30shine/video/7681531707677265160"},
+    {id:"c15", ngay_air:"2026-09-05", san_pham:["Đa sản phẩm (Drforskin, Glanzen)"], concept:"Product-focused (Cận cảnh sản phẩm)", hook:"9/9 super sale is coming to town", trang_thai:"GMV Max", link:"https://www.tiktok.com/@shop30shine/video/7681905873614081288"},
+    {id:"c16", ngay_air:"2026-09-06", san_pham:["Đa sản phẩm (Drforskin, Glanzen)"], concept:"Product-focused (Cận cảnh sản phẩm)", hook:"100% có quà", trang_thai:"GMV Max", link:"https://www.tiktok.com/@shop30shine/video/7682293794540145927"},
+    {id:"c17", ngay_air:"2026-09-07", san_pham:["Đa sản phẩm (Drforskin, Glanzen)"], concept:"Product-focused (Cận cảnh sản phẩm)", hook:"9/9 chơi lớn từ trước đến giờ", trang_thai:"GMV Max", link:"https://www.tiktok.com/@shop30shine/video/7682724987278609671"},
+    {id:"c18", ngay_air:"2026-09-08", san_pham:["Đa sản phẩm (Drforskin, Glanzen)"], concept:"Product-focused (Cận cảnh sản phẩm)", hook:"30Shine tặng búp phê á?", trang_thai:"GMV Max", link:"https://www.tiktok.com/@shop30shine/video/7682987592823999762"},
+  ];
+
+  function skuClass(name){
+    if (/serum/i.test(name)) return "sku-serum";
+    if (/tràm trà/i.test(name)) return "sku-tramtra";
+    if (/than/i.test(name)) return "sku-than";
+    if (/glanzen/i.test(name)) return "sku-glanzen";
+    return "sku-da";
+  }
+  function fmtVnd(n){ return Math.round(n).toLocaleString("vi-VN") + "đ"; }
+  function pct(x){ return (x*100).toLocaleString("vi-VN",{maximumFractionDigits:2}) + "%"; }
+  function daysSince(dstr){ return Math.floor((TODAY - new Date(dstr+"T00:00:00")) / DAY); }
+
+  function classify(ad, live){
+    if (!live) return "nodata";
+    if (ad && ad.tiktok_label === "Kém hiệu quả") return "cut";
+    if (live && live.orders >= 1) return "won";
+    if (ad && ad.cost >= 150000 && (!live || live.orders===0)) return "cut";
+    const liveCtr = live ? live.ctr : 0;
+    if (liveCtr >= 0.015 && live && live.views >= 200) return "potential";
+    if (live && live.views < 200) return "small";
+    return "potential_weak";
+  }
+  const CLASS_LABEL = {won:"🎯 NỔ ĐƠN — WINNER", potential:"🔥 CTR TỐT, CHỜ ĐƠN", potential_weak:"⚠️ CTR YẾU", cut:"🩸 CẮT LỖ NGAY", small:"⚪ MẪU NHỎ — CHỜ THÊM", nodata:"— CHƯA CÓ DỮ LIỆU"};
+
+  function gateStatus(ad, live){
+    if (!live) return null;
+    const giu = ad && ad.hook2s ? ad.hook6s/ad.hook2s : null;
+    return {
+      hook2s: ad ? {pass: ad.hook2s >= 0.15, val: pct(ad.hook2s), need:"≥15%"} : null,
+      giu: giu!==null ? {pass: giu >= 0.38, val: pct(giu), need:"≥38%"} : null,
+      ctr: {pass: live.ctr >= 0.015, val: pct(live.ctr), need:"≥1,5%"},
+      order: {pass: live.orders >= 1, val: live.orders+" SKU order", need:"≥1"},
+    };
+  }
+
+  function actionFor(cls, r){
+    const ad = r.ad, live = r.live;
+    if (cls==="nodata") return "Video quá mới — TikTok Shop API chưa xử lý xong dữ liệu (thường có độ trễ 1-2 ngày). Kiểm tra lại sau.";
+    if (cls==="cut" && ad && ad.tiktok_label==="Kém hiệu quả") return "TikTok đã gắn nhãn \"Kém hiệu quả\" — thuật toán ngừng phân phối tự nhiên. Tắt dứt điểm, không thử lại video này.";
+    if (cls==="cut") return "Đã chi vượt trần dừng lỗ 150-200k mà 0 đơn — tắt Tăng cường ngay, không rót thêm.";
+    if (cls==="won") return `Đã có ${live.orders} SKU order (GMV ${fmtVnd(live.gmv)}) — có thể là 1 khách mua nhiều sản phẩm, không chắc là ${live.orders} khách riêng biệt. Nhân rộng góc/hook này sang SKU khác.`;
+    if (cls==="potential") return "CTR sản phẩm tốt (≥1,5%) nhưng chưa ra đơn — giữ nguyên, theo dõi thêm vài ngày trước khi kết luận.";
+    if (cls==="potential_weak") return "CTR dưới 1,5% — cân nhắc sửa lại CTA hoặc góc quay dẫn vào giỏ hàng.";
+    return "Dưới 200 lượt xem — mẫu còn nhỏ, chưa đủ dữ liệu kết luận CTR.";
+  }
+
+  function niceStep(maxVal){
+    const rough = maxVal/5;
+    const mag = Math.pow(10, Math.floor(Math.log10(rough||1)));
+    const norm = rough/mag;
+    let step;
+    if (norm<1.5) step=1; else if (norm<3) step=2; else if (norm<7) step=5; else step=10;
+    return step*mag;
+  }
+
+  function svgBarCompare(container, items, series){
+    const VW = 900, rowH = 62, padTop = 14, labelW = 300, rightPad = 26;
+    const chartW = VW - labelW - rightPad;
+    const axisY = padTop + items.length*rowH + 6;
+    const h = axisY + 26;
+    const maxRaw = Math.max(1, ...items.flatMap(it=>series.map(s=>s.get(it))));
+    const step = niceStep(maxRaw);
+    const niceMax = Math.ceil(maxRaw/step)*step;
+    const ticks = []; for(let t=0;t<=niceMax+1e-9;t+=step) ticks.push(t);
+
+    let svg = `<svg viewBox="0 0 ${VW} ${h}" width="100%" height="${h*0.62}" role="img" preserveAspectRatio="xMinYMin meet">`;
+    // gridlines + ticks
+    ticks.forEach(t=>{
+      const x = labelW + (t/niceMax)*chartW;
+      svg += `<line class="grid-line" x1="${x}" y1="${padTop-4}" x2="${x}" y2="${axisY}"/>`;
+      svg += `<text class="axis-lbl" x="${x}" y="${axisY+16}" text-anchor="middle">${series[0].tick(t)}</text>`;
+    });
+    svg += `<line class="axis-line" x1="${labelW}" y1="${padTop-4}" x2="${labelW}" y2="${axisY}"/>`;
+    svg += `<line class="axis-line" x1="${labelW}" y1="${axisY}" x2="${labelW+chartW}" y2="${axisY}"/>`;
+
+    items.forEach((it,i)=>{
+      const y0 = padTop + i*rowH;
+      svg += `<text class="lbl-name" x="0" y="${y0+16}">${it.label}</text>`;
+      svg += `<text class="lbl-sub" x="0" y="${y0+31}">${it.sub}</text>`;
+      series.forEach((s,si)=>{
+        const val = s.get(it);
+        const bw = niceMax ? (val/niceMax)*chartW : 0;
+        const y = y0 + 38 + si*17;
+        svg += `<rect x="${labelW}" y="${y}" width="${Math.max(bw,val>0?3:0)}" height="13" rx="3.5" fill="${s.color}"/>`;
+        svg += `<text class="val" x="${labelW+Math.max(bw,val>0?3:0)+8}" y="${y+11}" fill="${s.color}">${s.fmt(val)}</text>`;
+      });
+    });
+    svg += `</svg>`;
+    container.innerHTML = svg;
+  }
+
+  function render(items){
+    const rows = items.map(it => {
+      const ad = ADS[it.id] || null;
+      const live = CONTENT_LIVE[it.id] || null;
+      const cls = classify(ad, live);
+      const gate = gateStatus(ad, live);
+      const days = daysSince(it.ngay_air);
+      const action = actionFor(cls, {ad, live});
+      return {...it, ad, live, cls, gate, days, action};
+    }).sort((a,b)=> b.days - a.days);
+
+    // ---- PAGE 1: bối cảnh doanh thu kênh (tham khảo, không phải KPI quản trị nội dung) ----
+    document.getElementById("revenue-context-kpis").innerHTML = `
+      <div class="tile"><span class="eyebrow">Doanh thu mục tiêu T9</span><div class="v num">292,78tr đ</div><div class="l">kênh TikTok (video)</div><span class="delta flat">↔ +44,6% so với DT thực tế T8 (202,51tr)</span></div>
+      <div class="tile good"><span class="eyebrow">Lợi nhuận gộp mục tiêu</span><div class="v num">66,88tr đ</div><div class="l">22,8% doanh thu</div><span class="delta flat">↔ Trần chi ads +66,7% so với T8 (35,12tr)</span></div>
+      <div class="tile"><span class="eyebrow">Đơn cần đạt T9</span><div class="v num">781 đơn</div><div class="l">AOV tham khảo ~375k</div><span class="delta flat">↔ +32,6% so với đơn thực tế T8 (589)</span></div>
+      <div class="tile teal"><span class="eyebrow">% hoàn thành mục tiêu T9</span><div class="v num">17,7%</div><div class="l">thực tế 1-8/9: 51,81tr đ, 141 đơn</div><span class="delta flat">⏳ 8/30 ngày đã qua (26,7%)</span></div>
+    `;
+
+    const weekTargets = [
+      {label:"1-9/9 (đã qua, gồm Sale đôi 9/9)", days:9, dt:87833993, lng:20062887, ads:17566799, orders:234, note:"đã qua"},
+      {label:"10-16/9", days:7, dt:68315328, lng:15604468, ads:13663066, orders:182},
+      {label:"17-23/9", days:7, dt:68315328, lng:15604468, ads:13663066, orders:182},
+      {label:"24-30/9", days:7, dt:68315328, lng:15604468, ads:13663066, orders:182},
+    ];
+    document.getElementById("week-target-body").innerHTML = weekTargets.map(w=>`
+      <tr ${w.note?'style="opacity:.6"':''}>
+        <td><b>${w.label}</b></td>
+        <td class="num">${w.days} ngày</td>
+        <td class="num">${fmtVnd(w.dt)}</td>
+        <td class="num" style="color:var(--good)">${fmtVnd(w.lng)}</td>
+        <td class="num">${fmtVnd(w.ads)}</td>
+        <td class="num">${w.orders} đơn</td>
+      </tr>
+    `).join("");
+
+    const planWeeks = [
+      {label:"1-9/9", from:"2026-09-01", to:"2026-09-09", target:9},
+      {label:"10-16/9", from:"2026-09-10", to:"2026-09-16", target:7},
+      {label:"17-23/9", from:"2026-09-17", to:"2026-09-23", target:7},
+      {label:"24-30/9", from:"2026-09-24", to:"2026-09-30", target:7},
+    ];
+    let cumTarget = 0, cumActual = 0;
+    document.getElementById("week-plan-body").innerHTML = planWeeks.map(w=>{
+      const actual = rows.filter(r=>r.ngay_air>=w.from && r.ngay_air<=w.to).length;
+      const started = TODAY >= new Date(w.from+"T00:00:00");
+      cumTarget += w.target;
+      cumActual += actual;
+      const cumGap = cumActual - cumTarget;
+      let statusHtml;
+      if (!started) statusHtml = `<span class="wk-status pending">Chưa tới hạn</span>`;
+      else if (cumGap >= 0) statusHtml = `<span class="wk-status good">✓ Đạt lũy kế</span>`;
+      else statusHtml = `<span class="wk-status warn">⚠️ Chậm lũy kế ${Math.abs(cumGap)} content</span>`;
+      return `<tr>
+        <td><b>Tuần ${w.label}</b></td>
+        <td class="num">${w.target} content</td>
+        <td class="num" style="font-weight:800;${actual===0&&started?'color:var(--warn)':''}">${actual}${actual===0&&started?' ⚠️':''}</td>
+        <td class="num">${cumTarget}</td>
+        <td class="num" style="font-weight:800">${cumActual}</td>
+        <td class="num" style="font-weight:800;color:${cumGap<0?'var(--bad)':'var(--good)'}">${cumGap>=0?'+':''}${cumGap}</td>
+        <td>${statusHtml}</td>
+      </tr>`;
+    }).join("");
+
+    setupMasterFilter(rows);
+
+    // ---- PAGE 3: bảng cố định theo campaign (không phản ứng theo kỳ) ----
+    document.getElementById("camp-current-body").innerHTML = CAMPAIGNS_CURRENT.map(s=>`
+      <tr>
+        <td><b>${s.name}</b></td>
+        <td class="num">${fmtVnd(s.cost)}</td>
+        <td class="num">${s.orders} đơn</td>
+        <td class="num">${fmtVnd(s.rev)}</td>
+        <td><span class="badge ${s.roi>=6?'good':s.roi>=4?'grey':'bad'}">${s.roi.toFixed(2)}x</span></td>
+      </tr>
+    `).join("");
+
+    document.getElementById("sept-mtd-caption").textContent = `${SEPT_MTD.days} ngày đầu tháng 9 (01-22/09, hôm nay 22/9 chưa hết ngày) — tổng ${fmtVnd(SEPT_MTD.cost)} chi phí, ${SEPT_MTD.orders} đơn, ${fmtVnd(SEPT_MTD.rev)} doanh thu, ROI ${SEPT_MTD.roi.toFixed(2)}x. Nguồn: TikTok Business API, live.`;
+    document.getElementById("sept-mtd-body").innerHTML = SEPT_MTD.campaigns.map(s=>`
+      <tr>
+        <td><b>${s.name}</b></td>
+        <td class="num">${fmtVnd(s.cost)}</td>
+        <td class="num">${s.orders} đơn</td>
+        <td class="num">${fmtVnd(s.rev)}</td>
+        <td><span class="badge ${s.roi>=6?'good':s.roi>=4?'grey':'bad'}">${s.roi.toFixed(2)}x</span></td>
+      </tr>
+    `).join("");
+
+    document.getElementById("sku-camp-body").innerHTML = SKU_CAMPAIGNS_AUG.map(s=>`
+      <tr>
+        <td><b>${s.name}</b></td>
+        <td class="num">${fmtVnd(s.cost)}</td>
+        <td class="num">${s.orders} đơn</td>
+        <td class="num">${fmtVnd(s.rev)}</td>
+        <td><span class="badge ${s.roi>=6?'good':s.roi>=4?'grey':'bad'}">${s.roi.toFixed(2)}x</span></td>
+      </tr>
+    `).join("");
+
+  }
+
+  function renderStoreWideForRange(from, to){
+    const el = document.getElementById("filter-kpis");
+    if (!el) return; // Trang 3 chưa render lần nào
+    const inRange = DAILY_STORE.filter(d => d.date >= from && d.date <= to);
+    const cost = inRange.reduce((s,d)=>s+d.cost,0);
+    const orders = inRange.reduce((s,d)=>s+d.orders,0);
+    const rev = inRange.reduce((s,d)=>s+d.rev,0);
+    const roi = cost ? rev/cost : 0;
+    const cpa = orders ? cost/orders : 0;
+    document.getElementById("filter-caption").innerHTML =
+      `Dùng chung ô "Xem theo kỳ" ở góc trên bên phải — đang xem <b>${from.split("-").reverse().join("/")} – ${to.split("-").reverse().join("/")}</b>. Dữ liệu thật theo từng ngày, nguồn TikTok Business API + Quảng cáo tháng 8.2026, toàn cửa hàng.`;
+    el.innerHTML = `
+      <div class="tile"><span class="eyebrow">Chi phí</span><div class="v num">${fmtVnd(cost)}</div><div class="l">${inRange.length} ngày có dữ liệu</div></div>
+      <div class="tile good"><span class="eyebrow">Doanh thu</span><div class="v num">${fmtVnd(rev)}</div><div class="l">GMV toàn cửa hàng</div></div>
+      <div class="tile"><span class="eyebrow">Đơn hàng</span><div class="v num">${orders}</div><div class="l">SKU đã bán</div></div>
+      <div class="tile teal"><span class="eyebrow">ROI</span><div class="v num">${roi.toFixed(2)}x</div><div class="l">CPA ${fmtVnd(cpa)}/đơn</div></div>
+    `;
+  }
+
+  function renderMultiMonthCalendar(container, from, to, airByDate, opts){
+    opts = opts || {};
+    const pendingFrom = opts.pendingFrom || null;
+    const dows = ["T2","T3","T4","T5","T6","T7","CN"];
+    // show pending's month too, so clicking near a month boundary doesn't hide the picker
+    const spanFrom = pendingFrom && pendingFrom < from ? pendingFrom : from;
+    const spanTo = pendingFrom && pendingFrom > to ? pendingFrom : to;
+    const start = new Date(spanFrom+"T00:00:00"), end = new Date(spanTo+"T00:00:00");
+    const months = [];
+    let cursor = new Date(start.getFullYear(), start.getMonth(), 1);
+    while (cursor <= end){
+      months.push({y:cursor.getFullYear(), m:cursor.getMonth()+1});
+      cursor = new Date(cursor.getFullYear(), cursor.getMonth()+1, 1);
+    }
+    container.innerHTML = months.map(({y,m})=>{
+      const firstDow = (new Date(y, m-1, 1).getDay()+6)%7;
+      const daysInMonth = new Date(y, m, 0).getDate();
+      let html = `<div style="flex:1;min-width:260px"><div style="font-weight:800;font-size:13px;margin-bottom:8px;color:var(--ink-dim)">Tháng ${m}/${y}</div><div class="cal pickable">`;
+      html += dows.map(d=>`<div class="dow">${d}</div>`).join("");
+      for(let i=0;i<firstDow;i++) html += `<div class="day empty"></div>`;
+      for(let d=1; d<=daysInMonth; d++){
+        const dateStr = `${y}-${String(m).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
+        if (dateStr < DATA_MIN_DATE || dateStr > DATA_MAX_DATE){
+          html += `<div class="day" style="opacity:.25;cursor:not-allowed">${d}</div>`;
+          continue;
+        }
+        const inRange = dateStr >= from && dateStr <= to;
+        const isEdge = dateStr === from || dateStr === to;
+        const isPending = dateStr === pendingFrom;
+        const c = airByDate[dateStr]||0;
+        const cls = ["day"];
+        if (isEdge) cls.push("range-edge");
+        else if (inRange) cls.push("in-range");
+        else if (c) cls.push("has");
+        if (isPending) cls.push("pending");
+        html += `<div class="${cls.join(" ")}" data-date="${dateStr}">${d}${c?`<span class="cnt">${c}</span>`:''}</div>`;
+      }
+      html += `</div></div>`;
+      return html;
+    }).join("");
+  }
+
+  function contentStats(rowsInRange){
+    const withLive = rowsInRange.filter(r=>r.live);
+    const wonRows = rowsInRange.filter(r=>r.cls==="won");
+    const won = wonRows.length;
+    const pctWon = withLive.length ? won/withLive.length*100 : 0;
+    const avgCtr = withLive.length ? withLive.reduce((s,r)=>s+r.live.ctr,0)/withLive.length : 0;
+    const wonGmv = wonRows.reduce((s,r)=>s+(r.live?r.live.gmv:0),0);
+    return {count: rowsInRange.length, withLiveCount: withLive.length, won, pctWon, avgCtr, wonGmv};
+  }
+  function deltaTag(curVal, prevVal, fmtFn){
+    if (prevVal===0 && curVal===0) return `<span class="delta flat">↔ bằng kỳ trước</span>`;
+    if (prevVal===0) return `<span class="delta up">▲ kỳ trước 0</span>`;
+    const diffPct = Math.round((curVal-prevVal)/Math.abs(prevVal)*100);
+    const cls = diffPct===0?'flat':(diffPct>0?'up':'down');
+    const arrow = diffPct===0?'↔':(diffPct>0?'▲':'▼');
+    return `<span class="delta ${cls}">${arrow} ${diffPct>0?'+':''}${diffPct}% (kỳ trước ${fmtFn(prevVal)})</span>`;
+  }
+
+  function renderPeriodViews(allRows, from, to){
+    const rows = allRows.filter(r=>r.ngay_air>=from && r.ngay_air<=to);
+    const days = Math.round((new Date(to)-new Date(from))/DAY)+1;
+    const target = Math.max(1, Math.round(30*days/30));
+
+    const prevToD = new Date(new Date(from+"T00:00:00").getTime()-DAY);
+    const prevFromD = new Date(prevToD.getTime()-(days-1)*DAY);
+    const prevFrom = prevFromD.toISOString().slice(0,10), prevTo = prevToD.toISOString().slice(0,10);
+    const prevRows = allRows.filter(r=>r.ngay_air>=prevFrom && r.ngay_air<=prevTo);
+
+    const cur = contentStats(rows), prev = contentStats(prevRows);
+    const pctComplete = Math.round(cur.count/target*100);
+
+    const kyLabel = `${from.split("-").reverse().join("/")}–${to.split("-").reverse().join("/")}`;
+    const gapCount = target - cur.count;
+    document.getElementById("content-month-headline").textContent =
+      gapCount > 0
+        ? `Kỳ ${kyLabel}: mới chạy ${pctComplete}% nhịp sản xuất — còn thiếu ${gapCount} content mới chạm mốc ${target}`
+        : `Kỳ ${kyLabel}: đã vượt nhịp sản xuất — ${cur.count}/${target} content, dư ${-gapCount}`;
+    document.getElementById("content-month-kpis").innerHTML = `
+      <div class="tile ${cur.count>0?'good':'bad'}"><span class="eyebrow">Sản lượng</span><div class="v num">${cur.count}/${target}</div><div class="l">${pctComplete}% hoàn thành — nhịp 30 content/tháng</div>${deltaTag(cur.count, prev.count, v=>v)}</div>
+      <div class="tile good"><span class="eyebrow">% ra đơn</span><div class="v num">${Math.round(cur.pctWon)}%</div><div class="l">${cur.won}/${cur.withLiveCount} content có SKU order</div>${deltaTag(cur.pctWon, prev.pctWon, v=>Math.round(v)+'%')}</div>
+      <div class="tile teal"><span class="eyebrow">CTR trung bình</span><div class="v num">${pct(cur.avgCtr)}</div><div class="l">${cur.withLiveCount} content có dữ liệu live</div>${deltaTag(cur.avgCtr*100, prev.avgCtr*100, v=>v.toFixed(1)+'%')}</div>
+      <div class="tile good"><span class="eyebrow">GMV từ content ra đơn</span><div class="v num">${fmtVnd(cur.wonGmv)}</div><div class="l">từ ${cur.won} content NỔ ĐƠN trong kỳ</div>${deltaTag(cur.wonGmv, prev.wonGmv, v=>fmtVnd(v))}</div>
+    `;
+
+    // ---- Phễu content: 4 nấc, air → có view ≥200 → có click → ra đơn ----
+    function funnelSteps(rowsIn){
+      const air = rowsIn.length;
+      const hasView = rowsIn.filter(r=>r.live && r.live.views>=200).length;
+      const hasClick = rowsIn.filter(r=>r.live && r.live.ctr>0).length;
+      const won2 = rowsIn.filter(r=>r.cls==="won").length;
+      return {air, hasView, hasClick, won: won2};
+    }
+    const fc = funnelSteps(rows), fp = funnelSteps(prevRows);
+    const rungView = fc.air - fc.hasView, rungClick = fc.hasView - fc.hasClick, rungOrder = fc.hasClick - fc.won;
+    const nacDot = (color)=>`<i style="background:${color}"></i>`;
+    function nacDiv(label, color, val, prevVal, sub){
+      return `<div>
+        <div class="cham">${nacDot(color)}${label}</div>
+        <div class="tien">${val}</div>
+        <div class="duoi">${sub}</div>
+        ${deltaTag(val, prevVal, v=>v)}
+      </div>`;
+    }
+    document.getElementById("funnel-headline").textContent =
+      rungView>=rungClick && rungView>=rungOrder
+        ? `Phễu content — rụng nhiều nhất ở khâu VIEW: ${rungView}/${fc.air} content chưa đạt 200 view`
+        : rungClick>=rungOrder
+        ? `Phễu content — rụng nhiều nhất ở khâu CLICK: ${rungClick} content có view nhưng 0% click sản phẩm`
+        : `Phễu content — rụng nhiều nhất ở khâu CHỐT ĐƠN: ${rungOrder} content có click nhưng chưa ra đơn`;
+    document.getElementById("content-funnel").innerHTML =
+      nacDiv("Content lên sóng", "var(--brand-2)", fc.air, fp.air, "tất cả content air trong kỳ") +
+      nacDiv("Đạt ≥200 view", "var(--teal)", fc.hasView, fp.hasView, fc.air?`${Math.round(fc.hasView/fc.air*100)}% content lên sóng — rụng ${rungView}`:'—') +
+      nacDiv("Có click sản phẩm", "var(--gold)", fc.hasClick, fp.hasClick, fc.hasView?`${Math.round(fc.hasClick/fc.hasView*100)}% content đủ view — rụng ${rungClick}`:'—') +
+      nacDiv("Ra đơn (NỔ ĐƠN)", "var(--good)", fc.won, fp.won, fc.hasClick?`${Math.round(fc.won/fc.hasClick*100)}% content có click — rụng ${rungOrder}`:'—');
+
+    // ---- Trang 2: theo đúng content trong kỳ ----
+    const withAdData = rows.filter(r=>r.ad);
+    const won = rows.filter(r=>r.cls==="won").length;
+    const cut = rows.filter(r=>r.cls==="cut").length;
+    const totalGmvLive = rows.reduce((s,r)=>s+(r.live?r.live.gmv:0),0);
+    const totalOrdersLive = rows.reduce((s,r)=>s+(r.live?r.live.orders:0),0);
+
+    document.getElementById("callout-30s").innerHTML =
+      `<span class="icon">Kỳ ${from.split("-").reverse().join("/")}–${to.split("-").reverse().join("/")}</span><span class="txt"><b>${won} content đang kéo đơn về</b> — ${totalOrdersLive} SKU order, ${fmtVnd(totalGmvLive)} GMV thật; trong khi <b>${cut} content vẫn cắn ngân sách mà không ra đơn</b>, cần cắt lỗ ngay theo rule T+3/T+6. ${rows.length-won-cut} content còn lại đang chờ đủ tín hiệu để chấm điểm.</span>`;
+
+    const ranked = rows.filter(r=>r.live && r.live.gmv>0).sort((a,b)=> b.live.gmv - a.live.gmv);
+    document.getElementById("rank-list").innerHTML = ranked.map((r,i)=>`
+      <div class="rank-item">
+        <div class="medal">#${i+1}</div>
+        <div><div class="name">${r.hook}</div><div class="sub">${r.san_pham.join(" · ")} — ${r.live.orders} SKU order, ${r.live.views} views, CTR ${pct(r.live.ctr)} — ${CLASS_LABEL[r.cls]}</div></div>
+        <div class="stat"><div class="v">${fmtVnd(r.live.gmv)}</div><div class="l">GMV thật (live)</div></div>
+      </div>
+    `).join("") || `<div class="muted">Chưa có content nào ra đơn trong kỳ này để xếp hạng.</div>`;
+
+    const stageGroups = {
+      won:      {title:"🎯 Đã thắng — NỔ ĐƠN", items: rows.filter(r=>r.cls==="won")},
+      watching: {title:"👀 Đang theo dõi — ở cửa T+3", items: rows.filter(r=>r.cls==="potential"||r.cls==="potential_weak")},
+      small:    {title:"⚪ Mẫu chưa đủ — dưới 200 view", items: rows.filter(r=>r.cls==="small")},
+      cut:      {title:"🩸 Cần cắt lỗ — theo Stop-loss", items: rows.filter(r=>r.cls==="cut")},
+      nodata:   {title:"— Chưa có dữ liệu — video quá mới", items: rows.filter(r=>r.cls==="nodata")},
+    };
+    const pl = {
+      won: stageGroups.won.items.length, potential: stageGroups.watching.items.length,
+      small: stageGroups.small.items.length, cut: stageGroups.cut.items.length, nodata: stageGroups.nodata.items.length,
+    };
+    document.getElementById("pipeline-row").innerHTML = `
+      <div class="stage" data-stage="won"><span class="n">ĐÃ THẮNG</span><span class="count num" style="color:var(--good)">${pl.won}</span><span class="lbl">🎯 NỔ ĐƠN</span><span class="rng">đẩy GMV Max thường</span></div>
+      <div class="stage" data-stage="watching"><span class="n">ĐANG THEO DÕI</span><span class="count num">${pl.potential}</span><span class="lbl">Ở cửa T+3</span><span class="rng">chờ đủ đơn/ROAS</span></div>
+      <div class="stage" data-stage="small"><span class="n">MẪU CHƯA ĐỦ</span><span class="count num">${pl.small}</span><span class="lbl">Dưới 200 view</span><span class="rng">chưa vội tắt</span></div>
+      <div class="stage" data-stage="cut"><span class="n">CẦN CẮT LỖ</span><span class="count num" style="color:var(--bad)">${pl.cut}</span><span class="lbl">🩸 Cắt lỗ ngay</span><span class="rng">theo Stop-loss</span></div>
+      ${pl.nodata>0 ? `<div class="stage" data-stage="nodata"><span class="n">CHƯA CÓ DỮ LIỆU</span><span class="count num" style="color:var(--grey)">${pl.nodata}</span><span class="lbl">Video quá mới</span><span class="rng">TikTok chưa xử lý</span></div>` : ""}
+    `;
+
+    function distBadge(r){
+      const isLive = r.trang_thai === "GMV Max";
+      return `<span class="pdg-dist ${isLive?'live':'off'}">${isLive?'🔥 Đang chạy GMV Max — vẫn tiêu tiền':'⏹ Đã dừng Tăng cường, chuyển GMV Max thường'}</span>`;
+    }
+    function renderStageDetail(key){
+      const g = stageGroups[key];
+      if (!g) { document.getElementById("pipeline-detail").innerHTML = ""; return; }
+      document.getElementById("pipeline-detail").innerHTML = `
+        <div class="pdg">
+          <div class="pdg-head">${g.title} — ${g.items.length} content</div>
+          ${g.items.length ? g.items.map(r=>{
+            const costTxt = r.ad ? fmtVnd(r.ad.cost) : "chưa có dữ liệu chi phí";
+            const liveTxt = r.live ? `${r.live.orders} SKU order · ${fmtVnd(r.live.gmv)} GMV · ${r.live.views} view` : "chưa có dữ liệu view/GMV";
+            return `<div class="pdg-item">
+              <div>
+                <div class="pdg-hook">${r.link?`<a href="${r.link}" target="_blank" rel="noopener">${r.hook} ↗</a>`:r.hook}</div>
+                <div class="pdg-meta">${r.san_pham.join(" · ")} — air ${r.ngay_air} · T+${r.days}</div>
+                ${distBadge(r)}
+              </div>
+              <div class="pdg-stats">
+                Chi phí: ${costTxt}<br>${liveTxt}
+              </div>
+            </div>`;
+          }).join("") : `<div class="muted">Không có content nào ở nhóm này.</div>`}
+        </div>
+      `;
+    }
+    let activeStage = "won";
+    document.querySelectorAll("#pipeline-row .stage").forEach(el=>{
+      el.classList.toggle("active-stage", el.dataset.stage===activeStage);
+      el.addEventListener("click", ()=>{
+        activeStage = el.dataset.stage;
+        document.querySelectorAll("#pipeline-row .stage").forEach(s=>s.classList.toggle("active-stage", s.dataset.stage===activeStage));
+        renderStageDetail(activeStage);
+      });
+    });
+    renderStageDetail(activeStage);
+
+    // ---- Trang 3: bảng/biểu đồ theo từng video, chỉ content trong kỳ ----
+    document.getElementById("split-body").innerHTML = withAdData.map(r=>{
+      const adsGmv = r.ad.revenue;
+      const totalGmv = Math.max(r.live?r.live.gmv:0, adsGmv);
+      const organic = Math.max(0, totalGmv - adsGmv);
+      const adsPct = totalGmv ? Math.round(adsGmv/totalGmv*100) : 0;
+      return `<tr>
+        <td><b>${r.hook.length>36?r.hook.slice(0,36)+'…':r.hook}</b><div class="muted">${r.san_pham.join(" · ")}</div></td>
+        <td class="num">${fmtVnd(adsGmv)}</td>
+        <td class="num">${fmtVnd(totalGmv)}</td>
+        <td class="num">${fmtVnd(organic)}</td>
+        <td>
+          <div class="split-bar"><div class="ads" style="width:${adsPct}%"></div><div class="organic" style="width:${100-adsPct}%"></div></div>
+          <div class="muted" style="margin-top:4px">${adsPct}% ads · ${100-adsPct}% tự nhiên</div>
+        </td>
+      </tr>`;
+    }).join("") || `<tr><td colspan="5" class="muted">Không có content nào trong kỳ này có dữ liệu chi phí.</td></tr>`;
+
+    const withLive = rows.filter(r=>r.live);
+    document.getElementById("table-caption").textContent = `Kỳ ${from.split("-").reverse().join("/")}–${to.split("-").reverse().join("/")}: ${rows.length} content air trong kỳ — ${withLive.length}/${rows.length} đã đối soát LIVE (views/GMV/đơn/CTR qua TikTok Shop API); ${withAdData.length}/${rows.length} có thêm dữ liệu chi phí Tăng cường & Hook 2s.`;
+    document.getElementById("table-body").innerHTML = rows.length ? rows.map(r=>{
+      const ad = r.ad, live = r.live, g = r.gate;
+      const mc = (val,pass,need)=> `<span class="${pass?'pass':'fail'}">${val}</span><span class="need">cần ${need}</span>`;
+      return `<tr>
+        <td style="max-width:250px">
+          <span class="t-badge">T+${r.days}</span><span class="t-sub" style="margin-left:6px">${r.ngay_air}</span>
+          <div class="hook-txt" style="margin-top:5px">${r.link?`<a href="${r.link}" target="_blank" rel="noopener">${r.hook} ↗</a>`:r.hook}</div>
+          <div class="tags" style="margin-top:5px">${r.san_pham.map(s=>`<span class="tag ${skuClass(s)}">${s}</span>`).join("")}</div>
+        </td>
+        <td><span class="status-pill ${r.cls==='potential_weak'?'potential':r.cls}">${CLASS_LABEL[r.cls]}</span></td>
+        <td class="metric-cell">${ad?fmtVnd(ad.cost):"<span class='muted'>chưa có</span>"}</td>
+        <td class="metric-cell">${live?mc(live.orders+' SKU order / '+fmtVnd(live.gmv), g.order.pass, g.order.need):"<span class='muted'>chưa có</span>"}</td>
+        <td class="metric-cell">${ad?mc(pct(ad.hook2s), g.hook2s.pass, g.hook2s.need):"<span class='muted'>chưa có</span>"}</td>
+        <td class="metric-cell">${g&&g.giu?mc(g.giu.val, g.giu.pass, g.giu.need):"<span class='muted'>chưa có</span>"}</td>
+        <td class="metric-cell">${live?mc(`${live.views} view (${pct(live.ctr)})`, g.ctr.pass, g.ctr.need):"<span class='muted'>chưa có</span>"}</td>
+        <td>${ad?`<span class="badge ${ad.tiktok_label==='Kém hiệu quả'?'bad':ad.tiktok_label==='Có hiệu quả'?'good':'grey'}">${ad.tiktok_label}</span>`:"—"}</td>
+        <td class="action-cell">${r.action}</td>
+      </tr>`;
+    }).join("") : `<tr><td colspan="9" class="muted">Không có content nào air trong kỳ đã chọn.</td></tr>`;
+
+    const chartItemsCost = withAdData.map(r=>({
+      label: r.hook.length>34? r.hook.slice(0,34)+"…" : r.hook,
+      sub: `${r.san_pham[0]} · air ${r.ngay_air} · ${CLASS_LABEL[r.cls]}`,
+      ad: r.ad
+    }));
+    svgBarCompare(document.getElementById("chart-cost-rev"), chartItemsCost, [
+      {get:it=>it.ad.cost, color:"var(--grey)", fmt:v=>fmtVnd(v), tick:v=>v>=1000?Math.round(v/1000)+"k":Math.round(v)},
+      {get:it=>it.ad.revenue, color:"var(--good)", fmt:v=>fmtVnd(v), tick:v=>v>=1000?Math.round(v/1000)+"k":Math.round(v)},
+    ]);
+    const chartItemsLive = withLive.map(r=>({
+      label: r.hook.length>34? r.hook.slice(0,34)+"…" : r.hook,
+      sub: `${r.san_pham[0]} · air ${r.ngay_air} · ${CLASS_LABEL[r.cls]}`,
+      live: r.live
+    }));
+    svgBarCompare(document.getElementById("chart-hook-ctr"), chartItemsLive, [
+      {get:it=>it.live.views, color:"var(--brand-2)", fmt:v=>v.toLocaleString("vi-VN")+" view", tick:v=>Math.round(v)},
+      {get:it=>it.live.ctr*100, color:"var(--teal)", fmt:v=>v.toFixed(1)+"%", tick:v=>v.toFixed(0)+"%"},
+    ]);
+  }
+
+  let masterFilterWired = false;
+  let masterPendingFrom = null;
+  function setupMasterFilter(rows){
+    const fromEl = document.getElementById("master-date-from");
+    const toEl = document.getElementById("master-date-to");
+    const hintEl = document.getElementById("master-cal-hint");
+    const airByDate = {};
+    rows.forEach(r=>{ airByDate[r.ngay_air] = (airByDate[r.ngay_air]||0)+1; });
+
+    function apply(from, to){
+      masterPendingFrom = null;
+      fromEl.value = from; toEl.value = to;
+      const days = Math.round((new Date(to)-new Date(from))/DAY)+1;
+      document.getElementById("master-filter-days").textContent = `(${days} ngày)`;
+
+      const inRange = DAILY_STORE.filter(d => d.date >= from && d.date <= to);
+      const cost = inRange.reduce((s,d)=>s+d.cost,0);
+      const orders = inRange.reduce((s,d)=>s+d.orders,0);
+      const rev = inRange.reduce((s,d)=>s+d.rev,0);
+      const roi = cost ? rev/cost : 0;
+      document.getElementById("master-kpi-sub").innerHTML = `Kỳ tự chọn: <b>${from.split("-").reverse().join("/")} – ${to.split("-").reverse().join("/")}</b> (${days} ngày), 4 campaign video GMV Max (không gồm livestream) — không phải mục tiêu cả tháng.`;
+      document.getElementById("master-kpis").innerHTML = `
+        <div class="tile good"><span class="eyebrow">Doanh thu</span><div class="v num">${fmtVnd(rev)}</div><div class="l">GMV 4 campaign video</div></div>
+        <div class="tile"><span class="eyebrow">Chi phí ads</span><div class="v num">${fmtVnd(cost)}</div><div class="l">${inRange.length} ngày có dữ liệu</div></div>
+        <div class="tile"><span class="eyebrow">Đơn hàng</span><div class="v num">${orders}</div><div class="l">4 campaign video</div></div>
+        <div class="tile teal"><span class="eyebrow">ROI</span><div class="v num">${roi.toFixed(2)}x</div><div class="l">doanh thu/chi phí</div></div>
+      `;
+
+      const contentInRange = rows.filter(r=>r.ngay_air>=from && r.ngay_air<=to);
+      document.getElementById("master-cal-caption").textContent =
+        `${contentInRange.length} content đã air trong khoảng ngày đã chọn (${days} ngày) — khớp với khối 📦 ở đầu trang.`;
+      if (hintEl) hintEl.textContent = "💡 Bấm 1 ngày trên lịch để chọn điểm bắt đầu, bấm ngày thứ 2 để chọn điểm kết thúc.";
+      renderMultiMonthCalendar(document.getElementById("master-calendar-wrap"), from, to, airByDate);
+      renderStoreWideForRange(from, to);
+      renderPeriodViews(rows, from, to);
+    }
+
+    function renderPending(){
+      renderMultiMonthCalendar(document.getElementById("master-calendar-wrap"), fromEl.value, toEl.value, airByDate, {pendingFrom: masterPendingFrom});
+      if (hintEl) hintEl.textContent = `👉 Đã chọn ${masterPendingFrom.split("-").reverse().join("/")} làm điểm bắt đầu — bấm ngày thứ 2 để chọn điểm kết thúc (bấm lại cùng ngày để chọn 1 ngày duy nhất).`;
+    }
+
+    function onDayClick(dateStr){
+      if (!masterPendingFrom){
+        masterPendingFrom = dateStr;
+        renderPending();
+        return;
+      }
+      let from = masterPendingFrom, to = dateStr;
+      if (from > to) [from, to] = [to, from];
+      apply(from, to);
+    }
+
+    if (!masterFilterWired){
+      masterFilterWired = true;
+      document.getElementById("master-calendar-wrap").addEventListener("click", e=>{
+        const cell = e.target.closest(".day[data-date]");
+        if (!cell) return;
+        onDayClick(cell.dataset.date);
+      });
+      [fromEl, toEl].forEach(el=>{
+        el.min = DATA_MIN_DATE; el.max = DATA_MAX_DATE;
+        el.addEventListener("change", ()=>{
+          let from = fromEl.value || DATA_MIN_DATE, to = toEl.value || DATA_MAX_DATE;
+          if (from > to) [from, to] = [to, from];
+          apply(from, to);
+        });
+      });
+      apply(DEFAULT_FROM_DATE, DEFAULT_TO_DATE);
+    } else {
+      apply(fromEl.value, toEl.value);
+    }
+  }
+
+  // Dữ liệu được cập nhật trực tiếp trong SEED mỗi khi trang này được đăng lại
+  // (không dùng db live-sync nữa — tránh dữ liệu cũ trong db đè lên bản mới nhất).
+  render(SEED);
+})();
+</script>
+
+</body></html>
