@@ -942,6 +942,20 @@
       </div>
     </section>
 
+    <section class="filter-card">
+      <div class="filter-caption">Lọc content theo <b>ngày air</b> (nguồn Lark Base). Số liệu mỗi content là <b>luỹ kế tính đến hôm nay</b> của ad set đó — không phải chi tiêu phát sinh riêng trong khoảng ngày đã chọn. 4 content chưa gắn Lark ("Cong nhan kcn", "Moi tru 30k", "Combo 5k 1 ngay", "Mua hanh kho") dùng tạm ngày chạy ads làm ngày air.</div>
+      <div class="filter-row">
+        <label>Từ</label>
+        <input type="date" id="fb-date-from">
+        <span class="filter-sep">→</span>
+        <label>Đến</label>
+        <input type="date" id="fb-date-to">
+        <span class="filter-days" id="fb-filter-days"></span>
+      </div>
+      <div class="preset-row" id="fb-preset-row"></div>
+      <div class="kpis" id="fb-filtered-kpis" style="margin-top:2px"></div>
+    </section>
+
     <section>
       <div class="section-head">
         <h2>Hiệu quả từng content — xếp theo ROAS/tín hiệu cao xuống thấp</h2>
@@ -950,7 +964,7 @@
 
       <div style="display:flex;flex-direction:column;gap:12px">
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-22" data-air-fallback="0" data-cost="1112564" data-inbox="8" data-orders="4" data-rev="3712000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">1</span>
@@ -976,7 +990,7 @@
           <div class="analysis-action">🟡 Action: <span style="font-weight:400">Chờ chốt sáng 29/9 theo đúng lịch tracker. Nếu đến lúc đó vẫn không có đơn thứ 5, nên lùi ngân sách về 200k thay vì tiếp tục ở 260k — ROAS đang giảm nhanh hơn dự kiến khi scale.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-11" data-air-fallback="0" data-cost="3994323" data-inbox="52" data-orders="15" data-rev="8471000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">2</span>
@@ -1002,7 +1016,7 @@
           <div class="analysis-action">🟡 Action: <span style="font-weight:400">Theo dõi 2 ngày ở mức 350k mới — nếu ROAS hồi phục về trên 2,3 thì đây là mức ngân sách phù hợp hơn cho content này; nếu không thì cần xem lại toàn bộ ngưỡng scale.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-19" data-air-fallback="0" data-cost="446266" data-inbox="3" data-orders="1" data-rev="928000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">3</span>
@@ -1028,7 +1042,7 @@
           <div class="analysis-action">⚪ Action: <span style="font-weight:400">Không cần hành động thêm.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-15" data-air-fallback="0" data-cost="1754927" data-inbox="24" data-orders="4" data-rev="2692000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">4</span>
@@ -1054,7 +1068,7 @@
           <div class="analysis-action">🟠 Action: <span style="font-weight:400">Đã tắt hợp lý. Nếu làm lại theo đề xuất "iterate", giữ nguyên hook/insight (đã chứng minh hút) nhưng đổi hẳn offer/CTA.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-18" data-air-fallback="0" data-cost="949139" data-inbox="10" data-orders="3" data-rev="1353000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">5</span>
@@ -1080,7 +1094,7 @@
           <div class="analysis-action">🟡 Action: <span style="font-weight:400">Cân nhắc bật lại thử nghiệm ở ngân sách thấp (100-150k) — kết quả final tốt hơn nhiều so với lúc quyết định tắt.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-14" data-air-fallback="0" data-cost="1395392" data-inbox="15" data-orders="4" data-rev="1892000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">6</span>
@@ -1105,7 +1119,7 @@
           <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý — nếu tái dùng nên tăng giá trị đơn (bundle/upsell).</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-10" data-air-fallback="0" data-cost="796760" data-inbox="7" data-orders="2" data-rev="957000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">7</span>
@@ -1130,7 +1144,7 @@
           <div class="analysis-action">⚪ Action: <span style="font-weight:400">Giữ nguyên đánh giá lần trước.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-26" data-air-fallback="1" data-cost="349258" data-inbox="7" data-orders="1" data-rev="329000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">8</span>
@@ -1156,7 +1170,7 @@
           <div class="analysis-action">🟡 Action: <span style="font-weight:400">Giữ nguyên 200k, chờ chốt sáng 29/9 — CP/inbox thấp là điểm cộng đáng theo dõi thêm.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-17" data-air-fallback="0" data-cost="647726" data-inbox="6" data-orders="1" data-rev="588000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">9</span>
@@ -1181,7 +1195,7 @@
           <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-18" data-air-fallback="0" data-cost="1360375" data-inbox="13" data-orders="2" data-rev="917000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">10</span>
@@ -1207,7 +1221,7 @@
           <div class="analysis-action">🔴 Action: <span style="font-weight:400">TẮT &amp; LÀM LẠI theo đúng đề xuất tracker — giữ hook (hold cao) nhưng đổi hẳn CTA/offer.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-17" data-air-fallback="0" data-cost="641337" data-inbox="6" data-orders="1" data-rev="329000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">11</span>
@@ -1232,7 +1246,7 @@
           <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-10" data-air-fallback="0" data-cost="782791" data-inbox="4" data-orders="1" data-rev="329000">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">12</span>
@@ -1258,7 +1272,7 @@
           <div class="analysis-action">⚪ Action: <span style="font-weight:400">Không cần bật lại.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-14" data-air-fallback="0" data-cost="579685" data-inbox="8" data-orders="0" data-rev="0">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">13</span>
@@ -1283,7 +1297,7 @@
           <div class="analysis-action">🟡 Action: <span style="font-weight:400">Thử lại hook này với CTA/ưu đãi mạnh hơn.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-24" data-air-fallback="1" data-cost="735009" data-inbox="6" data-orders="0" data-rev="0">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">14</span>
@@ -1307,7 +1321,7 @@
           <div class="analysis-action">🔴 Action: <span style="font-weight:400">TẮT theo đúng đề xuất tracker — cần thao tác trong Ads Manager.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-12" data-air-fallback="0" data-cost="691809" data-inbox="6" data-orders="0" data-rev="0">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">15</span>
@@ -1331,7 +1345,7 @@
           <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý, không cần hành động thêm.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-25" data-air-fallback="1" data-cost="472331" data-inbox="6" data-orders="0" data-rev="0">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">16</span>
@@ -1356,7 +1370,7 @@
           <div class="analysis-action">🔴 Action: <span style="font-weight:400">TẮT theo đúng đề xuất tracker.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-21" data-air-fallback="0" data-cost="745315" data-inbox="6" data-orders="0" data-rev="0">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">17</span>
@@ -1380,7 +1394,7 @@
           <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt, không cần hành động thêm.</span></div>
         </div>
 
-        <div class="analysis-card">
+        <div class="analysis-card" data-air="2026-09-15" data-air-fallback="0" data-cost="644163" data-inbox="4" data-orders="0" data-rev="0">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
             <div style="display:flex;gap:10px;align-items:flex-start">
               <span class="analysis-rank">18</span>
@@ -1405,7 +1419,7 @@
           <div class="analysis-action">🔴 Action: <span style="font-weight:400">Nếu tái dùng angle "lười/ngại", phải đổi hẳn hook mở đầu.</span></div>
         </div>
 
-        <div class="analysis-card" style="opacity:.85">
+        <div class="analysis-card" style="opacity:.85" data-air="2026-09-26" data-air-fallback="1" data-cost="336648" data-inbox="2" data-orders="0" data-rev="0">
           <div style="display:flex;gap:10px;align-items:flex-start">
             <span class="analysis-rank" style="background:var(--grey)">19</span>
             <div>
@@ -2169,6 +2183,81 @@
       apply(fromEl.value, toEl.value);
     }
   }
+
+  // Bộ lọc theo ngày air cho Trang 3 Facebook — mỗi content có sẵn data-air/data-cost/
+  // data-inbox/data-orders/data-rev trên .analysis-card; lọc chỉ ẩn/hiện thẻ + cộng dồn
+  // số liệu luỹ kế của các thẻ đang hiện, không tách chi tiêu theo ngày (tracker FB không có).
+  const FB_MIN_DATE = "2026-09-10", FB_MAX_DATE = "2026-09-28";
+  const FB_DEFAULT_FROM = FB_MIN_DATE, FB_DEFAULT_TO = FB_MAX_DATE;
+  const FB_PRESETS = [
+    {label:"Toàn bộ", from:FB_MIN_DATE, to:FB_MAX_DATE},
+    {label:"Sóng 1 · 12-14/9", from:"2026-09-12", to:"2026-09-14"},
+    {label:"Sóng 2 · 15-17/9", from:"2026-09-15", to:"2026-09-17"},
+    {label:"Sóng 3 · 18-20/9", from:"2026-09-18", to:"2026-09-20"},
+    {label:"Sóng 4 · 21-23/9", from:"2026-09-21", to:"2026-09-23"},
+    {label:"Sóng 5 · 24-26/9", from:"2026-09-24", to:"2026-09-26"},
+    {label:"7 ngày gần nhất", from:"2026-09-22", to:"2026-09-28"},
+  ];
+  function setupFbFilter(){
+    const fromEl = document.getElementById("fb-date-from");
+    const toEl = document.getElementById("fb-date-to");
+    if (!fromEl || !toEl) return;
+    const daysEl = document.getElementById("fb-filter-days");
+    const kpisEl = document.getElementById("fb-filtered-kpis");
+    const presetRow = document.getElementById("fb-preset-row");
+    const cards = Array.from(document.querySelectorAll("#pf3 .analysis-card[data-air]"));
+    presetRow.innerHTML = FB_PRESETS.map((p,i)=>`<button class="preset-btn" data-i="${i}">${p.label}</button>`).join("");
+
+    function apply(from, to){
+      fromEl.value = from; toEl.value = to;
+      const days = Math.round((new Date(to)-new Date(from))/DAY)+1;
+      daysEl.textContent = `(${days} ngày)`;
+
+      let shown=0, cost=0, inbox=0, orders=0, rev=0;
+      cards.forEach(c=>{
+        const air = c.dataset.air;
+        const inRange = air>=from && air<=to;
+        c.style.display = inRange ? "" : "none";
+        if (inRange){
+          shown++;
+          cost += +c.dataset.cost;
+          inbox += +c.dataset.inbox;
+          orders += +c.dataset.orders;
+          rev += +c.dataset.rev;
+        }
+      });
+      const roas = cost ? rev/cost : 0;
+      const cr = inbox ? 100*orders/inbox : 0;
+      kpisEl.innerHTML = `
+        <div class="tile"><span class="eyebrow">Content trong khoảng</span><div class="v num">${shown}</div><div class="l">/ ${cards.length} content, lọc theo ngày air</div></div>
+        <div class="tile"><span class="eyebrow">Tổng chi (luỹ kế)</span><div class="v num">${fmtVnd(cost)}</div><div class="l">${inbox} inbox</div></div>
+        <div class="tile good"><span class="eyebrow">Doanh thu (luỹ kế)</span><div class="v num">${fmtVnd(rev)}</div><div class="l">${orders} đơn</div></div>
+        <div class="tile ${roas>=1?'good':'bad'}"><span class="eyebrow">ROAS</span><div class="v num">${roas.toFixed(2)}x</div><div class="l">CR ${cr.toFixed(1)}%</div></div>
+      `;
+      presetRow.querySelectorAll(".preset-btn").forEach((b,i)=>{
+        const p = FB_PRESETS[+b.dataset.i];
+        b.classList.toggle("active", p.from===from && p.to===to);
+      });
+    }
+
+    [fromEl, toEl].forEach(el=>{
+      el.min = FB_MIN_DATE; el.max = FB_MAX_DATE;
+      el.addEventListener("change", ()=>{
+        let from = fromEl.value || FB_MIN_DATE, to = toEl.value || FB_MAX_DATE;
+        if (from > to) [from, to] = [to, from];
+        apply(from, to);
+      });
+    });
+    presetRow.addEventListener("click", e=>{
+      const btn = e.target.closest(".preset-btn");
+      if (!btn) return;
+      const p = FB_PRESETS[+btn.dataset.i];
+      apply(p.from, p.to);
+    });
+
+    apply(FB_DEFAULT_FROM, FB_DEFAULT_TO);
+  }
+  setupFbFilter();
 
   // Dữ liệu được cập nhật trực tiếp trong SEED mỗi khi trang này được đăng lại
   // (không dùng db live-sync nữa — tránh dữ liệu cũ trong db đè lên bản mới nhất).
