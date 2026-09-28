@@ -329,12 +329,16 @@
       <span class="tag">· Sale Online · Drforskin</span>
     </div>
     <div class="asof">
-      <div class="header-filter-row">
+      <div class="header-filter-row" id="header-filter-tiktok">
         <span class="header-filter-label">📅</span>
         <input type="date" id="master-date-from">
         <span class="sep">→</span>
         <input type="date" id="master-date-to">
         <span class="filter-days" id="master-filter-days"></span>
+      </div>
+      <div class="header-filter-row" id="header-asof-facebook">
+        <span class="header-filter-label">📅</span>
+        <span style="font-weight:700;color:var(--brand)">Facebook cập nhật tới 28/09/2026</span>
       </div>
     </div>
   </div>
@@ -1500,6 +1504,10 @@
   });
   document.documentElement.dataset.channel = "facebook";
   showPage("pf1");
+  // Bộ lọc ngày ở header chỉ đọc dữ liệu TikTok (DAILY_STORE, ngày air content TikTok) —
+  // mỗi channel có badge ngày riêng để không gây hiểu lầm về khoảng ngày của dữ liệu đang xem.
+  document.getElementById("header-filter-tiktok").hidden = true;
+  document.getElementById("header-asof-facebook").hidden = false;
 
   const CHANNEL_FIRST_PAGE = {tiktok:"p1", facebook:"pf1"};
   document.querySelectorAll(".chpill").forEach((pill)=>{
@@ -1510,6 +1518,8 @@
       document.documentElement.dataset.channel = ch;
       document.getElementById("tabs-tiktok").hidden = ch!=="tiktok";
       document.getElementById("tabs-facebook").hidden = ch!=="facebook";
+      document.getElementById("header-filter-tiktok").hidden = ch!=="tiktok";
+      document.getElementById("header-asof-facebook").hidden = ch!=="facebook";
       showPage(CHANNEL_FIRST_PAGE[ch]);
     });
   });
