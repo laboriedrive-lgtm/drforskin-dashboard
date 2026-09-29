@@ -1,0 +1,314 @@
+<title>Báo cáo Test Nội dung Tháng 9</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#15397F; --brand-2:#2C5FB8; --brand-soft:#EAF1FC;
+  --paper:#F5F7FB; --surface:#FFFFFF; --surface-2:#FBFCFE;
+  --ink:#171B24; --ink-dim:#5B6474; --ink-faint:#8890A0;
+  --line:#E3E7EF; --line-soft:#EDF0F6;
+  --good:#1E8A57; --good-soft:#E4F5EC;
+  --warn:#B0750C; --warn-soft:#FBF1DD;
+  --bad:#BE3B2E; --bad-soft:#FBEAE7;
+  --gold:#B8902E; --gold-soft:#FAF3E4;
+  --shadow:0 1px 2px rgba(20,30,60,.04),0 8px 24px -12px rgba(20,30,60,.12);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --brand:#6C93D6; --brand-2:#8FB0E6; --brand-soft:#182A4A;
+    --paper:#12151C; --surface:#191D27; --surface-2:#1E232F;
+    --ink:#EDEFF4; --ink-dim:#A7AFC0; --ink-faint:#747D90;
+    --line:#2A2F3C; --line-soft:#232833;
+    --good:#4CC98A; --good-soft:#153327;
+    --warn:#E0A83C; --warn-soft:#3A2E14;
+    --bad:#E37768; --bad-soft:#3A1E1A;
+    --gold:#D9B559; --gold-soft:#332912;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --brand:#6C93D6; --brand-2:#8FB0E6; --brand-soft:#182A4A;
+  --paper:#12151C; --surface:#191D27; --surface-2:#1E232F;
+  --ink:#EDEFF4; --ink-dim:#A7AFC0; --ink-faint:#747D90;
+  --line:#2A2F3C; --line-soft:#232833;
+  --good:#4CC98A; --good-soft:#153327;
+  --warn:#E0A83C; --warn-soft:#3A2E14;
+  --bad:#E37768; --bad-soft:#3A1E1A;
+  --gold:#D9B559; --gold-soft:#332912;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.5);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,sans-serif;margin:0;padding:0 16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:840px;margin:0 auto;padding:40px 0 80px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;text-wrap:balance;color:var(--ink);margin:0}
+::selection{background:var(--brand-soft);color:var(--brand)}
+a{color:var(--brand-2)}
+
+/* Masthead */
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:22px;margin-bottom:34px;border-bottom:2px solid var(--brand)}
+.brandmark{display:flex;align-items:center;gap:10px}
+.brandmark svg{flex:0 0 auto}
+.brandmark .word{font-family:"Be Vietnam Pro";font-weight:800;font-size:14.5px;color:var(--brand);letter-spacing:.02em}
+.brandmark .sub{font-size:11px;color:var(--ink-faint);font-weight:600;letter-spacing:.03em}
+.masthead-right{text-align:right;font-size:12.5px;color:var(--ink-faint);font-family:"IBM Plex Mono",monospace}
+
+/* Cover */
+.cover-eyebrow{font-family:"Be Vietnam Pro";font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-2);margin-bottom:14px}
+.cover-title{font-size:clamp(30px,5vw,44px);font-weight:600;line-height:1.08;margin-bottom:18px}
+.cover-title em{font-style:italic;color:var(--brand)}
+.cover-sub{font-size:16.5px;color:var(--ink-dim);max-width:60ch;margin-bottom:28px}
+.cover-meta{display:flex;gap:28px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-faint);padding-top:18px;border-top:1px solid var(--line)}
+.cover-meta b{color:var(--ink);font-weight:700}
+
+/* KPI strip */
+.kpi-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:36px 0}
+.kpi-tile{background:var(--surface);padding:18px 16px;display:flex;flex-direction:column;gap:5px}
+.kpi-tile .l{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-faint)}
+.kpi-tile .v{font-family:"IBM Plex Mono";font-weight:600;font-size:22px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.kpi-tile .v.good{color:var(--good)}
+.kpi-tile .v.bad{color:var(--bad)}
+.kpi-tile .d{font-size:11.5px;color:var(--ink-faint)}
+
+/* Verdict quote */
+.verdict{font-family:"Fraunces";font-weight:500;font-size:clamp(19px,2.6vw,23px);line-height:1.5;color:var(--ink);background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:0 12px 12px 0;padding:22px 26px;margin:20px 0 30px}
+.verdict b{font-weight:700;color:var(--brand)}
+
+/* Sections */
+section{margin:52px 0}
+.sec-eyebrow{font-family:"IBM Plex Mono";font-size:11.5px;font-weight:600;color:var(--brand-2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.sec-eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+h2.sec-title{font-size:clamp(22px,3vw,28px);font-weight:600;margin-bottom:16px}
+p{margin:0 0 14px}
+.lede{font-size:16px;color:var(--ink-dim)}
+
+/* Finding cards */
+.finding{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0;box-shadow:var(--shadow)}
+.finding.good{border-left:4px solid var(--good)}
+.finding.bad{border-left:4px solid var(--bad)}
+.finding.gold{border-left:4px solid var(--gold)}
+.finding-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.finding-head h3{font-size:16.5px;font-weight:600;font-family:"Be Vietnam Pro";font-weight:700}
+.finding-tag{font-family:"IBM Plex Mono";font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.finding.good .finding-tag{background:var(--good-soft);color:var(--good)}
+.finding.bad .finding-tag{background:var(--bad-soft);color:var(--bad)}
+.finding.gold .finding-tag{background:var(--gold-soft);color:var(--gold)}
+.finding p{font-size:14.5px;color:var(--ink-dim);margin-bottom:0}
+.finding p+p{margin-top:8px}
+.finding .evidence{font-family:"IBM Plex Mono";font-size:12.5px;color:var(--ink-faint);background:var(--surface-2);border-radius:8px;padding:8px 12px;margin-top:10px}
+
+/* Tables */
+.tbl-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+th{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-faint);background:var(--surface-2);padding:10px 14px;border-bottom:1px solid var(--line)}
+td{padding:10px 14px;border-bottom:1px solid var(--line-soft);color:var(--ink)}
+tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-family:"IBM Plex Mono";font-variant-numeric:tabular-nums}
+td.good{color:var(--good);font-weight:600}
+td.bad{color:var(--bad);font-weight:600}
+td.warn{color:var(--warn);font-weight:600}
+
+/* Roadmap */
+.roadmap{display:flex;flex-direction:column;gap:0;counter-reset:step;margin-top:18px}
+.step{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.step:first-child{border-top:none}
+.step-num{counter-increment:step;font-family:"IBM Plex Mono";font-weight:600;font-size:13px;color:var(--brand);background:var(--brand-soft);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.step-num::before{content:counter(step,decimal-leading-zero)}
+.step-body h4{font-family:"Be Vietnam Pro";font-weight:700;font-size:15px;margin:0 0 5px;color:var(--ink)}
+.step-body p{font-size:13.5px;color:var(--ink-dim);margin:0}
+.step-owner{display:inline-block;margin-top:8px;font-family:"IBM Plex Mono";font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--surface-2);color:var(--ink-faint);border:1px solid var(--line)}
+
+/* callout */
+.callout{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13.5px;color:var(--ink-dim);margin:18px 0}
+.callout b{color:var(--ink)}
+
+footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:640px){
+  .masthead{flex-direction:column;align-items:flex-start;gap:6px}
+  .masthead-right{text-align:left}
+  table{min-width:460px}
+}
+</style>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="brandmark">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="7" fill="var(--brand)"/><path d="M9 20.5V9.5H14.2C16.9 9.5 18.8 11.2 18.8 13.6C18.8 15.1 18.1 16.2 16.9 16.9L19.3 20.5H16.6L14.6 17.4H11.4V20.5H9ZM11.4 15.3H14C15.3 15.3 16.2 14.6 16.2 13.6C16.2 12.6 15.3 11.9 14 11.9H11.4V15.3Z" fill="white"/></svg>
+      <div>
+        <div class="word">30SHINE · DRFORSKIN</div>
+        <div class="sub">Ecom Content Ops</div>
+      </div>
+    </div>
+    <div class="masthead-right">BÁO CÁO NỘI BỘ<br>29/09/2026</div>
+  </div>
+
+  <div class="cover-eyebrow">Báo cáo đánh giá campaign · Facebook Ads</div>
+  <h1 class="cover-title">Tháng 9: tìm ra <em>một</em> insight thắng thật,<br>để lộ ra vấn đề lớn hơn ở khâu chốt đơn.</h1>
+  <p class="cover-sub">Đánh giá toàn bộ 23 content test + 4 nội dung cũ đang duy trì trên Facebook, chiến dịch "Ecom &mdash; Sóng Test 80 Triệu", kỳ 12/9&ndash;29/9/2026. Viết theo góc nhìn người trực tiếp set ngân sách, theo dõi rule và ra quyết định tắt/giữ trong suốt tháng.</p>
+  <div class="cover-meta">
+    <span>Phạm vi: <b>Facebook</b> (TikTok đánh giá riêng, dữ liệu content-level chưa đủ trọn tháng)</span>
+    <span>Ngân sách: <b>19,23tr / 80tr kế hoạch (24%)</b></span>
+    <span>Nguồn: <b>Tracker vận hành + Lark Base</b></span>
+  </div>
+
+  <div class="kpi-strip">
+    <div class="kpi-tile"><span class="l">Chi tiêu</span><span class="v">19,23tr</span><span class="d">/ 23 ad set</span></div>
+    <div class="kpi-tile"><span class="l">Doanh thu</span><span class="v good">24,07tr</span><span class="d">43 đơn</span></div>
+    <div class="kpi-tile"><span class="l">ROAS</span><span class="v">1,25</span><span class="d">chưa trừ COGS</span></div>
+    <div class="kpi-tile"><span class="l">CR gộp</span><span class="v good">21,7%</span><span class="d">ngưỡng 20%</span></div>
+    <div class="kpi-tile"><span class="l">Content air</span><span class="v">24 / 30</span><span class="d">80% kế hoạch</span></div>
+    <div class="kpi-tile"><span class="l">Còn sống</span><span class="v bad">8 / 23</span><span class="d">15 đã tắt</span></div>
+  </div>
+
+  <div class="verdict">
+    Tháng 9 đã làm đúng một việc quan trọng nhất: tìm ra được <b>một insight thắng thật, tái lập được ở quy mô lớn</b> &mdash; điều mà 3 tháng chạy content trước đó chưa ai chứng minh bằng số. Nhưng đồng thời, việc soi kỹ dữ liệu tới tận CPA thật (chứ không dừng ở ROAS bề mặt) cho thấy <b>gần một nửa lượng lead cả tháng đang bị lãng phí ở khâu chốt đơn</b>, không phải ở content &mdash; và đây là chỗ tháng 10 sẽ lãi nhiều nhất nếu sửa trước khi đổ thêm tiền ads.
+  </div>
+
+  <div class="callout"><b>Đính chính so với bản đọc trước:</b> Lark Base vừa được bổ sung trường Insight/Động lực/Rào cản thật cho từng content (trước đó chỉ có Đối tượng). Toàn bộ phần "Insight thắng" bên dưới đã tính lại theo đúng field Insight thật, thay cho suy đoán từ hook trước đây &mdash; kết luận có thay đổi so với bản trước.</div>
+
+  <!-- ===================== SECTION: DA DUNG ===================== -->
+  <section>
+    <div class="sec-eyebrow">Phần 1 · Đã làm đúng</div>
+    <h2 class="sec-title">Ba việc tháng 9 nên tự tin giữ nguyên</h2>
+
+    <div class="finding good">
+      <div class="finding-head"><h3>1. Có một insight thắng thật, không phải may mắn nhất thời</h3><span class="finding-tag">Xác nhận ở quy mô lớn</span></div>
+      <p style="font-family:'Fraunces';font-size:18px;font-weight:500;font-style:italic;color:var(--ink);border-left:3px solid var(--good);padding-left:16px;margin:10px 0 14px">&ldquo;Muốn da đẹp hơn, nhưng sợ chọn sai &mdash; tốn tiền mà không đáng, nên cứ trì hoãn.&rdquo;</p>
+      <p>Đây là insight duy nhất được gắn nhất quán cho 3 content, và cả 3 đều thắng: Anh1, Chi 5k/ngày, Gia shock kcn. Gộp lại đạt <b>CR 32,4%, ROAS 1,99</b> &mdash; cao nhất trong toàn bộ 7 insight đã thử tháng này, bỏ xa nhóm phía sau. Rào cản không phải "lười" hay "không đủ tiền" &mdash; là <b>sợ mua nhầm, sợ phí tiền</b>. Cách 3 content này thắng đều đi từ trấn an rủi ro (chứng minh hiệu quả thật, giá cụ thể rõ ràng) trước khi mời mua, không mở đầu bằng ưu đãi.</p>
+      <p>Quan trọng hơn cả CR: <b>Anh1 tái lập insight này liên tục 18 ngày</b>, qua nhiều lần đổi ngân sách (200k &rarr; 475k &rarr; 350k), vẫn giữ CR quanh 30&ndash;33%. Một content tốt trong 3 ngày là may mắn; giữ phong độ qua 18 ngày và nhiều mức chi là bằng chứng insight thật, không phải hên.</p>
+      <div class="evidence">Insight "sợ chọn sai" &middot; 22 đơn / 43 đơn cả tháng (51%) chỉ từ 3 content &middot; Anh1 một mình đã 17/43 đơn (40%)</div>
+    </div>
+
+    <div class="finding good">
+      <div class="finding-head"><h3>2. Ngưỡng CR&ge;20% đang đúng, nên giữ làm chuẩn tắt/giữ chính</h3><span class="finding-tag">Ngưỡng đã kiểm chứng</span></div>
+      <p>Phân phối CR toàn bộ 19 ad set có dữ liệu chia rõ hai cụm: 7 content 0% (nghẽn hoàn toàn), số còn lại trải 14&ndash;40%, với 7/19 vượt hẳn mốc 20%. Đây không phải một con số áp đặt từ trên xuống &mdash; nó khớp đúng với đường phân cách tự nhiên giữa content "có chuyển đổi thật" và "không chuyển đổi" quan sát được trong tháng.</p>
+    </div>
+
+    <div class="finding good">
+      <div class="finding-head"><h3>3. Kỷ luật tắt lỗ đúng lịch, không để content chết dai dẳng</h3><span class="finding-tag">Vận hành đúng nhịp</span></div>
+      <p>15/23 ad set đã được tắt đúng theo dữ liệu, phần lớn trong vòng 3&ndash;7 ngày kể từ lúc tín hiệu xấu rõ ràng (0 đơn, CP/Inbox vượt xa trung vị). Không có content nào bị "để quên" chạy tự do quá 2 tuần mà không xem lại &mdash; đây là kỷ luật vận hành cần giữ, vì nó trực tiếp giới hạn phần lỗ ở mức chấp nhận được (19,23tr cho cả tháng, không phải con số mất kiểm soát).</p>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION: CHUA TOT ===================== -->
+  <section>
+    <div class="sec-eyebrow">Phần 2 · Chưa đạt</div>
+    <h2 class="sec-title">Bốn khoảng hụt cần sửa ngay đầu tháng 10</h2>
+
+    <div class="finding bad">
+      <div class="finding-head"><h3>1. Một insight đã đủ mẫu để kết luận rõ: không hiệu quả, nên dừng hẳn</h3><span class="finding-tag">Insight đã bác bỏ</span></div>
+      <p style="font-family:'Fraunces';font-size:16.5px;font-weight:500;font-style:italic;color:var(--ink-dim);border-left:3px solid var(--bad);padding-left:16px;margin:10px 0 14px">&ldquo;Tôi chấp nhận mình trông thế nào lúc làm việc, nhưng không muốn vẻ ngoài đó đi theo mình và bị người ngoài đánh giá.&rdquo;</p>
+      <p>Đây là insight được thử nhiều nhất tháng (5 content: Lột xác diện mạo, Ae hải phòng, Sáng cống hiến, Cong nhan kcn, Moi tru 30k) &mdash; và cũng là insight cho kết quả kém nhất trong nhóm có đủ mẫu: CR 13,5%, ROAS 0,94. Khác với các insight còn mỏng, đây không phải "chưa đủ dữ liệu" &mdash; 5 content, nhiều hook khác nhau, cùng chạm đáy. Nên coi là đã kiểm chứng xong và dừng lại, thay vì tiếp tục rót thêm ngân sách với hy vọng một biến thể mới sẽ khác.</p>
+      <div class="evidence">5 content &middot; 4.812.694đ chi &middot; chỉ 7 đơn &middot; CR thấp nhất trong mọi insight đã đủ mẫu</div>
+    </div>
+
+    <div class="finding bad">
+      <div class="finding-head"><h3>2. Bốn trong bảy insight còn quá mỏng để tin &mdash; chưa phải kết luận, chỉ là gợi ý</h3><span class="finding-tag">Cỡ mẫu</span></div>
+      <p>"Không rành skincare, cần hiểu ngay sản phẩm" (1 content), "Đầu tư phải hợp lý, xứng đáng" (2 content), "Ngại/lười chăm da" (3 content, riêng nhóm mới lên ngày 1&ndash;2 chưa có inbox) &mdash; mỗi nhóm đều đang <0,5tr đồng ngân sách, quá nhỏ để phân biệt "thua vì insight sai" hay "thua vì mẫu chưa đủ". Ngược lại, insight thắng (#II) và insight vừa bác bỏ (#I) đều có 3&ndash;5 content mới đủ tin &mdash; đó là mức ngân sách tối thiểu nên đặt cho một insight trước khi kết luận, tháng 10 cần áp dụng nhất quán.</p>
+    </div>
+
+    <div class="finding bad">
+      <div class="finding-head"><h3>3. Ngân sách mục tiêu CPA (72k cho Tràm trà) không thể đạt được bằng kênh inbox lạnh</h3><span class="finding-tag">Đặt mục tiêu</span></div>
+      <p>Trong toàn bộ 19 ad set có dữ liệu, CP/Inbox thấp nhất từng đạt được là 63.559đ &mdash; đã cao hơn mục tiêu CPA 72k. Không một content nào, kể cả content tốt nhất, có đường nào chạm được CPA mục tiêu nếu vẫn bán qua kịch bản inbox &rarr; tư vấn &rarr; chốt. Đặt mục tiêu sai tầm khiến toàn bộ báo cáo rule trông như "cả tháng không ai đạt chuẩn", trong khi vấn đề nằm ở chỗ đặt mục tiêu.</p>
+      <div class="evidence">CPA thật thấp nhất đạt được: 237.285đ (Gia shock kcn) &middot; gấp 3,3 lần mục tiêu 72k</div>
+    </div>
+
+    <div class="finding bad">
+      <div class="finding-head"><h3>4. Định dạng đang là biến nhiễu, chưa tách bạch được với insight</h3><span class="finding-tag">Thiết kế test</span></div>
+      <p>Ảnh đang vượt trội Video trên toàn bộ chỉ số (CR 25,9% so với 16,7%, ROAS 1,59 so với 0,88), nhưng 2/3 content thuộc insight thắng lại tình cờ là Ảnh. Chưa có cặp Ảnh/Video nào chạy cùng một insight để biết chính insight thắng, hay định dạng rẻ hơn đang gánh phần lớn kết quả.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION: PHAT HIEN CHIEN LUOC ===================== -->
+  <section>
+    <div class="sec-eyebrow">Phần 3 · Phát hiện đáng giá nhất tháng</div>
+    <h2 class="sec-title">Gần một nửa lead cả tháng đang chết ở khâu chốt, không phải ở content</h2>
+    <p class="lede">Đây là phát hiện tôi cho là quan trọng hơn mọi con số ROAS/CR ở trên &mdash; vì nó chỉ ra khoản lãi lớn nhất tháng 10 không đến từ việc viết content hay hơn, mà từ việc sửa quy trình bán hàng trên chính lượng khách đã có sẵn, không tốn thêm một đồng ads nào.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Ad set</th><th class="num">Inbox</th><th class="num">Đơn</th><th class="num">CR</th><th class="num">CP/Inbox</th><th>Chẩn đoán</th></tr></thead>
+        <tbody>
+          <tr><td><b>Thang 6 &ndash; Serum 7in1</b> (nội dung cũ)</td><td class="num">84</td><td class="num">2</td><td class="num bad">2,4%</td><td class="num good">29.304đ</td><td>Rẻ nhất tháng ở phễu trên, nhưng gần như không ai chốt được</td></tr>
+          <tr><td>Post t8 (nội dung cũ)</td><td class="num">82</td><td class="num">13</td><td class="num warn">15,9%</td><td class="num">49.281đ</td><td>Lượng lead lớn nhất tháng, CR vẫn dưới chuẩn</td></tr>
+          <tr><td>Post t6 (nội dung cũ)</td><td class="num">52</td><td class="num">8</td><td class="num warn">15,4%</td><td class="num">57.489đ</td><td>Cùng mẫu hình với Post t8</td></tr>
+          <tr><td>Giải pháp da bóng dầu</td><td class="num">8</td><td class="num">0</td><td class="num bad">0%</td><td class="num good">72.461đ</td><td>Phễu trên rẻ, phễu dưới nghẽn hoàn toàn</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Ba ad set nội dung cũ (Thang 6, Post t8, Post t6) đang ôm <b>218 inbox</b> &mdash; nhiều hơn toàn bộ 23 content test cộng lại (198 inbox). Đây là nguồn lead lớn nhất trong toàn bộ dữ liệu tháng 9, và nó không nằm trong ngân sách test 80 triệu &mdash; nó đã tồn tại sẵn, miễn phí. Nếu CR của riêng 3 ad set này kéo lên mức trung bình các content cùng dòng đang làm tốt (khoảng 25%), tháng 9 đã có thêm gần <b>25&ndash;30 đơn</b> mà không cần chi thêm một đồng quảng cáo nào.</p>
+
+    <div class="callout">
+      <b>Vì sao tôi tin đây là vấn đề chốt đơn, không phải content:</b> "Thang 6 Serum 7in1" có CP/Inbox rẻ nhất trong toàn bộ 27 ad set của cả tháng (29.304đ) &mdash; nghĩa là content đang hút đúng người quan tâm, rất hiệu quả. Nhưng cứ 42 người nhắn tin thì chưa tới 1 người chốt được đơn. Khoảng cách đó không nằm ở hook hay hình ảnh &mdash; nó nằm ở phản hồi, kịch bản tư vấn, hoặc tốc độ xử lý inbox ở đúng ad set này.
+    </div>
+  </section>
+
+  <!-- ===================== SECTION: TIKTOK ===================== -->
+  <section>
+    <div class="sec-eyebrow">Phần 4 · TikTok (tham khảo, chưa trọn tháng)</div>
+    <h2 class="sec-title">Một tín hiệu đáng tin, nhưng dữ liệu mới phủ 2 tuần đầu</h2>
+    <p>Dữ liệu content-level TikTok (17 video) chỉ có tới đầu tháng &mdash; nửa sau tháng 9 chưa được kéo về nên tôi không đưa vào phần đánh giá chính để tránh kết luận non. Riêng phần đã có: <b>angle "sau khi nặn mụn / đi spa nặn mụn" đạt tỷ lệ ra đơn 3/3</b>, cao nhất trong toàn bộ content TikTok đã test &mdash; đáng chú ý vì đây chính là angle làm <em>kém</em> nhất trên Facebook (ROAS 0,81). Không dùng chung 1 công thức angle cho 2 nền tảng là bài học rõ nhất từ phần dữ liệu này.</p>
+  </section>
+
+  <!-- ===================== SECTION: ACTION ===================== -->
+  <section>
+    <div class="sec-eyebrow">Phần 5 · Kế hoạch tháng 10</div>
+    <h2 class="sec-title">Năm việc theo đúng thứ tự ưu tiên</h2>
+
+    <div class="roadmap">
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h4>Audit khâu chốt đơn trên 3 ad set nội dung cũ trước khi làm bất cứ việc gì khác</h4>
+          <p>Đây là đòn bẩy lãi cao nhất và không tốn thêm ngân sách. Kiểm tra thời gian phản hồi, người trực, kịch bản tư vấn tại đúng "Thang 6 Serum 7in1", so sánh với "Post t8" (cùng dòng, CR gấp 6 lần).</p>
+          <span class="step-owner">Sale / Vận hành inbox</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h4>Nhân bản insight "sợ chọn sai, tốn kém, không đáng tiền" thành 3&ndash;4 biến thể mới</h4>
+          <p>Giữ nguyên insight đã kiểm chứng (CR 32,4%, ROAS 1,99), đổi bối cảnh/proof-point cụ thể để mở rộng mà không đánh mất tín hiệu đã có. Song song, dừng hẳn insight "chấp nhận bản thân lúc làm việc" &mdash; đã đủ 5 content để kết luận không hiệu quả.</p>
+          <span class="step-owner">Content</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h4>Dồn thêm ngân sách cho 4 insight còn mỏng trước khi kết luận thua/thắng</h4>
+          <p>"Không rành skincare", "Đầu tư hợp lý xứng đáng", "Ngại/lười chăm da" mỗi nhóm mới &lt;0,5tr đồng &mdash; chưa đủ để phân biệt insight sai hay chỉ chưa đủ mẫu. Việc gắn Insight/Động lực/Rào cản cho từng content trong Lark Base (đã bắt đầu làm tốt tháng này) cần duy trì cho toàn bộ content mới, không riêng những cái nổi bật.</p>
+          <span class="step-owner">Content / Quy trình Lark Base</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h4>Đặt lại CPA mục tiêu Tràm trà sát thực tế kênh (dùng CPA hoà vốn 192k làm ngưỡng sống còn, không phải 72k), sau khi đối chiếu AOV thật</h4>
+          <p>AOV quan sát được của các đơn Tràm trà cao hơn bảng benchmark 15&ndash;220% &mdash; cần xác nhận số thật từ đơn hàng trước khi chốt lại ngưỡng, tránh cắt nhầm content đang có lãi.</p>
+          <span class="step-owner">Vận hành / Data</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div class="step-body">
+          <h4>Chạy phép thử Ảnh/Video trên cùng một insight để tách nhiễu định dạng</h4>
+          <p>Cần biết chắc insight thắng vì đúng tâm lý hay vì được thể hiện bằng Ảnh (rẻ hơn) &mdash; ảnh hưởng trực tiếp tới cách phân bổ ngân sách sản xuất tháng 10.</p>
+          <span class="step-owner">Content</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Nguồn dữ liệu: tracker vận hành Facebook Ads, Lark Base "Quản lý bài viết", TikTok Business API (chưa trọn tháng)</span>
+    <span>29/09/2026</span>
+  </footer>
+
+</div>
