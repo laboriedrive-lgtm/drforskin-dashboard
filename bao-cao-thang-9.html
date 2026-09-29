@@ -44,7 +44,11 @@
 }
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:"Be Vietnam Pro",system-ui,sans-serif;margin:0;padding:0 16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:840px;margin:0 auto;padding:40px 0 80px}
+.wrap{max-width:1320px;margin:0 auto;padding:40px 0 80px}
+.finding-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:16px;align-items:start}
+.finding-grid .finding{margin:0}
+.finding-grid .finding.span-all{grid-column:1/-1}
+.cover-sub,.verdict,.lede,.callout{max-width:74ch}
 h1,h2,h3{font-family:"Fraunces",Georgia,serif;text-wrap:balance;color:var(--ink);margin:0}
 ::selection{background:var(--brand-soft);color:var(--brand)}
 a{color:var(--brand-2)}
@@ -113,9 +117,8 @@ td.bad{color:var(--bad);font-weight:600}
 td.warn{color:var(--warn);font-weight:600}
 
 /* Roadmap */
-.roadmap{display:flex;flex-direction:column;gap:0;counter-reset:step;margin-top:18px}
+.roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:4px 32px;counter-reset:step;margin-top:18px}
 .step{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
-.step:first-child{border-top:none}
 .step-num{counter-increment:step;font-family:"IBM Plex Mono";font-weight:600;font-size:13px;color:var(--brand);background:var(--brand-soft);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
 .step-num::before{content:counter(step,decimal-leading-zero)}
 .step-body h4{font-family:"Be Vietnam Pro";font-weight:700;font-size:15px;margin:0 0 5px;color:var(--ink)}
@@ -175,7 +178,8 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
     <div class="sec-eyebrow">Phần 1 · Đã làm đúng</div>
     <h2 class="sec-title">Ba việc tháng 9 nên tự tin giữ nguyên</h2>
 
-    <div class="finding good">
+    <div class="finding-grid">
+    <div class="finding good span-all">
       <div class="finding-head"><h3>1. Có một insight thắng thật, không phải may mắn nhất thời</h3><span class="finding-tag">Xác nhận ở quy mô lớn</span></div>
       <p style="font-family:'Fraunces';font-size:18px;font-weight:500;font-style:italic;color:var(--ink);border-left:3px solid var(--good);padding-left:16px;margin:10px 0 14px">&ldquo;Muốn da đẹp hơn, nhưng sợ chọn sai &mdash; tốn tiền mà không đáng, nên cứ trì hoãn.&rdquo;</p>
       <p>Đây là insight duy nhất được gắn nhất quán cho 3 content, và cả 3 đều thắng: Anh1, Chi 5k/ngày, Gia shock kcn. Gộp lại đạt <b>CR 32,4%, ROAS 1,99</b> &mdash; cao nhất trong toàn bộ 7 insight đã thử tháng này, bỏ xa nhóm phía sau. Rào cản không phải "lười" hay "không đủ tiền" &mdash; là <b>sợ mua nhầm, sợ phí tiền</b>. Cách 3 content này thắng đều đi từ trấn an rủi ro (chứng minh hiệu quả thật, giá cụ thể rõ ràng) trước khi mời mua, không mở đầu bằng ưu đãi.</p>
@@ -192,6 +196,7 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
       <div class="finding-head"><h3>3. Kỷ luật tắt lỗ đúng lịch, không để content chết dai dẳng</h3><span class="finding-tag">Vận hành đúng nhịp</span></div>
       <p>15/23 ad set đã được tắt đúng theo dữ liệu, phần lớn trong vòng 3&ndash;7 ngày kể từ lúc tín hiệu xấu rõ ràng (0 đơn, CP/Inbox vượt xa trung vị). Không có content nào bị "để quên" chạy tự do quá 2 tuần mà không xem lại &mdash; đây là kỷ luật vận hành cần giữ, vì nó trực tiếp giới hạn phần lỗ ở mức chấp nhận được (19,23tr cho cả tháng, không phải con số mất kiểm soát).</p>
     </div>
+    </div>
   </section>
 
   <!-- ===================== SECTION: CHUA TOT ===================== -->
@@ -199,7 +204,8 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
     <div class="sec-eyebrow">Phần 2 · Chưa đạt</div>
     <h2 class="sec-title">Bốn khoảng hụt cần sửa ngay đầu tháng 10</h2>
 
-    <div class="finding bad">
+    <div class="finding-grid">
+    <div class="finding bad span-all">
       <div class="finding-head"><h3>1. Một insight tốt đang bị quản lý như 1 khối duy nhất, trong khi 5 content bên trong cần 3 quyết định khác nhau</h3><span class="finding-tag">Chưa phân loại theo content</span></div>
       <p style="font-family:'Fraunces';font-size:16.5px;font-weight:500;font-style:italic;color:var(--ink-dim);border-left:3px solid var(--bad);padding-left:16px;margin:10px 0 14px">&ldquo;Tôi chấp nhận mình trông thế nào lúc làm việc, nhưng không muốn vẻ ngoài đó đi theo mình và bị người ngoài đánh giá.&rdquo;</p>
       <p>Đây là insight có tổng ROAS gộp thấp (0,94) nhưng ẩn bên trong là 3 mẫu hình hoàn toàn khác nhau, đọc theo đúng 4 chỉ số phễu (hold &rarr; CP/Inbox &rarr; CR &rarr; ROAS):</p>
@@ -237,6 +243,7 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
     <div class="finding bad">
       <div class="finding-head"><h3>4. Định dạng đang là biến nhiễu, chưa tách bạch được với insight</h3><span class="finding-tag">Thiết kế test</span></div>
       <p>Ảnh đang vượt trội Video trên toàn bộ chỉ số (CR 25,9% so với 16,7%, ROAS 1,59 so với 0,88), nhưng 2/3 content thuộc insight thắng lại tình cờ là Ảnh. Chưa có cặp Ảnh/Video nào chạy cùng một insight để biết chính insight thắng, hay định dạng rẻ hơn đang gánh phần lớn kết quả.</p>
+    </div>
     </div>
   </section>
 
