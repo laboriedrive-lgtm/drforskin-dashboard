@@ -338,7 +338,7 @@
       </div>
       <div class="header-filter-row" id="header-asof-facebook">
         <span class="header-filter-label">📅</span>
-        <span style="font-weight:700;color:var(--brand)">Facebook cập nhật tới 28/09/2026</span>
+        <span style="font-weight:700;color:var(--brand)">Facebook cập nhật tới <span id="fb-asof-date">—</span></span>
       </div>
     </div>
   </div>
@@ -2271,6 +2271,12 @@
   // data-inbox/data-orders/data-rev trên .analysis-card; lọc chỉ ẩn/hiện thẻ + cộng dồn
   // số liệu luỹ kế của các thẻ đang hiện, không tách chi tiêu theo ngày (tracker FB không có).
   const FB_MIN_DATE = "2026-09-10", FB_MAX_DATE = "2026-09-29";
+  // Badge "Facebook cập nhật tới..." đọc trực tiếp từ FB_MAX_DATE — chỉ cần sửa hằng số
+  // này mỗi lần cập nhật dữ liệu, không còn gõ tay chuỗi ngày rời rạc trong HTML nữa.
+  (function(){
+    const el = document.getElementById("fb-asof-date");
+    if (el) el.textContent = FB_MAX_DATE.split("-").reverse().join("/");
+  })();
   const FB_DEFAULT_FROM = FB_MIN_DATE, FB_DEFAULT_TO = FB_MAX_DATE;
   const FB_PRESETS = [
     {label:"Toàn bộ", from:FB_MIN_DATE, to:FB_MAX_DATE},
