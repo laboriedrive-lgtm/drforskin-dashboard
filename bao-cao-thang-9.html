@@ -200,10 +200,27 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
     <h2 class="sec-title">Bốn khoảng hụt cần sửa ngay đầu tháng 10</h2>
 
     <div class="finding bad">
-      <div class="finding-head"><h3>1. Một insight bị đánh giá "kém" chỉ vì gộp trung bình &mdash; bên trong có cả win lẫn vấn đề sale, không phải content sai</h3><span class="finding-tag">Cách đọc dữ liệu</span></div>
+      <div class="finding-head"><h3>1. Một insight tốt đang bị quản lý như 1 khối duy nhất, trong khi 5 content bên trong cần 3 quyết định khác nhau</h3><span class="finding-tag">Chưa phân loại theo content</span></div>
       <p style="font-family:'Fraunces';font-size:16.5px;font-weight:500;font-style:italic;color:var(--ink-dim);border-left:3px solid var(--bad);padding-left:16px;margin:10px 0 14px">&ldquo;Tôi chấp nhận mình trông thế nào lúc làm việc, nhưng không muốn vẻ ngoài đó đi theo mình và bị người ngoài đánh giá.&rdquo;</p>
-      <p>Gộp trung bình 5 content dùng insight này cho CR 13,5% &mdash; nhìn thoáng qua giống một insight yếu. Nhưng tách riêng từng content: "Sáng cống hiến tư bản" đang là 1 trong những content ROAS cao nhất tháng (2,08), "Lột xác diện mạo" mở đầu ROAS 3,71. Chỉ 2/5 content (Cong nhan kcn, Moi tru 30k) thật sự yếu cả hai đầu phễu. Số trung bình che mất tín hiệu tốt &mdash; bài học cho cách đọc insight tháng 10: không kết luận bằng số gộp khi nhóm còn lẫn cả execution tốt và xấu.</p>
-      <div class="evidence">Sáng cống hiến ROAS 2,08 &middot; Lột xác diện mạo mở đầu ROAS 3,71 &middot; chỉ 2/5 content thật sự đáng dừng</div>
+      <p>Đây là insight có tổng ROAS gộp thấp (0,94) nhưng ẩn bên trong là 3 mẫu hình hoàn toàn khác nhau, đọc theo đúng 4 chỉ số phễu (hold &rarr; CP/Inbox &rarr; CR &rarr; ROAS):</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Content</th><th class="num">Hold</th><th class="num">CP/Inbox</th><th class="num">CR</th><th class="num">ROAS</th><th>Xếp loại</th></tr></thead>
+          <tbody>
+            <tr><td><b>Sáng cống hiến tư bản</b></td><td class="num">3,13%</td><td class="num">148.755đ</td><td class="num good">33,3%</td><td class="num good">2,08</td><td>🟢 Win &mdash; giữ chân yếu nhưng chốt cực tốt</td></tr>
+            <tr><td>Lột xác diện mạo</td><td class="num">4,53%</td><td class="num">73.122đ</td><td class="num warn">16,7%</td><td class="num">1,53</td><td>🟡 Từng thắng (ROAS mở đầu 3,71), rơi dần khi tăng ngân sách, nay đã tắt</td></tr>
+            <tr><td><b>Ae hải phòng</b></td><td class="num good">5,25%</td><td class="num">105.545đ</td><td class="num bad">15,4%</td><td class="num bad">0,67</td><td>🟠 Content tốt nhất phễu trên cả tháng, chốt kém &mdash; nghi vấn ở sale</td></tr>
+            <tr><td>Moi tru 30k</td><td class="num bad">3,09%</td><td class="num">81.130đ</td><td class="num bad">0%</td><td class="num bad">0</td><td>🔴 Kill &mdash; hold dưới ngưỡng, hỏng từ hook</td></tr>
+            <tr><td>Cong nhan kcn</td><td class="num">&mdash; (ảnh)</td><td class="num bad">125.439đ</td><td class="num bad">0%</td><td class="num bad">0</td><td>🔴 Kill &mdash; CP/Inbox đắt nhất nhóm, 0 đơn</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><b>3 quyết định khác nhau cho cùng 1 insight, tháng 10:</b></p>
+      <p>&bull; <b>Nhân rộng theo đúng công thức của "Sáng cống hiến tư bản"</b> &mdash; hold thấp không cản nó chốt tốt nhất nhóm, nghĩa là CTA/offer đang làm đúng việc, nên giữ nguyên hướng CTA này khi ra biến thể mới, ngân sách tăng dần chứ không nhảy vọt (bài học từ chính "Lột xác diện mạo" &mdash; ROAS rơi 3,71&rarr;1,53 khi tăng ngân sách quá nhanh).<br>
+      &bull; <b>Chuyển "Ae hải phòng" cho sale, không đổi content</b> &mdash; hold 5,25% chứng minh hook/hình ảnh đang làm đúng việc, tốt hơn cả "Sáng cống hiến". Vấn đề nằm ở giữa lúc khách xem xong tới lúc nhắn tin/chốt &mdash; audit kịch bản CTA cuối video và tốc độ phản hồi riêng ad set này.<br>
+      &bull; <b>Cắt hẳn Moi tru 30k và Cong nhan kcn</b>, không thử lại nguyên hook &mdash; một cái hỏng từ hold (hook), một cái hỏng từ CP/Inbox (targeting/giá), cả hai đều không liên quan tới insight.</p>
     </div>
 
     <div class="finding bad">
@@ -247,7 +264,7 @@ footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-si
       <b>Vì sao tôi tin đây là vấn đề chốt đơn, không phải content:</b> "Thang 6 Serum 7in1" có CP/Inbox rẻ nhất trong toàn bộ 27 ad set của cả tháng (29.304đ) &mdash; nghĩa là content đang hút đúng người quan tâm, rất hiệu quả. Nhưng cứ 42 người nhắn tin thì chưa tới 1 người chốt được đơn. Khoảng cách đó không nằm ở hook hay hình ảnh &mdash; nó nằm ở phản hồi, kịch bản tư vấn, hoặc tốc độ xử lý inbox ở đúng ad set này.
     </div>
 
-    <p>Có một bằng chứng thứ hai củng cố đúng giả thuyết này, ngay trong nhóm content test: <b>"Ae hải phòng"</b> đạt hold rate 5,25% &mdash; cao nhất trong toàn bộ content đang chạy tháng 9, nghĩa là hook và câu chuyện giữ chân người xem tốt hơn mọi content khác. Nhưng CR chỉ 15,4%, ROAS 0,67 &mdash; thấp nhất trong chính nhóm insight của nó. Ngược lại, "Sáng cống hiến tư bản" hold chỉ 3,13% (dưới ngưỡng cảnh báo) nhưng CR lại cao nhất nhóm (33,3%). Hold rate và CR đang đi ngược chiều nhau ở 2 content này &mdash; dấu hiệu rõ ràng cho thấy khâu giữ chân người xem và khâu chốt đơn là hai vấn đề tách biệt, không cùng một nguyên nhân. Kịch bản chốt đơn trên "Ae hải phòng" đáng được xem lại riêng, độc lập với nội dung.</p>
+    <p>Có một bằng chứng thứ hai củng cố đúng giả thuyết này, ngay trong nhóm content test: <b>"Ae hải phòng"</b> đạt hold rate 5,25% &mdash; cao nhất trong toàn bộ content đang chạy tháng 9 &mdash; nhưng ROAS chỉ 0,67, thấp nhất trong chính nhóm insight của nó (chi tiết đầy đủ ở Phần 2, mục 1). Hook đang làm đúng việc; chỗ hỏng nằm ở giữa lúc khách xem xong tới lúc chốt.</p>
   </section>
 
   <!-- ===================== SECTION: TIKTOK ===================== -->
