@@ -314,6 +314,38 @@
   footer b{color:var(--ink)}
   footer .src{font-family:"Be Vietnam Pro";font-size:13px}
 
+  /* Campaign = Insight group blocks (Trang FB-3 cải tổ) */
+  .camp-rank-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+  table.camp-rank{border-collapse:collapse;width:100%;min-width:720px}
+  table.camp-rank thead th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-dim);padding:12px 16px;border-bottom:2px solid var(--line);background:var(--paper);white-space:nowrap}
+  table.camp-rank tbody td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:middle}
+  table.camp-rank tbody tr:last-child td{border-bottom:none}
+  table.camp-rank tbody tr:hover{background:var(--brand-soft);cursor:pointer}
+  table.camp-rank td.num{font-weight:700}
+  .camp-group{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);margin:16px 0;overflow:hidden}
+  .camp-group-head{padding:22px clamp(18px,3vw,28px);display:flex;flex-direction:column;gap:10px}
+  .camp-group-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .camp-group-name{font-size:11.5px;font-weight:700;color:var(--brand-2);text-transform:uppercase;letter-spacing:.03em;font-family:"Be Vietnam Pro",sans-serif}
+  .camp-group-title{font-size:19px;font-weight:800;margin-top:2px}
+  .camp-quote{font-style:italic;font-size:15px;color:var(--ink);background:var(--brand-soft);border-left:3px solid var(--brand-2);padding:9px 14px;border-radius:0 8px 8px 0;margin:2px 0}
+  .camp-highlight{font-size:13.5px;line-height:1.6;background:var(--paper);border-radius:10px;padding:10px 14px}
+  .camp-highlight b{color:var(--ink)}
+  details.camp-details{border-top:1px solid var(--line)}
+  details.camp-details>summary{cursor:pointer;list-style:none;padding:14px clamp(18px,3vw,28px);font-size:13.5px;font-weight:700;color:var(--brand-2);display:flex;align-items:center;gap:8px;background:var(--paper)}
+  details.camp-details>summary::-webkit-details-marker{display:none}
+  details.camp-details>summary::before{content:"▸";display:inline-block;transition:transform .15s;font-size:11px}
+  details.camp-details[open]>summary::before{transform:rotate(90deg)}
+  details.camp-details>summary:hover{color:var(--brand-deep)}
+  .camp-details-body{padding:18px clamp(18px,3vw,28px) 22px;display:flex;flex-direction:column;gap:12px}
+  .tag.funnel-tof{background:var(--gold-soft);color:var(--gold)}
+  .tag.funnel-bof{background:var(--teal-soft);color:var(--teal)}
+  .camp-pill{font-family:"Be Vietnam Pro";font-size:11.5px;font-weight:800;padding:5px 13px;border-radius:20px;white-space:nowrap;letter-spacing:.01em}
+  .camp-pill.good{background:var(--good-soft);color:var(--good)}
+  .camp-pill.warn{background:var(--warn-soft);color:var(--warn)}
+  .camp-pill.bad{background:var(--bad-soft);color:var(--bad)}
+  .camp-pill.new{background:var(--brand-soft);color:var(--brand-2)}
+  .legacy-group{opacity:.92}
+
   @media (max-width:760px){
     .topbar .row{align-items:flex-start}
     .asof{align-items:flex-start;text-align:left}
@@ -929,21 +961,21 @@
   </div>
 
   <!-- PAGE FB-3 -->
-  <div class="page" id="pf3">
+      <div class="page" id="pf3">
     <section class="verdict" style="padding:20px clamp(20px,3vw,32px)">
       <span class="eyebrow">🟢 LIVE qua tracker vận hành (ecom-theo-doi-tk5.pages.dev) + Lark Base</span>
-      <h2 style="font-size:19px">19,23tr đ chi tiêu → 24,07tr đ doanh thu (ROAS 1,25) — kỳ 12/9–29/9/2026</h2>
-      <div class="sub" style="font-size:13px">23 ad set đã lên sóng (thêm mới 4 content 27-28/9: "Mồi giảm 10%", "Khoản đầu tư xứng đáng", "Sáng láng 5k" + 1 bản sao), 198 inbox, 43 đơn xác nhận, <b>CR gộp 21,7%</b> — trên ngưỡng tốt (20%). 8 đang chạy (1 chờ đủ 2 ngày ở 350k trước khi xét tăng lại 475k, 1 đề xuất giảm 260k→200k, 1 giữ 200k chờ chốt 01/10, 1 chờ thao tác TẮT, 4 mới ngày 1-2), 15 đã tắt (thêm 3 so với 2 ngày trước: "Ae hai phong", "Cong nhan kcn", "Moi tru 30k"). Đã đối chiếu lại với Lark Base (47 bản ghi, 25 content Facebook) — <b>khớp được hook/link thật cho toàn bộ 4 content trước đây thiếu Lark</b> (Combo 5k 1 ngay, Cong nhan kcn, Moi tru 30k, Mua hanh kho), sửa 2 ngày air bị ước tính sai (Cong nhan kcn 23/9 thay vì 24/9; Mua hanh kho 25/9 thay vì 26/9). TikTok chưa refresh lần này (vẫn số liệu tới 25/9) do thiếu access token phiên này. Ngưỡng cắt/scale trên tracker này (CP/inbox &gt;35k cắt, ROAS≥3 hoặc CPA&lt;200k để scale, Hold rate≥4%, <b>CR≥20% để coi là tốt</b>) khác với thang 200k→600k ở tab "Đối soát rule" — cần xác nhận bộ ngưỡng nào đang chính thức áp dụng.</div>
+      <h2 style="font-size:19px">37,46tr đ chi tiêu → 49,57tr đ doanh thu (ROAS 1,32) — 4 campaign insight, kỳ 10/9–13/10/2026</h2>
+      <div class="sub" style="font-size:13px">Tổ chức lại hoàn toàn theo <b>Campaign = Insight</b> — mỗi campaign gộp toàn bộ angle đã test cho cùng 1 insight, không tách riêng theo tháng. 28 content Facebook đã air (24 tháng 9 + 4 tháng 10), xếp vào đúng 4 insight đã xây từ đầu. Mỗi angle được đánh dấu thêm mục tiêu <b>phễu trên (📣 educate)</b> hay <b>phễu dưới (🎯 chốt đơn)</b>. Ngoài 4 campaign này còn 2 nhóm nội dung cũ không gắn insight — xem cuối trang.</div>
       <div class="kpis" style="margin-top:10px">
-        <div class="tile"><span class="eyebrow">Ad set đang chạy</span><div class="v num">8</div><div class="l">2 đang đổi ngân sách · 1 chờ chốt 01/10 · 1 chờ thao tác TẮT · 4 mới</div></div>
-        <div class="tile bad"><span class="eyebrow">Đã tắt</span><div class="v num">15</div><div class="l">tổng 23 ad set trong kỳ test</div></div>
-        <div class="tile bad"><span class="eyebrow">Top performer</span><div class="v num" style="font-size:20px">Combo tràm trà</div><div class="l">ROAS 2,87 (giảm tiếp từ 3,34) · CR 30,8% · vẫn 4 đơn, 3 lần đo không tăng</div></div>
-        <div class="tile good"><span class="eyebrow">Content chưa gắn Lark</span><div class="v num">0</div><div class="l">đã khớp hết 23/23 — 2 content Lark khác (28-29/9) chưa có ad set tương ứng</div></div>
+        <div class="tile"><span class="eyebrow">Campaign tốt</span><div class="v num good">2/4</div><div class="l">INS1, INS2</div></div>
+        <div class="tile"><span class="eyebrow">CR gộp</span><div class="v num">23,3%</div><div class="l">339 inbox → 79 đơn</div></div>
+        <div class="tile bad"><span class="eyebrow">Angle 0 đơn</span><div class="v num">14/27</div><div class="l">trên tổng 27 angle đã đủ dữ liệu</div></div>
+        <div class="tile"><span class="eyebrow">Đang chạy</span><div class="v num">3</div><div class="l">Anh1 (INS2) · Combo (INS1) · Tạm biệt da khô ráp (INS2)</div></div>
       </div>
     </section>
 
     <section class="filter-card">
-      <div class="filter-caption">Lọc content theo <b>ngày air</b> (nguồn Lark Base — đã khớp đủ 23/23 content). Số liệu mỗi content là <b>luỹ kế tính đến hôm nay</b> của ad set đó — không phải chi tiêu phát sinh riêng trong khoảng ngày đã chọn.</div>
+      <div class="filter-caption">Lọc content theo <b>ngày air</b> (nguồn Lark Base). Số liệu mỗi content là <b>luỹ kế tính đến hôm nay</b> — không phải phát sinh riêng trong khoảng ngày đã chọn.</div>
       <div class="filter-row">
         <label>Từ</label>
         <input type="date" id="fb-date-from">
@@ -958,621 +990,637 @@
 
     <section>
       <div class="section-head">
-        <h2>Hiệu quả từng content — xếp theo ROAS/tín hiệu cao xuống thấp</h2>
-        <p>Số liệu là tổng lũy kế mới nhất từng ad set (tính đến 28/9). "Ngày air" là ngày đăng content thật (Lark); "chạy ads từ" là ngày ad set thật sự lên ngân sách. <b>CR = Đơn xác nhận / Inbox</b> (ngưỡng 20% mà tracker vận hành đang dùng: ≥20% coi là tốt, dưới 20% là dấu hiệu cần cải thiện phễu dưới). <b>Không có CPM/Impressions</b> — tracker này không đo, cần nối Meta Marketing API hoặc export Ads Manager mới có.</p>
+        <h2>Xếp hạng 4 campaign — bấm để xem chi tiết</h2>
+        <p>Sắp theo mức độ cần chú ý: campaign tốt lên trước để biết nơi nên dồn thêm ngân sách, campaign yếu ở cuối để biết nơi cần sửa trước.</p>
       </div>
-
-      <div style="display:flex;flex-direction:column;gap:12px">
-
-        <div class="analysis-card" data-air="2026-09-22" data-air-fallback="0" data-cost="1292108" data-inbox="13" data-orders="4" data-rev="3712000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">1</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1FJbN4trz2/" target="_blank" rel="noopener">Giải pháp nhắm trúng đích ↗</a></div>
-                <div class="diagnosis warn">🟡 3 lần đo liên tiếp không có đơn mới — ROAS tiếp tục giảm dù vẫn top 1</div>
-                <div class="analysis-meta">Air 22/9 · Chạy ads từ 23/9 · <b>Ngày 7</b></div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đề xuất giảm 260k → 200k</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">1.292.108đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">13</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">99.393đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">4</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">30,8%</div><div class="l" style="color:var(--good);font-weight:700">Rất tốt</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Doanh thu</span><div class="v">3.712.000đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">ROAS</span><div class="v">2,87</div></div>
-          </div>
-          <div class="analysis-note">Vẫn dừng ở 4 đơn suốt 3 lần đo liên tiếp (25/9 → 26/9 → 28/9 → 29/9) trong khi chi tiêu tăng dần — ROAS giảm đều 8,19 → 7,14 → 3,34 → 2,87. CR vẫn tốt (30,8%) nhờ nền cũ nhưng không còn là tín hiệu "đang lên" như lần đầu. Tracker đã đổi đề xuất từ tăng sang giảm ngân sách sau 2 ngày liền không ra đơn (27-28/9).</div>
-          <div class="analysis-action">🟡 Action: <span style="font-weight:400">Giảm về 200k theo đúng đề xuất tracker — mẫu 4 đơn không tăng thêm dù đã thử scale 2 lần, nên giữ ở mức an toàn và theo dõi thêm trước khi thử tăng lại.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-11" data-air-fallback="0" data-cost="4249752" data-inbox="52" data-orders="17" data-rev="9382000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">2</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1Bb7setLce/" target="_blank" rel="noopener">Sạch dầu - giảm mụn chuẩn men! ↗</a></div>
-                <div class="diagnosis good">🟢 Vẫn nhiều đơn nhất — ngân sách đang bị điều chỉnh qua lại</div>
-                <div class="analysis-meta">Air 11/9 · Chạy ads từ 13/9 · <b>Ngày 17</b> · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill potential">350k hiện tại — đề xuất tăng lại 475k</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">4.249.752đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">52</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">81.726đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Đơn</span><div class="v">17</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">32,7%</div><div class="l" style="color:var(--good);font-weight:700">Rất tốt</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Doanh thu</span><div class="v">9.382.000đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">ROAS</span><div class="v">2,21</div></div>
-          </div>
-          <div class="analysis-note">Nhiều đơn nhất toàn bộ 23 content (17 đơn), CR vẫn rất tốt (32,7%). Ngân sách vừa bị giảm 475k→350k hôm 28/9 vì ROAS giảm dần — nay tracker lại đề xuất tăng lại lên 475k dựa trên 1 ngày đo nhanh (28/9: ROAS 3,58). Đáng chú ý: quyết định đang dựa vào cửa sổ 1 ngày, trong khi rule ở tab "Đối soát rule" khuyến nghị đọc CPA rolling 3 ngày trước khi đổi ngân sách — 2 lần đổi liên tiếp trong vài ngày có thể là nhiễu ngắn hạn chứ không phải xu hướng thật.</div>
-          <div class="analysis-action">🟡 Action: <span style="font-weight:400">Trước khi tăng lại lên 475k, nên chờ thêm 1-2 ngày ở mức 350k để xác nhận ROAS có ổn định thật không — tránh đổi ngân sách theo từng ngày đơn lẻ.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-19" data-air-fallback="0" data-cost="446266" data-inbox="3" data-orders="1" data-rev="928000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">3</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1BvQwXgRuy/" target="_blank" rel="noopener">Sáng cống hiến, tối về rửa mặt sạch dầu ↗</a></div>
-                <div class="diagnosis good">🟢 Final ổn định — CR 33,3% tốt dù mẫu nhỏ</div>
-                <div class="analysis-meta">Air 19/9 · Chạy ads 21-23/9 · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (23/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">446.266đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">3</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">148.755đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Đơn</span><div class="v">1</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">33,3%</div><div class="l" style="color:var(--good);font-weight:700">Rất tốt</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Doanh thu</span><div class="v">928.000đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">ROAS</span><div class="v">2,08</div></div>
-          </div>
-          <div class="analysis-note">Không đổi qua nhiều lần đo — final chắc chắn.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Không cần hành động thêm.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-18" data-air-fallback="0" data-cost="949139" data-inbox="10" data-orders="4" data-rev="1682000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">4</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1HAeunvtBQ/" target="_blank" rel="noopener">Shockk, giá ntn k mua thì bao h mua? ↗</a></div>
-                <div class="diagnosis good">🟢 Có thêm đơn muộn sau khi tắt — final tốt hơn dự đoán</div>
-                <div class="analysis-meta">Air 18/9 · Chạy ads 21-27/9 (7 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (27/9) — final, +1 đơn muộn</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">949.139đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">10</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">94.914đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Đơn</span><div class="v">4</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">40,0%</div><div class="l" style="color:var(--good);font-weight:700">Rất tốt</div></div>
-            <div class="tile-sm"><span class="eyebrow">Doanh thu</span><div class="v">1.682.000đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">ROAS</span><div class="v">1,77</div></div>
-          </div>
-          <div class="analysis-note">Có thêm 1 đơn muộn kể từ lần đo trước (3→4 đơn), kéo ROAS lên tiếp 1,43→1,77 và CR lên 40% — content này liên tục có đơn về muộn qua các lần cập nhật (0,37 → 1,43 → 1,77), củng cố thêm bài học "chờ vài ngày sau khi tắt trước khi chốt số cuối".</div>
-          <div class="analysis-action">🟢 Action: <span style="font-weight:400">Không cần bật lại nhưng ghi nhận: kết quả final tốt hơn hẳn lúc quyết định tắt — cân nhắc thử lại angle này ở ngân sách thấp.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-14" data-air-fallback="0" data-cost="1395392" data-inbox="15" data-orders="5" data-rev="2221000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">5</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/185GLhaKuz/" target="_blank" rel="noopener">Ngày cống hiến cho tư bản ↗</a></div>
-                <div class="diagnosis warn">🟡 Có thêm đơn muộn — CR tăng lên tốt, ROAS vẫn dưới hoà vốn</div>
-                <div class="analysis-meta">Air 14/9 · Chạy ads 15-25/9 (10 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (25/9) — final, +1 đơn muộn</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">1.395.392đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">15</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">93.026đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">5</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">33,3%</div><div class="l" style="color:var(--good);font-weight:700">Rất tốt</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">1,59</div></div>
-          </div>
-          <div class="analysis-note">Thêm 1 đơn muộn (4→5), CR tăng từ 26,7% lên 33,3% — chuyển đổi thực tế tốt hơn con số ban đầu. Nhưng ROAS 1,59 vẫn dưới hoà vốn vì giá trị đơn hàng thấp so với chi phí, không phải vấn đề chuyển đổi.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý — nếu tái dùng nên tăng giá trị đơn (bundle/upsell) thay vì chỉ đổi hook.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-15" data-air-fallback="0" data-cost="1754927" data-inbox="24" data-orders="4" data-rev="2692000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">6</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1H36x1GnJz/" target="_blank" rel="noopener">Lột xác diện mạo, nâng cấp chính mình ↗</a></div>
-                <div class="diagnosis crit">🟠 Final không đổi — CR dưới ngưỡng</div>
-                <div class="analysis-meta">Air 15/9 · Chạy ads 16-27/9 (12 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (27/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">1.754.927đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">24</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CP/Inbox</span><div class="v">73.122đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Hold</span><div class="v">4,53%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">4</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">16,7%</div><div class="l" style="color:var(--warn);font-weight:700">Cần cải thiện</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">1,53</div></div>
-          </div>
-          <div class="analysis-note">Không đổi — phễu trên vẫn tốt nhất nhóm (CP/inbox 73,1k, hold 4,53%) nhưng CR dưới ngưỡng, xác nhận vấn đề nằm ở offer/CTA.</div>
-          <div class="analysis-action">🟠 Action: <span style="font-weight:400">Nếu làm lại theo đề xuất "iterate", giữ nguyên hook/insight nhưng đổi hẳn offer/CTA.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-10" data-air-fallback="0" data-cost="796760" data-inbox="7" data-orders="2" data-rev="957000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">7</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1DedKpVQBd/" target="_blank" rel="noopener">Dành cho những ae tốn xiền spa nặn mụn ↗</a></div>
-                <div class="diagnosis crit">🟠 Final không đổi — CR tốt, ROAS gần hoà vốn</div>
-                <div class="analysis-meta">Air 10/9 · Chạy ads 12-15/9 (3 ngày) · Angle: "Zai phố/Da sau nặn mụn"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (15/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">796.760đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">7</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">113.823đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">2</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">28,6%</div><div class="l" style="color:var(--good);font-weight:700">Tốt</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">1,20</div></div>
-          </div>
-          <div class="analysis-note">Không đổi. CP/inbox cao kéo ROAS xuống dù CR tốt.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Giữ nguyên đánh giá lần trước.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-17" data-air-fallback="0" data-cost="647726" data-inbox="6" data-orders="1" data-rev="588000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">8</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-serum">Serum 7in1</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1BeZTVLsQf/" target="_blank" rel="noopener">Chỉ 5k/ngày mà da sáng láng mịn như zai Hàn ↗</a></div>
-                <div class="diagnosis crit">🟠 Final không đổi</div>
-                <div class="analysis-meta">Air 17/9 · Chạy ads 18-23/9 (6 ngày) · Angle: "KCN/Zai tỉnh - Sợ tốn kém"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (23/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">647.726đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">107.954đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">1</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">16,7%</div><div class="l" style="color:var(--warn);font-weight:700">Cần cải thiện</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,91</div></div>
-          </div>
-          <div class="analysis-note">Không đổi — bài học "không scale theo ROAS ban đầu từ mẫu nhỏ" vẫn đúng.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-26" data-air-fallback="0" data-cost="444912" data-inbox="7" data-orders="1" data-rev="329000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">9</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/30shineshop.official/posts/pfbid0gT96nqApBJks5RrZn7JAJJokeSXaty7yjVWsNGTFo4yqfwxBvgZhd18yRx1QHUf4l" target="_blank" rel="noopener">Chỉ 5 nghìn mỗi ngày mà da sáng láng mịn như zai Hàn ↗</a></div>
-                <div class="diagnosis warn">🟡 CP/inbox tốt, có 1 đơn — đang giữ, xét ngày 5</div>
-                <div class="analysis-meta">Air 26/9 · Chạy ads từ 26/9 · <b>Ngày 4</b> · Angle: "Mass"</div>
-              </div>
-            </div>
-            <span class="status-pill potential">Giữ 200k, chốt 01/10</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">444.912đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">7</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CP/Inbox</span><div class="v">63.559đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">1</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">14,3%</div><div class="l" style="color:var(--warn);font-weight:700">Cần cải thiện</div></div>
-            <div class="tile-sm"><span class="eyebrow">Doanh thu</span><div class="v">329.000đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,74</div></div>
-          </div>
-          <div class="analysis-note">CP/inbox 63,6k — tốt hơn phần lớn content khác dù đã vượt ngưỡng 35k. Có 1 đơn nên tracker đánh giá là "rescue" (cứu), giữ nguyên ngân sách và chốt lại ngày 01/10 thay vì tắt ngay.</div>
-          <div class="analysis-action">🟡 Action: <span style="font-weight:400">Giữ 200k tới 01/10 theo đúng đề xuất — cần đơn thứ 2 để xác nhận đây không phải may mắn mẫu nhỏ.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-18" data-air-fallback="0" data-cost="1372086" data-inbox="13" data-orders="2" data-rev="917000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">10</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1dyZQPj4y1/" target="_blank" rel="noopener">20 suất ưu đãi cho ae Hải Phòng-Quảng Ninh ↗</a></div>
-                <div class="diagnosis crit">🔴 Đã tắt — đúng như đề xuất "iterate" trước đó</div>
-                <div class="analysis-meta">Air 18/9 · Chạy ads 21-29/9 (9 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (29/9) — final</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">1.372.086đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">13</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">105.545đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Hold</span><div class="v">5,25%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">2</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">15,4%</div><div class="l" style="color:var(--warn);font-weight:700">Cần cải thiện</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,67</div></div>
-          </div>
-          <div class="analysis-note">Đã tắt hẳn — không có thêm đơn kể từ lần đo trước dù chi thêm ~12k, xác nhận đúng đề xuất "iterate" (tắt & làm lại) ở lần cập nhật trước. Hold vẫn cao (5,25%, tốt nhất nhóm) nên phễu trên khỏe, vấn đề nằm ở offer/CTA.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt hợp lý — nếu làm lại, giữ hook (hold cao) nhưng đổi hẳn CTA/offer.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-17" data-air-fallback="0" data-cost="641337" data-inbox="6" data-orders="1" data-rev="329000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">11</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1LFsjxVS59/" target="_blank" rel="noopener">Bảo hộ mặt tiền - triển liền 1 bước ↗</a></div>
-                <div class="diagnosis crit">🔴 Final không đổi — lỗ trực tiếp</div>
-                <div class="analysis-meta">Air 17/9 · Chạy ads 18-23/9 (6 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (23/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">641.337đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">106.890đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">1</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">16,7%</div><div class="l" style="color:var(--warn);font-weight:700">Cần cải thiện</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,51</div></div>
-          </div>
-          <div class="analysis-note">Không đổi — lỗ trực tiếp trên doanh thu.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-10" data-air-fallback="0" data-cost="782791" data-inbox="4" data-orders="1" data-rev="329000">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">12</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1GBMbBWCAD/" target="_blank" rel="noopener">Tiết kiệm 1 nửa tiền đi spa ↗</a></div>
-                <div class="diagnosis warn">🟡 Final không đổi — CR tốt, CP/inbox quá đắt</div>
-                <div class="analysis-meta">Air 10/9 · Chạy ads 12-15/9 (3 ngày) · Angle: "Zai phố/Da sau nặn mụn"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (15/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">782.791đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">4</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CP/Inbox</span><div class="v">195.698đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Hold</span><div class="v">5,00%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">1</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">25,0%</div><div class="l" style="color:var(--good);font-weight:700">Tốt</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,42</div></div>
-          </div>
-          <div class="analysis-note">Không đổi — ví dụ CR tốt không đồng nghĩa hiệu quả tốt khi CP/inbox quá cao.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Không cần bật lại.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-14" data-air-fallback="0" data-cost="579685" data-inbox="8" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">13</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/19Sb3qAXeH/" target="_blank" rel="noopener">Giải pháp nào cho tình trạng da bóng dầu ↗</a></div>
-                <div class="diagnosis crit">🔴 Final không đổi — CR 0%</div>
-                <div class="analysis-meta">Air 14/9 · Chạy ads 15-18/9 (3 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (18/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">579.685đ</div></div>
-            <div class="tile-sm good"><span class="eyebrow">Inbox</span><div class="v">8</div></div>
-            <div class="tile-sm good"><span class="eyebrow">CP/Inbox</span><div class="v">72.461đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">3,81%</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">Không đổi — hút chú ý tốt, nghẽn hoàn toàn ở bước chốt.</div>
-          <div class="analysis-action">🟡 Action: <span style="font-weight:400">Thử lại hook này với CTA/ưu đãi mạnh hơn.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-23" data-air-fallback="0" data-cost="752634" data-inbox="6" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">14</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1KsYgR5M2y/" target="_blank" rel="noopener">Đi làm thì thế thôi chứ đi chơi là phải bảnh ↗</a></div>
-                <div class="diagnosis crit">🔴 Đã tắt — CR 0% sau nhiều ngày</div>
-                <div class="analysis-meta">Air 23/9 · Chạy ads 24-27/9 (4 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (27/9) — final</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">752.634đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CP/Inbox</span><div class="v">125.439đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">Trước đây thiếu Lark match, nay đã khớp được content thật (air 23/9, không phải 24/9 như ước tính tạm trước đó). Đã tắt đúng như đề xuất — CP/inbox 125k rất cao, 0 đơn suốt 4 ngày chạy.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt hợp lý, không cần hành động thêm.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-21" data-air-fallback="0" data-cost="745315" data-inbox="6" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">15</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/17wwitjA49/" target="_blank" rel="noopener">Làm nghề công nhân nhưng giao diện công tử ↗</a></div>
-                <div class="diagnosis crit">🔴 Final không đổi — CR 0%</div>
-                <div class="analysis-meta">Air 21/9 · Chạy ads 21-25/9 · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt — final 745.315đ, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">745.315đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">124.219đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">Không đổi qua nhiều lần đo — xác nhận final chắc chắn.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt, không cần hành động thêm.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-12" data-air-fallback="0" data-cost="691809" data-inbox="6" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">16</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/1DbEjiNyKU/" target="_blank" rel="noopener">1 bước dành riêng cho da dầu mụn ↗</a></div>
-                <div class="diagnosis warn">🟠 Final không đổi — CR 0%</div>
-                <div class="analysis-meta">Air 12/9 · Chạy ads 13-16/9 (3 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (16/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">691.809đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">115.302đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">Không đổi.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Đã tắt hợp lý, không cần hành động thêm.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-25" data-air-fallback="0" data-cost="486781" data-inbox="6" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">17</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1EwmEDNNca/" target="_blank" rel="noopener">Trừ thẳng 30k cho mọi đơn hàng ↗</a></div>
-                <div class="diagnosis crit">🔴 Đã tắt — hold dưới ngưỡng, CR 0%</div>
-                <div class="analysis-meta">Air 25/9 · Chạy ads 25-28/9 (4 ngày) · Angle: "KCN/Zai tỉnh"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (28/9) — final</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">486.781đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">6</div></div>
-            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">81.130đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Hold</span><div class="v">3,09%</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">Air date đã xác nhận qua Lark là 25/9 (không phải fallback trước đây). Đã tắt đúng như đề xuất — hold dưới ngưỡng cảnh báo 4%, 0 đơn.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Đã tắt hợp lý, không cần hành động thêm.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-15" data-air-fallback="0" data-cost="644163" data-inbox="4" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">18</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1CNjcVmuuQ/" target="_blank" rel="noopener">Muốn da đẹp nhưng lười/ngại dưỡng da? ↗</a></div>
-                <div class="diagnosis crit">🔴 Final không đổi — hook yếu nhất nhóm</div>
-                <div class="analysis-meta">Air 15/9 · Chạy ads 16-22/9 (7 ngày) · Angle: "Lười/Ngại"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Đã tắt (22/9) — final, không đổi</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">644.163đ</div></div>
-            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">4</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CP/Inbox</span><div class="v">161.041đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Hold</span><div class="v">2,92%</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">Không đổi — lỗi ở hook, không phải phễu dưới.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Nếu tái dùng angle "lười/ngại", phải đổi hẳn hook mở đầu.</span></div>
-        </div>
-
-        <div class="analysis-card" data-air="2026-09-25" data-air-fallback="0" data-cost="404678" data-inbox="2" data-orders="0" data-rev="0">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
-            <div style="display:flex;gap:10px;align-items:flex-start">
-              <span class="analysis-rank">19</span>
-              <div>
-                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-serum">Serum 7in1</span></div>
-                <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/p/19Tph9CC2f/" target="_blank" rel="noopener">Mùa ám ảnh cho những ae da khô bong tróc đang tới rồi đó ↗</a></div>
-                <div class="diagnosis crit">🔴 Chờ thao tác TẮT — CP/inbox quá cao, 0 đơn</div>
-                <div class="analysis-meta">Air 25/9 (Lark, không phải 26/9 như ước tính trước) · Chạy ads từ 26/9 · Angle: "miền Bắc"</div>
-              </div>
-            </div>
-            <span class="status-pill cut">Chờ thao tác TẮT (CP/inbox 202k)</span>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">404.678đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Inbox</span><div class="v">2</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CP/Inbox</span><div class="v">202.339đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">0%</div><div class="l" style="color:var(--bad);font-weight:700">Tệ</div></div>
-          </div>
-          <div class="analysis-note">CP/inbox 202k — cao thứ nhì toàn bộ content (chỉ sau Tiết kiệm tiền Spa), 0 đơn sau nhiều ngày. Tracker đề xuất tắt từ 28/9 nhưng ghi nhận vẫn ở trạng thái "chờ thao tác" — spend không tăng thêm giữa 2 lần kiểm tra, có thể ngân sách thực tế đã dừng dù chưa cập nhật trạng thái chính thức.</div>
-          <div class="analysis-action">🔴 Action: <span style="font-weight:400">TẮT theo đúng đề xuất tracker — cần thao tác trong Ads Manager, có vẻ đang bị treo giữa "đề xuất" và "đã thực hiện".</span></div>
-        </div>
-
-        <div class="analysis-card" style="opacity:.85" data-air="2026-09-27" data-air-fallback="0" data-cost="58187" data-inbox="0" data-orders="0" data-rev="0">
-          <div style="display:flex;gap:10px;align-items:flex-start">
-            <span class="analysis-rank" style="background:var(--grey)">20</span>
-            <div>
-              <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-              <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1Hb5Anyv7B/" target="_blank" rel="noopener">Giờ ạ vừa giảm 10% vừa freeship mà không biết ↗</a></div>
-              <div class="diagnosis info">⚪ Mới lên sóng, hold 3,60% — chưa đủ dữ liệu</div>
-              <div class="analysis-meta">Air 27/9 · Chạy ads từ 28/9 · <b>Ngày 2</b> · Angle: "Da dầu, đen sạm, mass"</div>
-            </div>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">58.187đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Inbox</span><div class="v">0</div></div>
-            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">3,60%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-          </div>
-          <div class="analysis-note">Ngày 2, chưa có inbox — bình thường ở giai đoạn này, tracker cảnh báo phân phối còn thiếu do giới hạn tài khoản.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Theo dõi tới chốt ngày 3-5.</span></div>
-        </div>
-
-        <div class="analysis-card" style="opacity:.85" data-air="2026-09-28" data-air-fallback="0" data-cost="7314" data-inbox="0" data-orders="0" data-rev="0">
-          <div style="display:flex;gap:10px;align-items:flex-start">
-            <span class="analysis-rank" style="background:var(--grey)">21</span>
-            <div>
-              <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-              <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1DaDSzezRm/" target="_blank" rel="noopener">Khoản đầu tư xứng đáng nhất đời trai là gì ↗</a></div>
-              <div class="diagnosis info">⚪ Mới lên sóng ngày 1 — chưa đủ dữ liệu</div>
-              <div class="analysis-meta">Air 28/9 · Chạy ads từ 28/9 · <b>Ngày 1</b> · Angle: "Mass"</div>
-            </div>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">7.314đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Inbox</span><div class="v">0</div></div>
-            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">1,83%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-          </div>
-          <div class="analysis-note">Chi tiêu quá thấp (7.314đ) — tracker cảnh báo thiếu phân phối do giới hạn tài khoản, chưa phải tín hiệu về nội dung.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Theo dõi tới khi phân phối bình thường trở lại.</span></div>
-        </div>
-
-        <div class="analysis-card" style="opacity:.85" data-air="2026-09-28" data-air-fallback="0" data-cost="78032" data-inbox="0" data-orders="0" data-rev="0">
-          <div style="display:flex;gap:10px;align-items:flex-start">
-            <span class="analysis-rank" style="background:var(--grey)">22</span>
-            <div>
-              <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-              <div class="hook-txt" style="font-size:15px;max-width:none"><a href="https://www.facebook.com/share/r/1DumH1QsAg/" target="_blank" rel="noopener">Da giảm mụn - sáng láng mịn chỉ với 2 bước, tốn 5k/mỗi ngày ↗</a></div>
-              <div class="diagnosis info">⚪ Mới lên sóng ngày 1 — chưa đủ dữ liệu</div>
-              <div class="analysis-meta">Air 28/9 · Chạy ads từ 28/9 · <b>Ngày 1</b> · Angle: "Da dầu, đen sạm, mass"</div>
-            </div>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">78.032đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Inbox</span><div class="v">0</div></div>
-            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">2,60%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-          </div>
-          <div class="analysis-note">Ngày 1, chưa có inbox — có 1 bản sao chạy song song (xem #23) để so sánh tốc độ học của cùng 1 creative trên 2 ad set khác nhau.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Theo dõi tới chốt ngày 3-5.</span></div>
-        </div>
-
-        <div class="analysis-card" style="opacity:.85" data-air="2026-09-28" data-air-fallback="0" data-cost="7444" data-inbox="0" data-orders="0" data-rev="0">
-          <div style="display:flex;gap:10px;align-items:flex-start">
-            <span class="analysis-rank" style="background:var(--grey)">23</span>
-            <div>
-              <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div>
-              <div class="hook-txt" style="font-size:15px;max-width:none;color:var(--ink-dim)">Sáng láng 5k - Bản sao (cùng creative với #22, ad set nhân bản)</div>
-              <div class="diagnosis info">⚪ Bản sao của #22 — mới lên sóng ngày 1</div>
-              <div class="analysis-meta">Air 28/9 (cùng content với #22) · Chạy ads từ 28/9 · <b>Ngày 1</b></div>
-            </div>
-          </div>
-          <div class="kpis-sm">
-            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">7.444đ</div></div>
-            <div class="tile-sm bad"><span class="eyebrow">Inbox</span><div class="v">0</div></div>
-            <div class="tile-sm"><span class="eyebrow">Hold</span><div class="v">5,83%</div></div>
-            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">0</div></div>
-          </div>
-          <div class="analysis-note">Chi tiêu quá thấp để đánh giá — nhưng hold 5,83% (cao hơn hẳn bản gốc #22 ở 2,60%) là điểm đáng chú ý để theo dõi tiếp, có thể tệp phân phối khác nhau giữa 2 bản.</div>
-          <div class="analysis-action">⚪ Action: <span style="font-weight:400">Theo dõi song song với #22 để so sánh.</span></div>
-        </div>
+      <div class="camp-rank-wrap">
+        <table class="camp-rank">
+          <thead><tr><th>Campaign (Insight)</th><th class="num">Chi</th><th class="num">Inbox</th><th class="num">Đơn</th><th class="num">CR</th><th class="num">ROAS</th><th>Verdict</th></tr></thead>
+          <tbody>
+<tr onclick="document.getElementById('camp-ins2').scrollIntoView({behavior:'smooth',block:'start'})">
+      <td><b>Sợ chọn sai, sợ tốn tiền không đáng</b><div style="font-size:11px;color:var(--ink-dim);font-weight:400;margin-top:2px">7 angle</div></td>
+      <td class="num">16.121.208đ</td>
+      <td class="num">139</td>
+      <td class="num">38</td>
+      <td class="num" style="color:var(--good)">27,3%</td>
+      <td class="num" style="color:var(--warn)">1,44</td>
+      <td><span class="camp-pill good">Tín hiệu tốt — nhưng dồn vào 1 angle</span></td>
+    </tr>
+<tr onclick="document.getElementById('camp-ins1').scrollIntoView({behavior:'smooth',block:'start'})">
+      <td><b>Ngại skincare cầu kỳ, tốn thời gian</b><div style="font-size:11px;color:var(--ink-dim);font-weight:400;margin-top:2px">5 angle</div></td>
+      <td class="num">8.378.744đ</td>
+      <td class="num">75</td>
+      <td class="num">17</td>
+      <td class="num" style="color:var(--good)">22,7%</td>
+      <td class="num" style="color:var(--good)">1,66</td>
+      <td><span class="camp-pill good">Tín hiệu tốt — thắng đều hơn</span></td>
+    </tr>
+<tr onclick="document.getElementById('camp-ins4').scrollIntoView({behavior:'smooth',block:'start'})">
+      <td><b>Muốn phong độ, nhưng công việc làm mình xuề xòa</b><div style="font-size:11px;color:var(--ink-dim);font-weight:400;margin-top:2px">7 angle</div></td>
+      <td class="num">6.222.652đ</td>
+      <td class="num">66</td>
+      <td class="num">13</td>
+      <td class="num" style="color:var(--bad)">19,7%</td>
+      <td class="num" style="color:var(--warn)">1,23</td>
+      <td><span class="camp-pill warn">Cận ngưỡng — cần cải thiện</span></td>
+    </tr>
+<tr onclick="document.getElementById('camp-ins3').scrollIntoView({behavior:'smooth',block:'start'})">
+      <td><b>Chỉ chi khi thấy thật sự xứng đáng</b><div style="font-size:11px;color:var(--ink-dim);font-weight:400;margin-top:2px">8 angle</div></td>
+      <td class="num">6.735.883đ</td>
+      <td class="num">59</td>
+      <td class="num">11</td>
+      <td class="num" style="color:var(--bad)">18,6%</td>
+      <td class="num" style="color:var(--bad)">0,71</td>
+      <td><span class="camp-pill bad">Cần cải thiện</span></td>
+    </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section>
       <div class="section-head">
-        <h2>Nội dung cũ đang duy trì — ngoài chiến dịch test hiện tại</h2>
-        <p>4 ad set evergreen từ trước chiến dịch "Ecom - Tháng 9" (nội dung tháng 6-8), tracker vẫn theo dõi song song vì đang chạy. Không có hook/link/insight vì ngoài phạm vi Lark Base "Quản lý bài viết" (bảng này chỉ track content từ 9/9).</p>
+        <h2>Chi tiết từng campaign</h2>
+        <p>Mỗi campaign dưới đây gộp mọi angle đã test cho cùng 1 insight — không phân biệt tháng 9 hay tháng 10. Bấm "Xem chi tiết" để mở bảng đầy đủ từng angle.</p>
       </div>
-      <div class="kpis" style="margin-bottom:4px">
-        <div class="tile"><span class="eyebrow">Tổng chi (4 ad set)</span><div class="v num">9,49tr đ</div><div class="l">218 inbox</div></div>
-        <div class="tile good"><span class="eyebrow">Đơn xác nhận</span><div class="v num">24</div><div class="l">16,33tr đ doanh thu (không đổi)</div></div>
-        <div class="tile good"><span class="eyebrow">ROAS gộp</span><div class="v num">1,72</div><div class="l">cao hơn ROAS gộp nhóm test (1,25)</div></div>
-        <div class="tile bad"><span class="eyebrow">CR gộp</span><div class="v num">11,0%</div><div class="l">dưới ngưỡng 20% — "Thang 6 Serum 7in1" kéo xuống</div></div>
-        <div class="tile"><span class="eyebrow">Đang chạy</span><div class="v num">3/4</div><div class="l">1 đã tắt (Post t7-4)</div></div>
+
+    <div class="camp-group" id="camp-ins2">
+      <div class="camp-group-head">
+        <div class="camp-group-top">
+          <div>
+            <div class="camp-group-name">DRFORSKIN_Mess_INS2_Sợ chọn sai</div>
+            <h3 class="camp-group-title">Campaign 1 · Sợ chọn sai, sợ tốn tiền không đáng</h3>
+          </div>
+          <span class="camp-pill good">Tín hiệu tốt — nhưng dồn vào 1 angle</span>
+        </div>
+        <p class="camp-quote">&ldquo;Muốn da đẹp hơn, nhưng sợ chọn sai — tốn tiền mà không đáng, nên cứ trì hoãn.&rdquo;</p>
+        <div class="kpis-sm">
+          <div class="tile-sm"><span class="eyebrow">Chi</span><div class="v">16.121.208đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">139</div></div>
+          <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">38</div></div>
+          <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">27,3%</div></div>
+          <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v" style="font-size:16px">115.980đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">CPA</span><div class="v" style="font-size:16px">424.242đ</div></div>
+          <div class="tile-sm "><span class="eyebrow">ROAS</span><div class="v">1,44</div></div>
+        </div>
+        <div class="camp-highlight">💡 <b>85% chi tiêu và 100% trong 38 đơn</b> của cả campaign này đến từ đúng 1 angle (Anh1). 7 angle còn lại — kể cả 4 content educate tháng 10 — cộng lại chưa ra nổi 1 đơn trọn vẹn.</div>
       </div>
-      <div class="dtable-wrap">
-        <table class="dtable">
-          <thead><tr><th>Ad set</th><th>Định dạng</th><th>Ngân sách/ngày</th><th>Chi tiêu</th><th>Inbox</th><th>CP/Inbox</th><th>Đơn</th><th>CR</th><th>Doanh thu</th><th>ROAS</th><th>Trạng thái</th></tr></thead>
-          <tbody>
-            <tr>
-              <td><b>Post t8 - Hoang khong sao</b></td>
-              <td><span class="badge fmt-video">🎬 Video</span></td>
-              <td class="num">430k</td><td class="num">4.041.028đ</td><td class="num">82</td><td class="num">49.281đ</td>
-              <td class="num" style="font-weight:800">13</td><td class="num" style="color:var(--warn)">15,9%</td><td class="num">9.801.000đ</td><td class="num" style="font-weight:800;color:var(--good)">2,43</td>
-              <td><span class="status-pill won">Đang chạy</span></td>
-            </tr>
-            <tr>
-              <td><b>Post t6 - kol t7</b></td>
-              <td><span class="badge fmt-video">🎬 Video</span></td>
-              <td class="num">150k</td><td class="num">2.989.452đ</td><td class="num">52</td><td class="num">57.489đ</td>
-              <td class="num" style="font-weight:800">8</td><td class="num" style="color:var(--warn)">15,4%</td><td class="num">4.683.000đ</td><td class="num">1,57</td>
-              <td><span class="status-pill won">Đang chạy</span></td>
-            </tr>
-            <tr>
-              <td><b>Thang 6 - Serum 7in1</b></td>
-              <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
-              <td class="num">150k</td><td class="num">2.461.506đ</td><td class="num">84</td><td class="num" style="font-weight:800;color:var(--good)">29.304đ</td>
-              <td class="num">2</td><td class="num" style="color:var(--bad)">2,4%</td><td class="num">1.516.000đ</td><td class="num" style="color:var(--bad)">0,62</td>
-              <td><span class="status-pill potential">Đang chạy</span></td>
-            </tr>
-            <tr>
-              <td><b>Post t7 - 4</b></td>
-              <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
-              <td class="num">150k</td><td class="num">0đ</td><td class="num">0</td><td class="num">—</td>
-              <td class="num">1</td><td class="num">—</td><td class="num">329.000đ</td><td class="num">—</td>
-              <td><span class="status-pill cut">Đã tắt</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <details class="camp-details">
+        <summary>Xem chi tiết 7 angle trong campaign này</summary>
+        <div class="camp-details-body">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Ngày</th><th>Nội dung</th><th>Định dạng</th><th>SKU</th><th>Phễu</th><th class="num">Chi</th><th class="num">Inbox</th><th class="num">Đơn</th><th class="num">CR</th><th class="num">ROAS</th><th>Đánh giá Lark</th><th>Verdict</th></tr></thead>
+              <tbody>
+<tr data-air="2026-09-11" data-cost="11226557" data-inbox="104" data-orders="37" data-rev="22283000">
+      <td class="date-cell">11/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1Bb7setLce/" target="_blank" rel="noopener">Sạch dầu - giảm mụn chuẩn men ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">Anh1 — đang chạy</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">11.226.557đ</td>
+      <td class="num">104</td>
+      <td class="num" style="">37</td>
+      <td class="num" style="color:var(--good);font-weight:700">35,6%</td>
+      <td class="num">1,98</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Rất tốt - Scale mạnh</td>
+      <td><span class="status-pill won">WIN</span></td>
+    </tr>
+<tr data-air="2026-09-14" data-cost="579685" data-inbox="8" data-orders="0" data-rev="0">
+      <td class="date-cell">14/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/19Sb3qAXeH/" target="_blank" rel="noopener">Giải pháp da bóng dầu ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">579.685đ</td>
+      <td class="num">8</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Yếu - Loại bỏ</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-09-25" data-cost="705080" data-inbox="5" data-orders="0" data-rev="0">
+      <td class="date-cell">25/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/19Tph9CC2f/" target="_blank" rel="noopener">Mùa ám ảnh da khô bong tróc ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">705.080đ</td>
+      <td class="num">5</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-09-28" data-cost="683158" data-inbox="7" data-orders="0" data-rev="0">
+      <td class="date-cell">28/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1DaDSzezRm/" target="_blank" rel="noopener">Khoản đầu tư xứng đáng nhất đời trai ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">683.158đ</td>
+      <td class="num">7</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-10-02" data-cost="1042451" data-inbox="7" data-orders="0" data-rev="0">
+      <td class="date-cell">02/10</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1CTwoMHQfC/" target="_blank" rel="noopener">Cũng &quot;chịu chi&quot; như người ta mà mặt vẫn không sang ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">Anh - Chịu chi — đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-tof">📣 Đầu phễu · educate</span></td>
+      <td class="num">1.042.451đ</td>
+      <td class="num">7</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Chưa đánh giá</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-10-05" data-cost="1572028" data-inbox="4" data-orders="1" data-rev="928000">
+      <td class="date-cell">05-06/10</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1Dofe7BoAm/" target="_blank" rel="noopener">Thứ phá tan outfit / Hối hận vì không biết sớm ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">Video-1 (chạy) + Video-2 (tắt)*</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-tof">📣 Đầu phễu · educate</span></td>
+      <td class="num">1.572.028đ</td>
+      <td class="num">4</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--good);font-weight:700">25,0%</td>
+      <td class="num">0,59</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Chưa đánh giá</td>
+      <td><span class="status-pill potential">WATCH</span></td>
+    </tr>
+<tr data-air="2026-10-07" data-cost="312249" data-inbox="4" data-orders="0" data-rev="0">
+      <td class="date-cell">07/10</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1CCTdCQzF3/" target="_blank" rel="noopener">Tạm biệt da khô ráp bong tróc mùa hanh khô ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đang chạy</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-tof">📣 Đầu phễu · educate</span></td>
+      <td class="num">312.249đ</td>
+      <td class="num">4</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Chưa đánh giá</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="camp-group" id="camp-ins1">
+      <div class="camp-group-head">
+        <div class="camp-group-top">
+          <div>
+            <div class="camp-group-name">DRFORSKIN_Mess_INS1_Ngại cầu kì</div>
+            <h3 class="camp-group-title">Campaign 2 · Ngại skincare cầu kỳ, tốn thời gian</h3>
+          </div>
+          <span class="camp-pill good">Tín hiệu tốt — thắng đều hơn</span>
+        </div>
+        <p class="camp-quote">&ldquo;Muốn da đẹp hơn, nhưng ngại skincare cầu kỳ, tốn thời gian nên cứ trì hoãn.&rdquo;</p>
+        <div class="kpis-sm">
+          <div class="tile-sm"><span class="eyebrow">Chi</span><div class="v">8.378.744đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">75</div></div>
+          <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">17</div></div>
+          <div class="tile-sm good"><span class="eyebrow">CR</span><div class="v">22,7%</div></div>
+          <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v" style="font-size:16px">111.717đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">CPA</span><div class="v" style="font-size:16px">492.867đ</div></div>
+          <div class="tile-sm good"><span class="eyebrow">ROAS</span><div class="v">1,66</div></div>
+        </div>
+        <div class="camp-highlight">💡 3/5 angle có đơn (tỉ lệ cao nhất trong 4 campaign) — CR 22,7% phản ánh thật, không bị 1 outlier kéo lên. Angle bán theo <b>combo</b> (không bán lẻ) đang có biên ngân sách an toàn nhất toàn bộ danh mục.</div>
       </div>
-      <div class="analysis-note" style="margin-top:2px">Cả 3 ad set đang chạy tiếp tục KHÔNG có đơn mới nào so với lần cập nhật trước — doanh thu 3 ad set này giữ nguyên y hệt (9.801.000đ / 4.683.000đ / 1.516.000đ) dù chi thêm và inbox tăng ở cả 3. "Post t8" ROAS giảm tiếp 2,66→2,43, CR 15,9% (dưới ngưỡng). "Thang 6 - Serum 7in1" vẫn CP/inbox tốt nhất (29,3k) nhưng CR chỉ 2,4% — nghẽn phễu dưới rõ rệt nhất trong toàn dashboard.</div>
+      <details class="camp-details">
+        <summary>Xem chi tiết 5 angle trong campaign này</summary>
+        <div class="camp-details-body">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Ngày</th><th>Nội dung</th><th>Định dạng</th><th>SKU</th><th>Phễu</th><th class="num">Chi</th><th class="num">Inbox</th><th class="num">Đơn</th><th class="num">CR</th><th class="num">ROAS</th><th>Đánh giá Lark</th><th>Verdict</th></tr></thead>
+              <tbody>
+<tr data-air="2026-09-12" data-cost="691809" data-inbox="6" data-orders="1" data-rev="212000">
+      <td class="date-cell">12/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1DbEjiNyKU/" target="_blank" rel="noopener">1 bước dành riêng cho da dầu mụn ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">Anh2 — đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">691.809đ</td>
+      <td class="num">6</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--bad);font-weight:700">16,7%</td>
+      <td class="num">0,31</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Yếu - Loại bỏ</td>
+      <td><span class="status-pill small">CẦN CẢI THIỆN</span></td>
+    </tr>
+<tr data-air="2026-09-15" data-cost="644163" data-inbox="4" data-orders="0" data-rev="0">
+      <td class="date-cell">15/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1CNjcVmuuQ/" target="_blank" rel="noopener">Muốn da đẹp nhưng lười dưỡng da ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">644.163đ</td>
+      <td class="num">4</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-09-22" data-cost="4635355" data-inbox="45" data-orders="12" data-rev="9972000">
+      <td class="date-cell">22/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1FJbN4trz2/" target="_blank" rel="noopener">Combo Tràm trà + Serum — giải pháp nhắm trúng đích ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đang chạy</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">4.635.355đ</td>
+      <td class="num">45</td>
+      <td class="num" style="">12</td>
+      <td class="num" style="color:var(--good);font-weight:700">26,7%</td>
+      <td class="num">2,15</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Rất tốt - Scale mạnh</td>
+      <td><span class="status-pill won">WIN</span></td>
+    </tr>
+<tr data-air="2026-09-27" data-cost="1827824" data-inbox="15" data-orders="3" data-rev="2784000">
+      <td class="date-cell">27/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1Hb5Anyv7B/" target="_blank" rel="noopener">Mồi giảm 10% + freeship ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">1.827.824đ</td>
+      <td class="num">15</td>
+      <td class="num" style="">3</td>
+      <td class="num" style="color:var(--good);font-weight:700">20,0%</td>
+      <td class="num">1,52</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill potential">WATCH</span></td>
+    </tr>
+<tr data-air="2026-09-28" data-cost="579593" data-inbox="5" data-orders="1" data-rev="928000">
+      <td class="date-cell">28/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1DumH1QsAg/" target="_blank" rel="noopener">Da giảm mụn sáng láng chỉ 2 bước, 5k/ngày ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">579.593đ</td>
+      <td class="num">5</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--good);font-weight:700">20,0%</td>
+      <td class="num">1,60</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill potential">WATCH</span></td>
+    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="camp-group" id="camp-ins4">
+      <div class="camp-group-head">
+        <div class="camp-group-top">
+          <div>
+            <div class="camp-group-name">DRFORSKIN_Mess_INS4_Nâng cấp diện mạo</div>
+            <h3 class="camp-group-title">Campaign 3 · Muốn phong độ, nhưng công việc làm mình xuề xòa</h3>
+          </div>
+          <span class="camp-pill warn">Cận ngưỡng — cần cải thiện</span>
+        </div>
+        <p class="camp-quote">&ldquo;Muốn ra ngoài phong độ, nhưng công việc khiến mình xuề xòa, nên không muốn vẻ ngoài đó đi theo mình.&rdquo;</p>
+        <div class="kpis-sm">
+          <div class="tile-sm"><span class="eyebrow">Chi</span><div class="v">6.222.652đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">66</div></div>
+          <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">13</div></div>
+          <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">19,7%</div></div>
+          <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v" style="font-size:16px">94.283đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">CPA</span><div class="v" style="font-size:16px">478.666đ</div></div>
+          <div class="tile-sm "><span class="eyebrow">ROAS</span><div class="v">1,23</div></div>
+        </div>
+        <div class="camp-highlight">💡 2 content CR 33-40%/ROAS&gt;2 vẫn đang bị Lark ghi &ldquo;TB — Cần tối ưu&rdquo; — nên re-check trước khi coi campaign là yếu. Tứ &ldquo;công nhân/giao diện công tử&rdquo; đã thử 2 lần, cả 2 đều 0 đơn — nên dừng, không thử lần 3.</div>
+      </div>
+      <details class="camp-details">
+        <summary>Xem chi tiết 7 angle trong campaign này</summary>
+        <div class="camp-details-body">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Ngày</th><th>Nội dung</th><th>Định dạng</th><th>SKU</th><th>Phễu</th><th class="num">Chi</th><th class="num">Inbox</th><th class="num">Đơn</th><th class="num">CR</th><th class="num">ROAS</th><th>Đánh giá Lark</th><th>Verdict</th></tr></thead>
+              <tbody>
+<tr data-air="2026-09-14" data-cost="1395392" data-inbox="15" data-orders="6" data-rev="3149000">
+      <td class="date-cell">14/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/185GLhaKuz/" target="_blank" rel="noopener">Ngày cống hiến tư bản, tối đi chơi ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">1.395.392đ</td>
+      <td class="num">15</td>
+      <td class="num" style="">6</td>
+      <td class="num" style="color:var(--good);font-weight:700">40,0%</td>
+      <td class="num">2,26</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill won">WIN</span></td>
+    </tr>
+<tr data-air="2026-09-15" data-cost="1754927" data-inbox="24" data-orders="5" data-rev="3253000">
+      <td class="date-cell">15/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1H36x1GnJz/" target="_blank" rel="noopener">Lột xác diện mạo, nâng cấp chính mình ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">1.754.927đ</td>
+      <td class="num">24</td>
+      <td class="num" style="">5</td>
+      <td class="num" style="color:var(--good);font-weight:700">20,8%</td>
+      <td class="num">1,85</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill potential">WATCH</span></td>
+    </tr>
+<tr data-air="2026-09-17" data-cost="641337" data-inbox="6" data-orders="1" data-rev="329000">
+      <td class="date-cell">17/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1LFsjxVS59/" target="_blank" rel="noopener">Bảo hộ mặt tiền — triển liền 1 bước ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">641.337đ</td>
+      <td class="num">6</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--bad);font-weight:700">16,7%</td>
+      <td class="num">0,51</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Yếu - Loại bỏ</td>
+      <td><span class="status-pill small">CẦN CẢI THIỆN</span></td>
+    </tr>
+<tr data-air="2026-09-19" data-cost="446266" data-inbox="3" data-orders="1" data-rev="928000">
+      <td class="date-cell">19/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1BvQwXgRuy/" target="_blank" rel="noopener">Sáng cống hiến tư bản, tối rửa mặt ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">446.266đ</td>
+      <td class="num">3</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--good);font-weight:700">33,3%</td>
+      <td class="num">2,08</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill won">WIN</span></td>
+    </tr>
+<tr data-air="2026-09-21" data-cost="745315" data-inbox="6" data-orders="0" data-rev="0">
+      <td class="date-cell">21/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/17wwitjA49/" target="_blank" rel="noopener">Công nhân nhưng giao diện công tử ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">745.315đ</td>
+      <td class="num">6</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-09-23" data-cost="752634" data-inbox="6" data-orders="0" data-rev="0">
+      <td class="date-cell">23/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1KsYgR5M2y/" target="_blank" rel="noopener">Công nhân KCN — đi làm vs đi chơi ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">752.634đ</td>
+      <td class="num">6</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-09-25" data-cost="486781" data-inbox="6" data-orders="0" data-rev="0">
+      <td class="date-cell">25/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1EwmEDNNca/" target="_blank" rel="noopener">Moi trừ thẳng 30k mọi đơn hàng ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">486.781đ</td>
+      <td class="num">6</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Yếu - Loại bỏ</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="camp-group" id="camp-ins3">
+      <div class="camp-group-head">
+        <div class="camp-group-top">
+          <div>
+            <div class="camp-group-name">DRFORSKIN_Mess_INS3_Chi tiền phải đáng</div>
+            <h3 class="camp-group-title">Campaign 4 · Chỉ chi khi thấy thật sự xứng đáng</h3>
+          </div>
+          <span class="camp-pill bad">Cần cải thiện</span>
+        </div>
+        <p class="camp-quote">&ldquo;Muốn da đẹp hơn, nhưng không muốn bỏ tiền vô lý, nên chỉ muốn chi khi thấy thật sự xứng đáng.&rdquo;</p>
+        <div class="kpis-sm">
+          <div class="tile-sm"><span class="eyebrow">Chi</span><div class="v">6.735.883đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">59</div></div>
+          <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">11</div></div>
+          <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">18,6%</div></div>
+          <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v" style="font-size:16px">114.168đ</div></div>
+          <div class="tile-sm"><span class="eyebrow">CPA</span><div class="v" style="font-size:16px">612.353đ</div></div>
+          <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,71</div></div>
+        </div>
+        <div class="camp-highlight">💡 Campaign yếu nhất: CR 18,6% dưới ngưỡng, ROAS 0,71. 6/8 angle chạy trên đối tượng &ldquo;Zai phố/Da sau nặn mụn&rdquo; và <b>không angle nào trong nhóm này vượt CR 20%</b> — chỉ &ldquo;Giá shock KCN&rdquo; (đối tượng khác) thắng rõ.</div>
+      </div>
+      <details class="camp-details">
+        <summary>Xem chi tiết 8 angle trong campaign này</summary>
+        <div class="camp-details-body">
+          <div class="table-wrap">
+            <table class="data">
+              <thead><tr><th>Ngày</th><th>Nội dung</th><th>Định dạng</th><th>SKU</th><th>Phễu</th><th class="num">Chi</th><th class="num">Inbox</th><th class="num">Đơn</th><th class="num">CR</th><th class="num">ROAS</th><th>Đánh giá Lark</th><th>Verdict</th></tr></thead>
+              <tbody>
+<tr data-air="2026-09-10" data-cost="796760" data-inbox="7" data-orders="2" data-rev="957000">
+      <td class="date-cell">10/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1DedKpVQBd/" target="_blank" rel="noopener">Tốn tiền spa nặn mụn thường xuyên ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">796.760đ</td>
+      <td class="num">7</td>
+      <td class="num" style="">2</td>
+      <td class="num" style="color:var(--good);font-weight:700">28,6%</td>
+      <td class="num">1,20</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Yếu - Loại bỏ</td>
+      <td><span class="status-pill potential">WATCH</span></td>
+    </tr>
+<tr data-air="2026-09-10" data-cost="782791" data-inbox="4" data-orders="1" data-rev="329000">
+      <td class="date-cell">10/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1GBMbBWCAD/" target="_blank" rel="noopener">Tiết kiệm nửa tiền đi spa ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">782.791đ</td>
+      <td class="num">4</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--good);font-weight:700">25,0%</td>
+      <td class="num">0,42</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Yếu - Loại bỏ</td>
+      <td><span class="status-pill potential">WATCH</span></td>
+    </tr>
+<tr data-air="2026-09-17" data-cost="647726" data-inbox="6" data-orders="1" data-rev="588000">
+      <td class="date-cell">17/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1BeZTVLsQf/" target="_blank" rel="noopener">Chỉ 5k/ngày da sáng láng ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">647.726đ</td>
+      <td class="num">6</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--bad);font-weight:700">16,7%</td>
+      <td class="num">0,91</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill small">CẦN CẢI THIỆN</span></td>
+    </tr>
+<tr data-air="2026-09-18" data-cost="1372086" data-inbox="13" data-orders="2" data-rev="917000">
+      <td class="date-cell">18/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1dyZQPj4y1/" target="_blank" rel="noopener">20 suất ưu đãi Ae Hải Phòng ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">1.372.086đ</td>
+      <td class="num">13</td>
+      <td class="num" style="">2</td>
+      <td class="num" style="color:var(--bad);font-weight:700">15,4%</td>
+      <td class="num">0,67</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill small">CẦN CẢI THIỆN</span></td>
+    </tr>
+<tr data-air="2026-09-18" data-cost="949139" data-inbox="10" data-orders="4" data-rev="1682000">
+      <td class="date-cell">18/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/p/1HAeunvtBQ/" target="_blank" rel="noopener">Giá shock KCN ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">949.139đ</td>
+      <td class="num">10</td>
+      <td class="num" style="">4</td>
+      <td class="num" style="color:var(--good);font-weight:700">40,0%</td>
+      <td class="num">1,77</td>
+      <td style="font-size:12px;color:var(--ink-dim)">TB - Cần tối ưu</td>
+      <td><span class="status-pill won">WIN</span></td>
+    </tr>
+<tr data-air="2026-09-26" data-cost="914682" data-inbox="7" data-orders="1" data-rev="329000">
+      <td class="date-cell">26/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/30shineshop.official/posts/pfbid0gT96nqApBJks5RrZn7JAJJokeSXaty7yjVWsNGTFo4yqfwxBvgZhd18yRx1QHUf4l" target="_blank" rel="noopener">Combo 5k/ngày ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span> <span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">914.682đ</td>
+      <td class="num">7</td>
+      <td class="num" style="">1</td>
+      <td class="num" style="color:var(--bad);font-weight:700">14,3%</td>
+      <td class="num">0,36</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill small">CẦN CẢI THIỆN</span></td>
+    </tr>
+<tr data-air="2026-09-28" data-cost="695414" data-inbox="7" data-orders="0" data-rev="0">
+      <td class="date-cell">28/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/18EfpbtsNq/" target="_blank" rel="noopener">Làm lại cuộc đời từ cái mặt sáng sủa ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-video">🎬 Video</span></td>
+      <td><div class="tags"><span class="tag sku-tramtra">Tràm trà</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">695.414đ</td>
+      <td class="num">7</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+<tr data-air="2026-09-29" data-cost="577285" data-inbox="5" data-orders="0" data-rev="0">
+      <td class="date-cell">29/09</td>
+      <td><div class="hook-txt" style="font-size:13px;max-width:260px"><a href="https://www.facebook.com/share/r/1Hdeitwo1p/" target="_blank" rel="noopener">3-4 trăm nghìn/30ml có hợp lý? ↗</a></div><div style="font-size:11px;color:var(--ink-dim);margin-top:3px">đã tắt</div></td>
+      <td><span class="badge fmt-anh">🖼️ Ảnh</span></td>
+      <td><div class="tags"><span class="tag sku-serum">Serum 7in1</span></div></td>
+      <td><span class="tag funnel-bof">🎯 Cuối phễu · chốt đơn</span></td>
+      <td class="num">577.285đ</td>
+      <td class="num">5</td>
+      <td class="num" style="color:var(--bad);font-weight:700">0</td>
+      <td class="num" style="">0,0%</td>
+      <td class="num">0,00</td>
+      <td style="font-size:12px;color:var(--ink-dim)">Đang theo dõi</td>
+      <td><span class="status-pill cut">KILL</span></td>
+    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </div>
+    </section>
+
+    <section class="legacy-group">
+      <div class="section-head">
+        <h2>Ngoài hệ thống Campaign = Insight</h2>
+        <p>2 nhóm ad set này không gắn insight nào — chạy song song, ngoài phạm vi rule 200k→600k. Giữ tách riêng để không làm loãng số liệu test insight ở trên.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-anh">🖼️ Ảnh</span><span class="tag sku-serum">Serum 7in1</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none">Ecom – Thang 6 – DrForSkin – Serum 7in 1</div>
+                <div class="diagnosis crit">🔴 ROAS dưới 1, CR thấp nhất mọi ad set đang chạy — đề xuất tắt/làm lại</div>
+                <div class="analysis-meta">Lên lịch từ 08/07 · tính lại từ 12/09 trong kỳ báo cáo này</div>
+              </div>
+            </div>
+            <span class="status-pill cut">Đề xuất TẮT</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">4.754.737đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">175</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">27.170đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Đơn</span><div class="v">6</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">CR</span><div class="v">3,4%</div></div>
+            <div class="tile-sm"><span class="eyebrow">Doanh thu</span><div class="v">3.880.000đ</div></div>
+            <div class="tile-sm bad"><span class="eyebrow">ROAS</span><div class="v">0,82</div></div>
+          </div>
+          <div class="analysis-action">🔴 Action: <span style="font-weight:400">Tắt và không tính vào ngân sách test tháng 10 — CP/Inbox tốt nhất dashboard (27k) nhưng CR 3,4% cho thấy nghẽn hoàn toàn ở khâu chốt, không phải ở content.</span></div>
+        </div>
+
+        <div class="analysis-card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start">
+              <div>
+                <div style="display:flex;gap:6px;margin-bottom:5px"><span class="badge fmt-video">🎬 Video</span><span class="tag sku-serum">Serum 7in1</span></div>
+                <div class="hook-txt" style="font-size:15px;max-width:none">Nhóm &ldquo;Ecom – MUA – Quý – DrForSkin&rdquo; (3 ad set evergreen)</div>
+                <div class="diagnosis good">🟢 ROAS 1,66 gộp — vẫn đang sinh lời đều, chỉ chưa gắn insight</div>
+                <div class="analysis-meta">Serum - Post t8 - Hoang khong sao (đang chạy) · Serum - Post t6 - kol t7 (đang chạy) · Serum - Post t8 - Hoang khong sao - Nhân bản - KH mới (đã tắt)</div>
+              </div>
+            </div>
+            <span class="status-pill won">Vẫn chạy tốt</span>
+          </div>
+          <div class="kpis-sm">
+            <div class="tile-sm"><span class="eyebrow">Chi tiêu</span><div class="v">19.662.030đ</div></div>
+            <div class="tile-sm"><span class="eyebrow">Inbox</span><div class="v">328</div></div>
+            <div class="tile-sm"><span class="eyebrow">CP/Inbox</span><div class="v">59.945đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">Đơn</span><div class="v">45</div></div>
+            <div class="tile-sm"><span class="eyebrow">Doanh thu</span><div class="v">32.565.000đ</div></div>
+            <div class="tile-sm good"><span class="eyebrow">ROAS</span><div class="v">1,66</div></div>
+          </div>
+          <div class="analysis-note">Nội dung evergreen từ trước khi hệ thống Campaign=Insight ra đời, vẫn đang chạy ổn định (ROAS 1,66, cao hơn 3/4 campaign insight hiện tại). Chưa cần hành động gấp, nhưng nên cân nhắc đặt lại tên theo đúng format Campaign=Insight để không bỏ sót khi đọc báo cáo tổng.</div>
+        </div>
+      </div>
+
+      <div class="callout" style="background:var(--warn-soft);border:1px solid var(--warn);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--ink-dim);margin-top:14px">
+        <b style="color:var(--ink)">Ghi chú đối soát:</b> 2 ad set &ldquo;Video - 1&rdquo; và &ldquo;Video - 2&rdquo; (05-06/10, campaign INS2) không có caption trên tracker nên chưa tách được chính xác content nào ứng với ad set nào — đang gộp chung. 1 content Lark 27/9 và 2 content 28-29/9 trước đây thiếu ad set tương ứng nay đã khớp đủ.
+      </div>
     </section>
   </div>
 
@@ -2270,7 +2318,7 @@
   // Bộ lọc theo ngày air cho Trang 3 Facebook — mỗi content có sẵn data-air/data-cost/
   // data-inbox/data-orders/data-rev trên .analysis-card; lọc chỉ ẩn/hiện thẻ + cộng dồn
   // số liệu luỹ kế của các thẻ đang hiện, không tách chi tiêu theo ngày (tracker FB không có).
-  const FB_MIN_DATE = "2026-09-10", FB_MAX_DATE = "2026-09-29";
+  const FB_MIN_DATE = "2026-09-10", FB_MAX_DATE = "2026-10-13";
   // Badge "Facebook cập nhật tới..." đọc trực tiếp từ FB_MAX_DATE — chỉ cần sửa hằng số
   // này mỗi lần cập nhật dữ liệu, không còn gõ tay chuỗi ngày rời rạc trong HTML nữa.
   (function(){
@@ -2285,8 +2333,9 @@
     {label:"Sóng 3 · 18-20/9", from:"2026-09-18", to:"2026-09-20"},
     {label:"Sóng 4 · 21-23/9", from:"2026-09-21", to:"2026-09-23"},
     {label:"Sóng 5 · 24-26/9", from:"2026-09-24", to:"2026-09-26"},
-    {label:"Content mới nhất · 27-29/9", from:"2026-09-27", to:"2026-09-29"},
-    {label:"7 ngày gần nhất", from:"2026-09-23", to:"2026-09-29"},
+    {label:"Tháng 9 (12/9-29/9)", from:"2026-09-10", to:"2026-09-29"},
+    {label:"Tháng 10 mới · 2-7/10", from:"2026-10-02", to:"2026-10-13"},
+    {label:"7 ngày gần nhất", from:"2026-10-07", to:"2026-10-13"},
   ];
   function setupFbFilter(){
     const fromEl = document.getElementById("fb-date-from");
@@ -2295,7 +2344,7 @@
     const daysEl = document.getElementById("fb-filter-days");
     const kpisEl = document.getElementById("fb-filtered-kpis");
     const presetRow = document.getElementById("fb-preset-row");
-    const cards = Array.from(document.querySelectorAll("#pf3 .analysis-card[data-air]"));
+    const cards = Array.from(document.querySelectorAll("#pf3 [data-air]"));
     presetRow.innerHTML = FB_PRESETS.map((p,i)=>`<button class="preset-btn" data-i="${i}">${p.label}</button>`).join("");
 
     function apply(from, to){
