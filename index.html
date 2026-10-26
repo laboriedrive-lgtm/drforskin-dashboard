@@ -398,7 +398,7 @@
 <main>
   <!-- PAGE 1 -->
   <div class="page" id="p1">
-    <section class="verdict" style="border-top-color:var(--gold);padding:20px clamp(20px,3vw,32px)">
+    <section class="verdict" style="border-top-color:var(--gold);padding:20px clamp(20px,3vw,32px);display:none" id="legacy-content-month-section">
       <span class="eyebrow" style="color:var(--gold)">📦 QUẢN TRỊ NỘI DUNG — theo đúng kỳ đang chọn ở góc trên</span>
       <h2 id="content-month-headline" style="font-size:19px">—</h2>
       <div class="sub" style="font-size:13px">Đổi ngày ở ô "Xem theo kỳ" trên đầu trang để xem lại bất kỳ giai đoạn nào — mục tiêu, sản lượng, tỷ lệ ra đơn đều tính lại theo đúng kỳ đó, so với kỳ liền trước cùng độ dài. Doanh thu/lợi nhuận kênh chỉ là bối cảnh tham khảo, xem ở cuối trang.</div>
@@ -460,7 +460,7 @@
     </section>
 
 
-    <section>
+    <section style="display:none" id="legacy-funnel-section">
       <div class="section-head">
         <h2 id="funnel-headline">Phễu content — tiền rụng qua từng nấc</h2>
         <p>Bốn nấc từ lúc content lên sóng tới lúc ra tiền, trong đúng kỳ đang chọn. Nấc nào rụng nhiều nhất là chỗ cần sửa trước.</p>
@@ -481,7 +481,7 @@
       </div>
     </section>
 
-    <section>
+    <section style="display:none" id="legacy-master-kpi-section">
       <div class="section-head">
         <h2>Kỳ tự chọn — xem chi tiết một khoảng ngày bất kỳ</h2>
         <p id="master-kpi-sub">Đổi ngày ở ô "Xem theo kỳ" trên đầu trang, hoặc bấm thẳng lên lịch bên dưới. <b>Lưu ý:</b> đây là công cụ xem chi tiết một khoảng ngày tự chọn, không phải tiến độ mục tiêu cả tháng (xem khối 📦 phía trên) — nên số content/doanh thu ở đây sẽ khác khi bạn đổi khoảng ngày, đó là bình thường.</p>
@@ -489,7 +489,7 @@
       <div class="kpis" id="master-kpis"></div>
     </section>
 
-    <section>
+    <section style="display:none" id="legacy-master-cal-section">
       <div class="section-head">
         <h2>Content air trong kỳ đã chọn</h2>
         <p id="master-cal-caption">—</p>
