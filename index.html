@@ -1971,8 +1971,11 @@
     ["2026-09-23",713242,6,1804196],
     ["2026-09-24",1250820,15,5786629],["2026-09-25",259060,2,574809],
   ].map(([d,cost,orders,rev])=>({date:d,cost,orders,rev}));
-  const DATA_MIN_DATE = "2026-08-01", DATA_MAX_DATE = "2026-09-25";
-  const DEFAULT_FROM_DATE = "2026-09-01", DEFAULT_TO_DATE = "2026-09-25";
+  // Dữ liệu TikTok Business/Shop API (SEED, DAILY_STORE) mới có tới 25/09 — chưa kết nối
+  // lại để lấy tháng 10. Mốc chọn ngày vẫn mở tới hôm nay để không chặn người dùng chọn
+  // tháng 10, nhưng khối CTR/đơn/view/doanh thu ở trang này sẽ trống cho tới khi có dữ liệu thật.
+  const DATA_MIN_DATE = "2026-08-01", DATA_MAX_DATE = "2026-10-26";
+  const DEFAULT_FROM_DATE = "2026-10-01", DEFAULT_TO_DATE = "2026-10-26";
   const CONTENT_TARGET_PER_WEEK = 7;
 
   // Nguồn: TikTok Business API (GMV Max Report, /gmv_max/report/get/) — pull LIVE lúc dựng trang
