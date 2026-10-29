@@ -468,19 +468,6 @@
       <div class="nac" id="content-funnel"></div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <h2>Kế hoạch sản xuất content T9 — lũy kế thực tế đến đâu</h2>
-        <p>Chia đều 30 content mục tiêu cả tháng theo tuần (tuần đầu 9 ngày nên mục tiêu 9, các tuần sau 7 ngày mục tiêu 7). Hụt tuần nào sẽ cộng dồn sang lũy kế, không "bỏ qua". Ô "0" kèm ⚠️ nghĩa là chưa có content nào air trong tuần đó.</p>
-      </div>
-      <div class="dtable-wrap">
-        <table class="dtable">
-          <thead><tr><th>Tuần</th><th>Mục tiêu tuần</th><th>Thực tế tuần</th><th>Lũy kế mục tiêu</th><th>Lũy kế thực tế</th><th>Chênh lệch lũy kế</th><th>Trạng thái</th></tr></thead>
-          <tbody id="week-plan-body"></tbody>
-        </table>
-      </div>
-    </section>
-
     <section style="display:none" id="legacy-master-kpi-section">
       <div class="section-head">
         <h2>Kỳ tự chọn — xem chi tiết một khoảng ngày bất kỳ</h2>
@@ -498,19 +485,6 @@
       <div id="master-calendar-wrap" style="display:flex;gap:16px;flex-wrap:wrap"></div>
     </section>
 
-    <section>
-      <div class="section-head">
-        <h2>Bối cảnh doanh thu — lợi nhuận kênh TikTok (tham khảo)</h2>
-        <p>Đây là mục tiêu <b>toàn kênh</b> (gồm cả 2 campaign đã scale từ lâu như Serum, Tràm trà) — doanh thu từ riêng 18 content test chỉ là phần rất nhỏ trong số này, nên KHÔNG dùng để đánh giá hiệu quả quản trị nội dung. Để tham khảo bối cảnh kinh doanh chung thôi.</p>
-      </div>
-      <div class="kpis" id="revenue-context-kpis"></div>
-      <div class="dtable-wrap">
-        <table class="dtable">
-          <thead><tr><th>Giai đoạn</th><th>Số ngày</th><th>Doanh thu mục tiêu</th><th>LN gộp mục tiêu</th><th>Trần chi ads</th><th>Đơn cần đạt</th></tr></thead>
-          <tbody id="week-target-body"></tbody>
-        </table>
-      </div>
-    </section>
   </div>
 
   <!-- PAGE 2 -->
@@ -2153,59 +2127,6 @@
       const action = actionFor(cls, {ad, live});
       return {...it, ad, live, cls, gate, days, action};
     }).sort((a,b)=> b.days - a.days);
-
-    // ---- PAGE 1: bối cảnh doanh thu kênh (tham khảo, không phải KPI quản trị nội dung) ----
-    document.getElementById("revenue-context-kpis").innerHTML = `
-      <div class="tile"><span class="eyebrow">Doanh thu mục tiêu T9</span><div class="v num">292,78tr đ</div><div class="l">kênh TikTok (video)</div><span class="delta flat">↔ +44,6% so với DT thực tế T8 (202,51tr)</span></div>
-      <div class="tile good"><span class="eyebrow">Lợi nhuận gộp mục tiêu</span><div class="v num">66,88tr đ</div><div class="l">22,8% doanh thu</div><span class="delta flat">↔ Trần chi ads +66,7% so với T8 (35,12tr)</span></div>
-      <div class="tile"><span class="eyebrow">Đơn cần đạt T9</span><div class="v num">781 đơn</div><div class="l">AOV tham khảo ~375k</div><span class="delta flat">↔ +32,6% so với đơn thực tế T8 (589)</span></div>
-      <div class="tile teal"><span class="eyebrow">% hoàn thành mục tiêu T9</span><div class="v num">17,7%</div><div class="l">thực tế 1-8/9: 51,81tr đ, 141 đơn</div><span class="delta flat">⏳ 8/30 ngày đã qua (26,7%)</span></div>
-    `;
-
-    const weekTargets = [
-      {label:"1-9/9 (đã qua, gồm Sale đôi 9/9)", days:9, dt:87833993, lng:20062887, ads:17566799, orders:234, note:"đã qua"},
-      {label:"10-16/9", days:7, dt:68315328, lng:15604468, ads:13663066, orders:182},
-      {label:"17-23/9", days:7, dt:68315328, lng:15604468, ads:13663066, orders:182},
-      {label:"24-30/9", days:7, dt:68315328, lng:15604468, ads:13663066, orders:182},
-    ];
-    document.getElementById("week-target-body").innerHTML = weekTargets.map(w=>`
-      <tr ${w.note?'style="opacity:.6"':''}>
-        <td><b>${w.label}</b></td>
-        <td class="num">${w.days} ngày</td>
-        <td class="num">${fmtVnd(w.dt)}</td>
-        <td class="num" style="color:var(--good)">${fmtVnd(w.lng)}</td>
-        <td class="num">${fmtVnd(w.ads)}</td>
-        <td class="num">${w.orders} đơn</td>
-      </tr>
-    `).join("");
-
-    const planWeeks = [
-      {label:"1-9/9", from:"2026-09-01", to:"2026-09-09", target:9},
-      {label:"10-16/9", from:"2026-09-10", to:"2026-09-16", target:7},
-      {label:"17-23/9", from:"2026-09-17", to:"2026-09-23", target:7},
-      {label:"24-30/9", from:"2026-09-24", to:"2026-09-30", target:7},
-    ];
-    let cumTarget = 0, cumActual = 0;
-    document.getElementById("week-plan-body").innerHTML = planWeeks.map(w=>{
-      const actual = rows.filter(r=>r.ngay_air>=w.from && r.ngay_air<=w.to).length;
-      const started = TODAY >= new Date(w.from+"T00:00:00");
-      cumTarget += w.target;
-      cumActual += actual;
-      const cumGap = cumActual - cumTarget;
-      let statusHtml;
-      if (!started) statusHtml = `<span class="wk-status pending">Chưa tới hạn</span>`;
-      else if (cumGap >= 0) statusHtml = `<span class="wk-status good">✓ Đạt lũy kế</span>`;
-      else statusHtml = `<span class="wk-status warn">⚠️ Chậm lũy kế ${Math.abs(cumGap)} content</span>`;
-      return `<tr>
-        <td><b>Tuần ${w.label}</b></td>
-        <td class="num">${w.target} content</td>
-        <td class="num" style="font-weight:800;${actual===0&&started?'color:var(--warn)':''}">${actual}${actual===0&&started?' ⚠️':''}</td>
-        <td class="num">${cumTarget}</td>
-        <td class="num" style="font-weight:800">${cumActual}</td>
-        <td class="num" style="font-weight:800;color:${cumGap<0?'var(--bad)':'var(--good)'}">${cumGap>=0?'+':''}${cumGap}</td>
-        <td>${statusHtml}</td>
-      </tr>`;
-    }).join("");
 
     setupMasterFilter(rows);
 
